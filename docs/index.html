@@ -1,96 +1,721 @@
 <!DOCTYPE html>
 <html>
 
+
+
 <head>
     <meta charset="utf-8">
+    <meta name="description"
+          content="">
+    <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UniEdit</title>
-    <link rel="shortcut icon" type="image/jpg" href="" />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <script src="https://kit.fontawesome.com/49f46e7382.js" crossorigin="anonymous"></script>
-</head>
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+  
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+  
+      gtag('js', new Date());
+  
+      gtag('config', 'G-PYVRSFMDRL');
+    </script>
+  
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+  
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/dut.svg">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+    <!-- <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </head>
 
 <body>
-    <section class="section">
-        <div class="container is-max-widescreen">
-            <h1 class="title is-2 has-text-centered">
-                <center>UniEdit: A Unified Tuning-Free Framework for Video Motion and Appearance Editing</center>
-            </h1>
-            <p class="subtitle is-4 has-text-centered">
-                 <br>
-            </p>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">
+                    UniEdit: A Unified Tuning-Free Framework for Video Motion and Appearance Editing
+                  </h1>
+
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
 
 
     <section>
-        <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:left;">Section A: Qualitative Results on LOVEU-TGVE-2023</h2>
+                    <!-- <p class="title is-5" style="text-align:left;">:</p> -->
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex; width: 22.5%;">
+                            <p style="writing-mode: vertical-rl;">Source Video</p>
+                            <div>
+                                <p>+ 'raining'</p>
+                                <img src="./video/rebuttal/tgve/airplane/input.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="width: 20%;">
+                            <p>+ 'furturistic style'</p>
+                            <img src="./video/rebuttal/tgve/basketball/input_new_processed.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                        </div>
+                        <div style="width: 20%;">
+                            <p>+ 'neon lights'</p>
+                            <img src="./video/rebuttal/tgve/car/input.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                        </div>
+                        <div style="width: 20%;">
+                            <p>'cat' --> 'dog'</p>
+                            <img src="./video/rebuttal/tgve/cat_object/input.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                        </div>
+                        <div style="width: 20%;">
+                            <p>'look up to the sky'</p>
+                            <img src="./video/rebuttal/tgve/cat_object/input.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex; width: 22.5%;">
+                            <p style="writing-mode: vertical-rl;">TAV</p>
+                            <div>
+                                <img src="./video/rebuttal/tgve/airplane/tuneavideo.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/basketball/tuneavideo.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/car/tuneavideo.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_object/tuneavideo.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_motion/tuneavideo.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex; width: 22.5%;">
+                            <p style="writing-mode: vertical-rl;">MasaCtrl*</p>
+                            <div>
+                                <img src="./video/rebuttal/tgve/airplane/masactrl.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/basketball/masactrl.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/car/masactrl.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_object/masactrl.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_motion/masactrl.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex; width: 22.5%;">
+                            <p style="writing-mode: vertical-rl;">FateZero</p>
+                            <div>
+                                <img src="./video/rebuttal/tgve/airplane/fatezero.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/basketball/fatezero.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/car/fatezero.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_object/fatezero.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_motion/fatezero.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex; width: 22.5%;">
+                            <p style="writing-mode: vertical-rl;">TokenFlow</p>
+                            <div>
+                                <img src="./video/rebuttal/tgve/airplane/tokenflow.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/basketball/tokenflow.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/car/tokenflow.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_object/tokenflow.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_motion/tokenflow.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex; width: 22.5%;">
+                            <p style="writing-mode: vertical-rl;">Rerender</p>
+                            <div>
+                                <img src="./video/rebuttal/tgve/airplane/rerender.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/basketball/rerender.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/car/rerender.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_object/rerender.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_motion/rerender.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex; width: 22.5%;">
+                            <p style="writing-mode: vertical-rl;">UniEdit (Ours)</p>
+                            <div>
+                                <img src="./video/rebuttal/tgve/airplane/ours.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/basketball/ours_new_processed.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/car/ours.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_object/ours.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                        <div style="display: flex; width: 20%;">
+                            <div>
+                                <img src="./video/rebuttal/tgve/cat_motion/ours.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            </div>
+                        </div>
+                    </div>
+
                 <hr style="margin-top:0px">
-                <h1 style="padding: 20px;"><strong><center>Motion Editing</center></strong></h1>
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:left;">Section B: Analysis on the Proposed Components in UniEdit</h2>
+                    <p class="title is-5" style="text-align:left;">Difference between QK and V features in SA-S modules:</p>
+                    <p><strong>+ 'Van Gogh style'</strong></p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/rebuttal/explain_v/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(a) source video</p>
+                        </div>
+                        <div>
+                            <img src="./video/rebuttal/explain_v/stylization_wo_ours.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(b) w/o feature replacement</p>
+                        </div>
+
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+
+                        <div>
+                            <img src="./video/rebuttal/explain_v/stylization_qk.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(c) w/ query and key features replacement</p>
+                        </div>
+                        <div>
+                            <img src="./video/rebuttal/explain_v/stylization_v.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(d) w/ value features replacement + query and key in (b)</p>
+                        </div>
+                    </div>
+                    <p>Fig B.1.</p>
+                    <br>
+                    <p style="text-align:left;"><strong>Observation:</strong> The query and key features (in SA-S modules) dictate the spatial structure of the generated video, while the value features tend to influence the texture, including details such as color tones.<br>To comprehend why we can have inhomogeneous QK and V and their differences, we visualized the results of swapping different features (QK or V) in SA-S modules during style transfer tasks on the source video in Fig. B.1. As can be seen, compared to Fig. B.1(b) with no feature replacement, replacing QK (Fig. B.1(c)) results in the edited video adopting the same spatial structure as the source video. Simultaneously, replacing V eradicates the style information in (Fig. B.1(b)), meaning the texture details from the source video are utilized to replace the style depicted by the target prompt.</p>
+                    <br>
+                    <hr style="margin-top:0px">
+                    <p class="title is-5" style="text-align:left;">Influence of Spatial Structure Control in Motion Editing:</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/rebuttal/motion_editing_w_wo_spatial/wo_spatial.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(a). w/o Spatial Structure Control</p>
+                        </div>
+
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+
+                        <div>
+                            <img src="./video/rebuttal/motion_editing_w_wo_spatial/w_spatial.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(b). w/ Spatial Structure Control</p>
+                        </div>
+                    </div>
+                    <p>Fig B.2.</p>
+                    <br>
+                    <p style="text-align:left;">We explored the role of spatial control in motion editing. The proposed method synthesizes videos with larger modifications when removing the spatial control mechanism on both the motion-reference branch and the main editing branch. We visualized the results in Fig. B.2, from left to right are {reconstruction branch, main editing path, and motion reference branch} respectively. It can be observed that although the motion-reference branch can still generate the target motion without the control of spatial layout, the structure deviates significantly, for example, the raccoon assumes a different pose and location. We regard this as a suboptimal solution because, compared to the results presented in the paper, the results w/o spatial structure control modifies the object position of the source video, leading to a decrease in consistency between the edited result and the source video.</p>
+                <br>
+                <hr style="margin-top:0px">
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+    
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:left;">Section C: Impact of Hyper-parameter Selection in UniEdit</h2>
+
+                <p class="title is-5" style="text-align:left;">Appearance Editing (global):</p>
+                <img src="./video/rebuttal/hyper/fig8.jpg" alt="Your browser does not support the image tag." loop>
+                <p>Fig. C.1. (copied from Fig.8 in the main text)</p>
+                <br>
+                <p style="text-align:left;">For appearance editing, it's observed that changing the blend layers (\(t_2\)) and steps (\(l_2\)) in Eq. 4 could effectively adjust the degree to which the edited image remains faithful to the original image. Take stylization in Fig. 8 as an example, attention map injection on fewer (15) steps produces a stylized output that may not have the same structure as the input, and injection on all 50 steps could obtain videos with almost identical textures but less stylized. The user can adjust the blended layers and steps to realize their desired balancing between stylization and faithfully.</p>
+                <hr style="margin-top:0px">
+
+                <p class="title is-5" style="text-align:left;">Appearance Editing (local):</p>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <img src="./video/rebuttal/hyper/0-15 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">step:[0-15] layer:[0-16]</p>
+                    </div>
+                    <div>
+                        <img src="./video/rebuttal/hyper/0-20 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">step:[0-20] layer:[0-16]</p>
+                    </div>
+                </div>
+                <br>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <img src="./video/rebuttal/hyper/0-25 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">step:[0-25] layer:[0-16]</p>
+                    </div>
+                    <div>
+                        <img src="./video/rebuttal/hyper/0-30 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">step:[0-30] layer:[0-16]</p>
+                    </div>
+                </div>
+                <br>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <img src="./video/rebuttal/hyper/0-35 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">step:[0-35] layer:[0-16]</p>
+                    </div>
+                    <div>
+                        <img src="./video/rebuttal/hyper/0-40 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">step:[0-40] layer:[0-16]</p>
+                    </div>
+                </div>
+                <p style="text-align:center;">Fig. C.2.</p>
+                <br>
+                <p style="text-align:left;">The same conclusion was also confirmed in local appearance editing. As shown in the figure above, when we do non-rigid (deformable) object replacement, we find that as the feature injection steps increase, the outline of the "dog" becomes more and more similar to the outline of the cat in the source video. And the appropriate hyperparameters (i.e., ~25 steps) bring the best results.</p>
+                <br>
+                <hr style="margin-top:0px">
+
+                <p class="title is-5" style="text-align:left;">Motion Editing:</p>
+                <table style="table-layout: fixed;">
+                <tbody>
+                    <p style="text-align:left;">Source video:</p>
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/rebuttal/hyper/source.gif" alt="Your browser does not support the image tag." loop>
+                            <br>
+                            <br>
+                        </td>
+
+                    <tr>
+                    
+                    <tr>
+                        <td colspan="5" style="text-align:left;">Changing <b>content preservation</b> steps in Eq. 2:</td>
+                    </tr>
+
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/rebuttal/hyper/1.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered>step:[4-20] layer:[10-16]</centered></p>
+                            <br>
+                        </td>
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/rebuttal/hyper/2.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered>step:[4-30] layer:[10-16]</centered></p>
+                            <br>
+                        </td>
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/rebuttal/hyper/3.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered>step:[4-40] layer:[10-16]</centered></p>
+                            <br>
+                        </td>
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/rebuttal/hyper/4_10.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered><span style="color:red;">step:[4-50] layer:[10-16]</span></centered></p>
+                            <br>
+                        </td>
+
+                    <tr>
+
+                    <tr>
+                        <td colspan="5" style="text-align:left;">Changing <b>motion injection</b> steps in Eq. 3:</td>
+                    </tr>
+
+                    <tr>
+                        
+                        <!-- First row of videos -->
+
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/rebuttal/hyper/7.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered>step:[0-20] layer:[0-16]</centered></p>
+                            <br>
+                        </td>
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/rebuttal/hyper/8.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered>step:[0-30] layer:[0-16]</centered></p>
+                            <br>
+                        </td>
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/rebuttal/hyper/9.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered>step:[0-40] layer:[0-16]</centered></p>
+                            <br>
+                        </td>
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/rebuttal/hyper/4_10.gif" alt="Your browser does not support the image tag." loop>
+                            <centered><span style="color:red;">step:[0-50] layer:[0-16]</span></centered></p>
+                            <br>
+                        </td>
+                    <tr>
+                </tbody>
+                </table>
+
+                <table style="table-layout: fixed;">
+                    <tbody>
+                        <p style="text-align:left;">Source video:</p>
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="20%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/hyper/cat_source.gif" alt="Your browser does not support the image tag." loop>
+                                <br>
+                                <br>
+                            </td>
+    
+                        <tr>
+                        
+                        <tr>
+                            <td colspan="5" style="text-align:left;">Changing <b>content preservation</b> layers in Eq. 2:</td>
+                        </tr>
+    
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="20%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/hyper/cat1.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>step:[4-50] layer:[7-16]</centered></p>
+                                <br>
+                            </td>
+                            <td width="20%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/hyper/cat2.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>step:[4-50] layer:[8-16]</centered></p>
+                                <br>
+                            </td>
+                            <td width="20%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/hyper/cat3.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>step:[4-50] layer:[9-16]</centered></p>
+                                <br>
+                            </td>
+                            <td width="20%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/hyper/cat4_8.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered><span style="color:red;">step:[4-50] layer:[10-16]</span></centered></p>
+                                <br>
+                            </td>
+    
+                        <tr>
+    
+                        <tr>
+                            <td colspan="5" style="text-align:left;">Changing <b>motion injection</b> layers in Eq. 3:</td>
+                        </tr>
+    
+                        <tr>
+                            
+                            <!-- First row of videos -->
+    
+                            <td width="20%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/hyper/cat5.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>step:[0-50] layer:[0-4]</centered></p>
+                                <br>
+                            </td>
+                            <td width="20%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/hyper/cat6.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>step:[0-50] layer:[0-8]</centered></p>
+                                <br>
+                            </td>
+                            <td width="20%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/hyper/cat7.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>step:[0-50] layer:[0-12]</centered></p>
+                                <br>
+                            </td>
+                            <td width="20%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/hyper/cat4_8.gif" alt="Your browser does not support the image tag." loop>
+                                <centered><span style="color:red;">step:[0-50] layer:[0-16]</span></centered></p>
+                                <br>
+                            </td>
+                        <tr>
+                            
+                    </tbody>
+                    
+                    </table>
+                <p style="text-align:center;">Fig. C.3. & C.4.</p>
+                <p style="text-align:left;"><b>Note: The model have 16 SA-S layers in total, and denoising with 50 steps. Red indicate the optimal value used in UniEdit.</b></p>
+                <br>
+                <hr style="margin-top:0px">
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:left;">Section D: Impact of Mask-Guided Coordination in UniEdit</h2>
+                <p></p>
+                    <p class="title is-5" style="text-align:left;">Visualization of attention maps in CA-S modules:</p>
+                    <img src="./video/rebuttal/mask/CA_attn_vis.jpg" alt="Your browser does not support the image tag." loop>
+
+                    <p class="title is-5" style="text-align:left;">Visualization of masks:</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/rebuttal/mask/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>Output Video<br></p>
+                        </div>
+                        <div>
+                            <img src="./video/rebuttal/mask/ca_mask.png" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>CA-S mask<br>(obtained by using threshold on the attention map of 'man')</p>
+                        </div>
+                        <div>
+                            <img src="./video/rebuttal/mask/sam_mask.png" alt="Your browser does not support the image tag." style="width: 90%;" loop>
+                            <p>SAM mask<br>(obtained by using point guided segmentation)</p>
+                        </div>
+                    </div>
+                    
+                <br>
+                <table style="table-layout: fixed;">
+                    <tbody>
+                        <tr>
+                            <p class="title is-5" style="text-align:left;">Synthesis results when using UniEdit with or without mask:</p>
+                            
+                            <p><strong>'in NYC Times Square' --> 'in park, in winter'</strong></p>
+                            <td width="50%" style="text-align:center;">
+                                
+                                <img src="./video/rebuttal/mask/without_uniedit.gif" alt="Your browser does not support the image tag." loop>
+    
+                                <p><centered>Result without UniEdit</centered></p>
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;">
+                                <img src="./video/rebuttal/mask/without_mask.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (no mask)</centered></p>
+                                <br>
+                            </td>
+                        <tr>
+                        
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="50%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/mask/with_ca_mask.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (use attention mask in CA-S)</centered></p>
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/mask/with_sam_mask.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (use SAM segmentation mask)</centered></p>
+                                <br>
+                            </td>
+                        <tr>
+                        <tr>
+                            <tr>
+                                <td colspan="4""><strong>'cat' --> 'dog'</strong><br></td>
+                            </tr>
+                            
+                            <td width="50%" style="text-align:center;">
+    
+                                <img src="./video/rebuttal/mask/1.gif" alt="Your browser does not support the image tag." loop>
+    
+                                <p><centered>Result without UniEdit</centered></p>
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;">
+                                <img src="./video/rebuttal/mask/2.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (no mask)</centered></p>
+                                <br>
+                            </td>
+                        <tr>
+                        
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="50%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/mask/3.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (use attention mask in CA-S)</centered></p>
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;"> 
+                                <img src="./video/rebuttal/mask/4.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (use SAM segmentation mask)</centered></p>
+                                <br>
+                            </td>
+
+                        <tr>
+                        
+                    </tbody>
+                </table>
+                <hr style="margin-top:0px">
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+
+
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">Section E: Results on Different Base Model<br>(UniEdit + VideoCrafter2)</h2>
                 <p></p>
                 <table style="table-layout: fixed;">
                 <tbody>
                     <tr>
                         <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop>
-                                <source src="video/motion_combined_mp4/raccoon eat apple.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'A raccoon is eating an apple'</p>
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/videocrafter2/rabbit.mp4" type="video/mp4">
+                            </video>
+                            <img src="./static/images/vc1.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
                         </td>
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/motion_combined_mp4/raccoon waving.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'A raccoon is waving'</p>
-                        </td>
-                    <tr>
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/motion_combined_mp4/corgi_lying.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'A corgi is lying'</p>
-                        </td>
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/motion_combined_mp4/corgi jumping.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'A corgi is jumping'</p>
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/videocrafter2/teddy.mp4" type="video/mp4">
+                            </video>
+                            <img src="./static/images/vc2.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
                         </td>
                     <tr>
+                    
                     <tr>
                         <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/motion_combined_mp4/man running.mp4" type="video/mp4"> 
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/videocrafter2/swing.mp4" type="video/mp4"> 
                             </video> 
-                            <p>'A man is running'</p>
+                            <img src="./static/images/vc3.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
                         </td>
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/motion_combined_mp4/monkey turn around.mp4" type="video/mp4"> 
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/videocrafter2/corgi.mp4" type="video/mp4"> 
                             </video> 
-                            <p>'A monkey is turning around'</p>
-                        </td>
-                    <tr>
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/motion_combined_mp4/teddy dancing.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'A teddy bear is dancing'</p>
-                        </td>
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/motion_combined_mp4/cat jumping.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'A cat is leaping'</p>
+                            <img src="./static/images/vc4.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
                         </td>
                     <tr>
                 </tbody>
@@ -104,118 +729,403 @@
     </section>
 
     <section>
-        <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:left;">Section F: Failure Cases Visualization</h2>
+                    <h2 class="title is-5" style="text-align:left;">Edit multiple elements simultaneously:</h2>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/rebuttal/failure/1.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <p>cat --> dog, + Van Gogh style</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/rebuttal/failure/2.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <p>raccoon --> panda, play violin --> waving</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+
+                        <div>
+                            <img src="./video/rebuttal/failure/4.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <p>raccoon --> kangaroo, play violin --> play guitar<br>(the model do not learn the correct posture for playing the violin, and whether or not our method is used, the model could not generate the posture of "violin on the shoulder")</p>
+                        </div>
+                    </div>
+                    <h2 class="title is-5" style="text-align:left;">Complex scene editing:</h2>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/rebuttal/failure/3.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <p>a shark on the left and several goldfish swim in a tank</p>
+                        </div>
+                    </div>
+                <br>
                 <hr style="margin-top:0px">
-                <h1 style="padding-left: 6px;"><strong><center>Appearance Editing</center></strong></h1>
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:left;">Section G: More Results and Visualization</h2>
+                    <h2 class="title is-5" style="text-align:left;">Visualization of the reconstruction branch and the motion-reference branch:</h2>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/rebuttal/branch_vis/1.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/rebuttal/branch_vis/2.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p></p>
+                        </div>
+                    </div>
+                    <p>Fig. G.1.</p>
+                    <br>
+                    <hr style="margin-top:0px">
+
+                    <h2 class="title is-5" style="text-align:left;">Qualitative results on the reconstruction branch</h2>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div>
+                                <img src="./video/rebuttal/recons/input_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Source Video</p>
+                            </div>
+                            <div>
+                                <img src="./video/rebuttal/recons/sd_scheduler_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Reconstruction Branch Output<br></p>
+                            </div>
+                            <div>
+                                <img src="./video/rebuttal/recons/nti_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Reconstruction Branch Output<br>(w/ null-text inversion)</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div>
+                                <img src="./video/rebuttal/recons/input_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Source Video</p>
+                            </div>
+                            <div>
+                                <img src="./video/rebuttal/recons/sd_scheduler_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Reconstruction Branch Output<br></p>
+                            </div>
+                            <div>
+                                <img src="./video/rebuttal/recons/nti_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Reconstruction Branch Output<br>(w/ null-text inversion)</p>
+                            </div>
+                        </div>
+                        <p>Fig. G.2.</p>
+                    <br>
+                    <hr style="margin-top:0px">
+                    <p class="title is-5" style="text-align:left;">Visualization of foreground mask extracted by U^2-Net:</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/rebuttal/salient/sos1_source.png" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p></p>
+                        </div>
+
+                        <div>
+                            <img src="./video/rebuttal/salient/sos1.png" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p></p>
+                        </div>
+                    </div>
+                    <p>Fig. G.3.</p>
+                <hr style="margin-top:0px">
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+
+    
+
+
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">UniEdit + LaVie (Motion Editing)</h2>
+
+                    <table style="table-layout: fixed;">
+                    <tbody>
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="50%" style="text-align:center;"> 
+                                <video width="98%" autoplay muted loop>
+                                    <source src="video/motion/raccoon eat apple.mp4" type="video/mp4"> 
+                                </video> 
+                                <img src="./static/images/m1.svg", style="width: 100%; margin-top: -0px;">
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;"> 
+                                <video width="98%" autoplay muted loop> 
+                                    <source src="video/motion/raccoon waving.mp4" type="video/mp4"> 
+                                </video> 
+                                <img src="./static/images/m2.svg", style="width: 100%; margin-top: -0px;">
+                                <br>
+                            </td>
+                        <tr>
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="50%" style="text-align:center;"> 
+                                <video width="98%" autoplay muted loop> 
+                                    <source src="video/motion/corgi_lying.mp4" type="video/mp4"> 
+                                </video> 
+                                <img src="./static/images/m3.svg", style="width: 100%; margin-top: -0px;">
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;"> 
+                                <video width="98%" autoplay muted loop> 
+                                    <source src="video/motion/corgi jumping.mp4" type="video/mp4"> 
+                                </video> 
+                                <img src="./static/images/m4.svg", style="width: 100%; margin-top: -0px;">
+                                <br>
+                            </td>
+                        <tr>
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="50%" style="text-align:center;"> 
+                                <video width="98%" autoplay muted loop> 
+                                    <source src="video/motion/man running.mp4" type="video/mp4"> 
+                                </video> 
+                                <img src="./static/images/m5.svg", style="width: 100%; margin-top: -0px;">
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;"> 
+                                <video width="98%" autoplay muted loop> 
+                                    <source src="video/motion/monkey turn around.mp4" type="video/mp4"> 
+                                </video> 
+                                <img src="./static/images/m6.svg", style="width: 100%; margin-top: -0px;">
+                                <br>
+                            </td>
+                        <tr>
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="50%" style="text-align:center;"> 
+                                <video width="98%" autoplay muted loop> 
+                                    <source src="video/motion/teddy dancing.mp4" type="video/mp4"> 
+                                </video> 
+                                <img src="./static/images/m7.svg", style="width: 100%; margin-top: -0px;">
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;"> 
+                                <video width="98%" autoplay muted loop> 
+                                    <source src="video/motion/cat jumping.mp4" type="video/mp4"> 
+                                </video> 
+                                <img src="./static/images/m8.svg", style="width: 100%; margin-top: -0px;">
+                                <br>
+                            </td>
+                        <tr>
+                    </tbody>
+                    </table>
+                <br>
+                <hr style="margin-top:0px">
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">UniEdit + LaVie (Appearance Editing)</h2>
                 <p></p>
                 <table style="table-layout: fixed;">
                 <tbody>
                     <tr>
                         <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;">
-                            <video width="80%" autoplay muted loop>
-                                <source src="video/appear_combined_mp4/phantom red suit.mp4" type="video/mp4">
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/appear/phantom red suit.mp4" type="video/mp4">
                             </video>
-                            <p>'A man wearing a red suit'</p>
+                            <img src="./static/images/a1.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
                         </td>
-                        <td width="40%" style="text-align:center;">
-                            <video width="80%" autoplay muted loop>
-                                <source src="video/appear_combined_mp4/phantom superman suit.mp4" type="video/mp4">
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/appear/phantom superman suit.mp4" type="video/mp4">
                             </video>
-                            <p>'A man wearing a superman suit'</p>
+                            <img src="./static/images/a2.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
                         </td>
                     <tr>
+                    
                     <tr>
                         <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;">
-                            <video width="80%" autoplay muted loop>
-                                <source src="video/appear_combined_mp4/wolf dinner.mp4" type="video/mp4">
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/iron man winter.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/a9.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/furturistic factory.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/a6.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+
+                    <tr>
+
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/appear/wolf dinner.mp4" type="video/mp4">
                             </video>
-                            <p>'A wolf is having dinner'</p>
+                            <img src="./static/images/a4.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
                         </td>
-                        <td width="40%" style="text-align:center;">
-                            <video width="80%" autoplay muted loop>
-                                <source src="video/appear_combined_mp4/spider man guitar.mp4" type="video/mp4">
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/appear/mario dinner.mp4" type="video/mp4">
                             </video>
-                            <p>'A Spider Man is playing guitar'</p>
+                            <img src="./static/images/a3.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                    <tr>
+
+                    <tr>
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/shanghai oil painting.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/a8.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/appear/husky.mp4" type="video/mp4">
+                            </video>
+                            <img src="./static/images/a18.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                    <tr>
+
+                    <tr>
+                        <!-- First row of videos -->
+
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/appear/ice car.mp4" type="video/mp4">
+                            </video>
+                            <img src="./static/images/a17.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/lego boy.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/a10.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                    <tr>
+
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/NYC night.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/a7.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/NYC blackwhite.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/a16.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                    <tr>
+
+
+
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/crayon_shark.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/a5.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/appear/girl walk.mp4" type="video/mp4">
+                            </video>
+                            <img src="./static/images/a15.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                    <tr>
+
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/metal raccoon guitar.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/a11.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/iron man guitar.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/a12.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
                         </td>
                     <tr>
                     <tr>
                         <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/appear_combined_mp4/crayon_shark.mp4" type="video/mp4"> 
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/panda guitar.mp4" type="video/mp4"> 
                             </video> 
-                            <p>'A crayon drawing of a shark swimming'</p>
+                            <img src="./static/images/a13.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
                         </td>
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/appear_combined_mp4/furturistic factory.mp4" type="video/mp4"> 
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/spider man guitar.mp4" type="video/mp4"> 
                             </video> 
-                            <p>'A view of factory, furturistic style'</p>
-                        </td>
+                            <img src="./static/images/a14.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>                        
                     <tr>
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/appear_combined_mp4/iron man guitar.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'Iron Man is playing guitar'</p>
-                        </td>
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/appear_combined_mp4/iron man winter.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'Iron Man in park, at winter'</p>
-                        </td>
-                    <tr>
+
                     <tr>
                         <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/appear_combined_mp4/mario dinner.mp4" type="video/mp4"> 
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/guitar in space.mp4" type="video/mp4"> 
                             </video> 
-                            <p>'A Mario is having dinner'</p>
+                            <img src="./static/images/a19.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
                         </td>
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/appear_combined_mp4/lego boy.mp4" type="video/mp4"> 
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/appear/guitar van gogh.mp4" type="video/mp4"> 
                             </video> 
-                            <p>'A lego boy is playing drums'</p>
-                        </td>
-                    <tr>
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/appear_combined_mp4/metal raccoon guitar.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'A metal raccoon is playing guitar'</p>
-                        </td>
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/appear_combined_mp4/NYC night.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'A view of NYC, night'</p>
-                        </td>
-                    <tr>
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/appear_combined_mp4/panda guitar.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'A panda is playing guitar'</p>
-                        </td>
-                        <td width="40%" style="text-align:center;"> 
-                            <video width="80%" autoplay muted loop> 
-                                <source src="video/appear_combined_mp4/shanghai oil painting.mp4" type="video/mp4"> 
-                            </video> 
-                            <p>'Shanghai, the bund, oil painting style'</p>
-                        </td>
+                            <img src="./static/images/a20.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>                        
                     <tr>
                 </tbody>
                 </table>
@@ -226,51 +1136,29 @@
         </div>
     <br>
     </section>
+
+
     <section>
-        <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <hr style="margin-top:0px">
-                <h1><center><strong>Comparison with State-of-the-Art Methods</strong></center></h1>
-                <p></p>
-                <video width="80%" controls style="display: block; margin: 0 auto;">
-                    <source src="video/sup_video_final.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">Comparison with State-of-the-Art Methods</h2>
+                <video width="100%" controls style="display: block; margin: 0 auto;">
+                    <source src="video/compare with baselines.mp4" type="video/mp4">
                 </video>
-                <br>
-                <hr style="margin-top:0px">
+                
+
             </div>
+            
         </div>
+        <p>MasaCtrl* indicates we adapt MasaCtrl to the text-to-video model.</p>
+        <br>
+        <hr style="margin-top:0px">
         </div>
     <br>
     </section>
+
+    
 </body>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-        // Check if there are any navbar burgers
-        if ($navbarBurgers.length > 0) {
-
-            // Add a click event on each of them
-            $navbarBurgers.forEach(el => {
-                el.addEventListener('click', () => {
-
-                    // Get the target from the "data-target" attribute
-                    const target = el.dataset.target;
-                    const $target = document.getElementById(target);
-
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-
-                });
-            });
-        }
-    });
-</script>
 
 </html>
