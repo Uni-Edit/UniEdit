@@ -158,32 +158,32 @@
     </script> -->
         
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const images = document.getElementsByTagName('img');
-            let loadedImages = 0; // Counter for loaded images
+    document.addEventListener("DOMContentLoaded", function() {
+        var images = document.getElementsByTagName('img');
+        var loadedImages = 0; // 已加载图片的计数器
 
-            // Function to update image src
-            const updateImageSrc = (img) => {
-                const src = img.getAttribute('src');
-                const timeStamp = new Date().getTime();
-                const delimiter = src.includes('?') ? '&' : '?';
-                img.setAttribute('src', `${src}${delimiter}nocache=${timeStamp}`);
-            };
-
-            // Event listener for image load
-            const onImageLoad = () => {
-                loadedImages++; // Increment counter
-                if (loadedImages === images.length) { // Check if all images are loaded
-                    Array.from(images).forEach(img => updateImageSrc(img));
+        for (var i = 0; i < images.length; i++) {
+            images[i].addEventListener('load', function() {
+                loadedImages++; // 增加已加载图片的计数
+                if (loadedImages === images.length) { // 检查是否所有图片都已加载
+                    for (var j = 0; j < images.length; j++) {
+                        images[j].style.visibility = 'visible'; // 将所有图片设置为可见
+                    }
                 }
-            };
-
-            Array.from(images).forEach(img => {
-                img.addEventListener('load', onImageLoad);
-                // Trigger load event by updating image src
-                updateImageSrc(img);
             });
-        });
+
+            // 检查图片是否已经加载（对于缓存的图片）
+            if (images[i].complete) {
+                loadedImages++;
+                if (loadedImages === images.length) {
+                    for (var j = 0; j < images.length; j++) {
+                        images[j].style.visibility = 'visible'; // 将所有图片设置为可见
+                    }
+                }
+            }
+        }
+    });
+
     </script>
 
     <section>
@@ -191,7 +191,7 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
                     <h2 class="title is-3" style="text-align:left;">Section A: Qualitative Results on LOVEU-TGVE-2023</h2>
-                    <p class="title is-5" style="text-align:left;"><strong>If you encounter an issue with unsynchronized video playback, please refresh the page again after the webpage is loaded. Thanks!</strong></p>
+                    <!-- <p class="title is-5" style="text-align:left;">:</p> -->
                     <div style="display: flex; justify-content: space-between;">
                         <div style="display: flex; width: 22.5%;">
                             <p style="writing-mode: vertical-rl;">Source Video</p>
