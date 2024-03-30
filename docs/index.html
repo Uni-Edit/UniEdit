@@ -148,16 +148,32 @@
     loadAllGifs();
     </script> -->
 
-    <script>
+    <!-- <script>
         window.onload = function() {
             var images = document.getElementsByTagName('img');
             for (var i = 0; i < images.length; i++) {
                 images[i].src = images[i].src;
             }
         }
-    </script>
+    </script> -->
         
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var images = document.getElementsByTagName('img');
+            var loadedImages = 0; // Counter for loaded images
+            for (var i = 0; i < images.length; i++) {
+                images[i].addEventListener('load', function() {
+                    loadedImages++; // Increment counter
+                    if (loadedImages === images.length) { // Check if all images are loaded
+                        for (var j = 0; j < images.length; j++) {
+                            images[j].src = images[j].src; // Reset src to start animation
+                        }
+                    }
+                });
+                images[i].src = images[i].src; // Trigger load event
+            }
+        });
+    </script>
 
     <section>
         <div class="container is-max-desktop">
@@ -374,6 +390,9 @@
         
     <br>
     </section>
+
+    
+
 
     <section>
         <div class="container is-max-desktop">
