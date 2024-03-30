@@ -158,32 +158,32 @@
     </script> -->
         
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var images = document.getElementsByTagName('img');
-        var loadedImages = 0; // 已加载图片的计数器
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.getElementsByTagName('img');
+            let loadedImages = 0; // Counter for loaded images
 
-        for (var i = 0; i < images.length; i++) {
-            images[i].addEventListener('load', function() {
-                loadedImages++; // 增加已加载图片的计数
-                if (loadedImages === images.length) { // 检查是否所有图片都已加载
-                    for (var j = 0; j < images.length; j++) {
-                        images[j].style.visibility = 'visible'; // 将所有图片设置为可见
-                    }
+            // Function to update image src
+            const updateImageSrc = (img) => {
+                const src = img.getAttribute('src');
+                const timeStamp = new Date().getTime();
+                const delimiter = src.includes('?') ? '&' : '?';
+                img.setAttribute('src', `${src}${delimiter}nocache=${timeStamp}`);
+            };
+
+            // Event listener for image load
+            const onImageLoad = () => {
+                loadedImages++; // Increment counter
+                if (loadedImages === images.length) { // Check if all images are loaded
+                    Array.from(images).forEach(img => updateImageSrc(img));
                 }
+            };
+
+            Array.from(images).forEach(img => {
+                img.addEventListener('load', onImageLoad);
+                // Trigger load event by updating image src
+                updateImageSrc(img);
             });
-
-            // 检查图片是否已经加载（对于缓存的图片）
-            if (images[i].complete) {
-                loadedImages++;
-                if (loadedImages === images.length) {
-                    for (var j = 0; j < images.length; j++) {
-                        images[j].style.visibility = 'visible'; // 将所有图片设置为可见
-                    }
-                }
-            }
-        }
-    });
-
+        });
     </script>
 
     <section>
@@ -191,204 +191,16 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
                     <h2 class="title is-3" style="text-align:left;">Section A: Qualitative Results on LOVEU-TGVE-2023</h2>
-                    <!-- <p class="title is-5" style="text-align:left;">:</p> -->
+
                     <div style="display: flex; justify-content: space-between;">
-                        <div style="display: flex; width: 22.5%;">
-                            <p style="writing-mode: vertical-rl;">Source Video</p>
-                            <div>
-                                <p>+ 'raining'</p>
-                                <img src="./video/rebuttal/tgve/airplane/input.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="width: 20%;">
+                        <!-- <div style="width: 20%;">
                             <p>+ 'furturistic style'</p>
                             <img src="./video/rebuttal/tgve/basketball/input.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                        </div>
-                        <div style="width: 20%;">
-                            <p>+ 'neon lights'</p>
-                            <img src="./video/rebuttal/tgve/car/input.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                        </div>
-                        <div style="width: 20%;">
-                            <p>'cat' --> 'dog'</p>
-                            <img src="./video/rebuttal/tgve/cat_object/input.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                        </div>
-                        <div style="width: 20%;">
-                            <p>'look up to the sky'</p>
-                            <img src="./video/rebuttal/tgve/cat_object/input.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div style="display: flex; width: 22.5%;">
-                            <p style="writing-mode: vertical-rl;">TAV</p>
-                            <div>
-                                <img src="./video/rebuttal/tgve/airplane/tuneavideo.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/basketball/tuneavideo.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/car/tuneavideo.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_object/tuneavideo.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_motion/tuneavideo.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <div style="display: flex; width: 22.5%;">
-                            <p style="writing-mode: vertical-rl;">MasaCtrl*</p>
-                            <div>
-                                <img src="./video/rebuttal/tgve/airplane/masactrl.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/basketball/masactrl.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/car/masactrl.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_object/masactrl.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_motion/masactrl.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <div style="display: flex; width: 22.5%;">
-                            <p style="writing-mode: vertical-rl;">FateZero</p>
-                            <div>
-                                <img src="./video/rebuttal/tgve/airplane/fatezero.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/basketball/fatezero.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/car/fatezero.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_object/fatezero.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_motion/fatezero.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <div style="display: flex; width: 22.5%;">
-                            <p style="writing-mode: vertical-rl;">TokenFlow</p>
-                            <div>
-                                <img src="./video/rebuttal/tgve/airplane/tokenflow.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/basketball/tokenflow.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/car/tokenflow.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_object/tokenflow.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_motion/tokenflow.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <div style="display: flex; width: 22.5%;">
-                            <p style="writing-mode: vertical-rl;">Rerender</p>
-                            <div>
-                                <img src="./video/rebuttal/tgve/airplane/rerender.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/basketball/rerender.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/car/rerender.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_object/rerender.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_motion/rerender.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <div style="display: flex; width: 22.5%;">
-                            <p style="writing-mode: vertical-rl;">UniEdit (Ours)</p>
-                            <div>
-                                <img src="./video/rebuttal/tgve/airplane/ours.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/basketball/ours.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/car/ours.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_object/ours.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
-                        </div>
-                        <div style="display: flex; width: 20%;">
-                            <div>
-                                <img src="./video/rebuttal/tgve/cat_motion/ours.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
-                            </div>
+                        </div> -->
+                        <div style="width: 100%;">
+                            <!-- <p>+ 'furturistic style'</p> -->
+                            <img src="./video/rebuttal/tgve/final.gif" alt="Your browser does not support the image tag." style="width: 100%;" loop>
+                            <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p>
                         </div>
                     </div>
 
