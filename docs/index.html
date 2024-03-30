@@ -74,7 +74,69 @@
             </div>
         </div>
     </section>
+    <div id="container"></div>
 
+    <script>
+
+    var gifUrls = [
+    './video/rebuttal/tgve/airplane/masactrl.gif',
+    './video/rebuttal/tgve/basketball/masactrl.gif',
+    './video/rebuttal/tgve/car/masactrl.gif',
+    './video/rebuttal/tgve/cat_object/masactrl.gif',
+    './video/rebuttal/tgve/cat_motion/masactrl.gif',
+    './video/rebuttal/tgve/airplane/fatezero.gif',
+    './video/rebuttal/tgve/basketball/fatezero.gif',
+    './video/rebuttal/tgve/car/fatezero.gif',
+    './video/rebuttal/tgve/cat_object/fatezero.gif',
+    './video/rebuttal/tgve/cat_motion/fatezero.gif',
+    './video/rebuttal/tgve/airplane/tokenflow.gif',
+    './video/rebuttal/tgve/basketball/tokenflow.gif',
+    './video/rebuttal/tgve/car/tokenflow.gif',
+    './video/rebuttal/tgve/cat_object/tokenflow.gif',
+    './video/rebuttal/tgve/cat_motion/tokenflow.gif',
+    './video/rebuttal/tgve/airplane/rerender.gif',
+    './video/rebuttal/tgve/basketball/rerender.gif',
+    './video/rebuttal/tgve/car/rerender.gif',
+    './video/rebuttal/tgve/cat_object/rerender.gif',
+    './video/rebuttal/tgve/cat_motion/rerender.gif',
+    './video/rebuttal/tgve/airplane/ours.gif',
+    './video/rebuttal/tgve/basketball/ours.gif',
+    './video/rebuttal/tgve/car/ours.gif',
+    './video/rebuttal/tgve/cat_object/ours.gif',
+    './video/rebuttal/tgve/cat_motion/ours.gif'
+    ];
+    
+    function loadGif(url) {
+      return new Promise(function(resolve, reject) {
+        var img = new Image();
+        img.onload = function() {
+          resolve(img);
+        };
+        img.onerror = function() {
+          reject(new Error('Failed to load image ' + url));
+        };
+        img.src = url;
+      });
+    }
+    
+    async function loadAllGifs() {
+      try {
+        var images = await Promise.all(gifUrls.map(loadGif));
+        // var container = document.getElementById('container');
+        // for (var i = 0; i < images.length; i++) {
+        //   var div = document.createElement('div');
+        //   div.style.display = 'flex';
+        //   div.style.width = '20%';
+        //   div.appendChild(images[i]);
+        //   container.appendChild(div);
+        // }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    
+    loadAllGifs();
+    </script>
 
     <section>
         <div class="container is-max-desktop">
@@ -1158,7 +1220,61 @@
     <br>
     </section>
 
-    
+
+    <!-- <div id="container"></div>
+
+    <script>
+    var gifUrls = [
+    './video/rebuttal/tgve/airplane/masactrl.gif',
+    './video/rebuttal/tgve/basketball/masactrl.gif',
+    './video/rebuttal/tgve/car/masactrl.gif',
+    './video/rebuttal/tgve/cat_object/masactrl.gif',
+    './video/rebuttal/tgve/cat_motion/masactrl.gif',
+    './video/rebuttal/tgve/airplane/fatezero.gif',
+    './video/rebuttal/tgve/basketball/fatezero.gif',
+    './video/rebuttal/tgve/car/fatezero.gif',
+    './video/rebuttal/tgve/cat_object/fatezero.gif',
+    './video/rebuttal/tgve/cat_motion/fatezero.gif',
+    './video/rebuttal/tgve/airplane/tokenflow.gif',
+    './video/rebuttal/tgve/basketball/tokenflow.gif',
+    './video/rebuttal/tgve/car/tokenflow.gif',
+    './video/rebuttal/tgve/cat_object/tokenflow.gif',
+    './video/rebuttal/tgve/cat_motion/tokenflow.gif',
+    './video/rebuttal/tgve/airplane/rerender.gif',
+    './video/rebuttal/tgve/basketball/rerender.gif',
+    './video/rebuttal/tgve/car/rerender.gif',
+    './video/rebuttal/tgve/cat_object/rerender.gif',
+    './video/rebuttal/tgve/cat_motion/rerender.gif',
+    './video/rebuttal/tgve/airplane/ours.gif',
+    './video/rebuttal/tgve/basketball/ours.gif',
+    './video/rebuttal/tgve/car/ours.gif',
+    './video/rebuttal/tgve/cat_object/ours.gif',
+    './video/rebuttal/tgve/cat_motion/ours.gif'
+    ];
+
+    var images = [];
+
+    for (var i = 0; i < gifUrls.length; i++) {
+
+    var img = new Image();
+
+
+    img.onload = function() {
+
+        images.push(this);
+
+
+        if (images.length == gifUrls.length) {
+        for (var j = 0; j < images.length; j++) {
+            document.getElementById('container').appendChild(images[j]);
+        }
+        }
+    };
+
+
+    img.src = gifUrls[i];
+    }
+    </script> -->
 </body>
 
 </html>
