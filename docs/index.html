@@ -190,7 +190,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:left;">Section A: Qualitative Results on LOVEU-TGVE-2023</h2>
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section A: Qualitative Results on LOVEU-TGVE-2023</h2>
 
                     <div style="display: flex; justify-content: space-between;">
                         <div style="width: 100%;">
@@ -198,7 +198,7 @@
                                 <img src="./video/rebuttal/tgve/cap.svg" style="float: left; width: 4.7%;">
                                 <img src="./video/rebuttal/tgve/concat.gif" style="float: left; width: 95%;" loop>
                             </div> -->
-                            <p style="text-align:left;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
+                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
                             <div style="width: 100%;">
                                 <img src="./video/rebuttal/tgve/cap.svg" style="float: left; width: 4.7%;">
                                 <img src="./video/rebuttal/tgve/airplane/concatenated.gif" style="float: left; width: 19%;" loop>
@@ -208,12 +208,14 @@
                                 <img src="./video/rebuttal/tgve/cat_motion/concatenated.gif" style="float: left; width: 19%;" loop>
                             </div>
                             <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
-                            <p style="text-align:left;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
+                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
                             <p>Fig A.1.</p>
                             <br>
                             <br>
                             <img src="./video/rebuttal/tgve/difference.svg" style="float: left; width: 100%;">
                             <p>Fig A.2.</p>
+                            <p style="text-align:justify; word-wrap:break-word;">We highlight the contrast in Fig. A.2. Tune-A-Video (TAV) produces videos with poor temporal consistency and significant content changes (e.g., the crowd behind the racing car, the fields behind the cat). MasaCtrl*, FateZero, and TokenFlow tend to generate videos that are highly similar to the source, but fail to make edits that match the prompt (e.g., lack of raindrops in column 1 and noticeable stylistic changes in columns 2 and 3). Similarly, Rerender-A-Video also falls short in aligning with the target prompt and has significant color differences compared to the source. Additionally, all baselines are unable to modify the temporal dependency of the source video, leading to their failure in motion editing.</p>
+                            <p style="text-align:justify; word-wrap:break-word;">In contrast, the proposed UniEdit stands out for its ability to generate videos with 1) better content preservation 2) alignment with the target prompt 3) capability for various appearance editing tasks (including global stylization, local object replacement, or background modification), and motion editing.</p>
                             
 
                 <hr style="margin-top:0px">
@@ -231,8 +233,8 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:left;">Section B: Analysis on the Proposed Components in UniEdit</h2>
-                    <p class="title is-5" style="text-align:left;">Difference between QK and V features in SA-S modules:</p>
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section B: Analysis on the Proposed Components in UniEdit</h2>
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Difference between QK and V features in SA-S modules:</p>
                     <p><strong>+ 'Van Gogh style'</strong></p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
@@ -258,10 +260,10 @@
                     </div>
                     <p>Fig B.1.</p>
                     <br>
-                    <p style="text-align:left;"><strong>Observation:</strong> The query and key features (in SA-S modules) dictate the spatial structure of the generated video, while the value features tend to influence the texture, including details such as color tones.<br>To comprehend why we can have inhomogeneous QK and V and their differences, we visualized the results of swapping different features (QK or V) in SA-S modules during style transfer tasks on the source video in Fig. B.1. As can be seen, compared to Fig. B.1(b) with no feature replacement, replacing QK (Fig. B.1(c)) results in the edited video adopting the same spatial structure as the source video. Simultaneously, replacing V eradicates the style information in (Fig. B.1(b)), meaning the texture details from the source video are utilized to replace the style depicted by the target prompt.</p>
+                    <p style="text-align:justify; word-wrap:break-word;"><strong>Observation:</strong> The query and key features (in SA-S modules) dictate the spatial structure of the generated video, while the value features tend to influence the texture, including details such as color tones.<br>To comprehend why we can have inhomogeneous QK and V and their differences, we visualized the results of swapping different features (QK or V) in SA-S modules during style transfer tasks on the source video in Fig. B.1. As can be seen, compared to Fig. B.1(b) with no feature replacement, replacing QK (Fig. B.1(c)) results in the edited video adopting the same spatial structure as the source video. Simultaneously, replacing V eradicates the style information in (Fig. B.1(b)), meaning the texture details from the source video are utilized to replace the style depicted by the target prompt.</p>
                     <br>
                     <hr style="margin-top:0px">
-                    <p class="title is-5" style="text-align:left;">Influence of Spatial Structure Control in Motion Editing:</p>
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Influence of Spatial Structure Control in Motion Editing:</p>
                     <p><strong>'playing guitar' --> 'eating an apple'</strong></p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
@@ -279,7 +281,7 @@
                     </div>
                     <p>Fig B.2.</p>
                     <br>
-                    <p style="text-align:left;">We explored the role of spatial control in motion editing. The proposed method synthesizes videos with larger modifications when removing the spatial control mechanism on both the motion-reference branch and the main editing branch. We visualized the results in Fig. B.2, from left to right are {reconstruction branch, main editing path, and motion reference branch} respectively. It can be observed that although the motion-reference branch can still generate the target motion without the control of spatial layout, the structure deviates significantly, for example, the raccoon assumes a different pose and location. We regard this as a suboptimal solution because, compared to the results presented in the paper, the results w/o spatial structure control modifies the object position of the source video, leading to a decrease in consistency between the edited result and the source video.</p>
+                    <p style="text-align:justify; word-wrap:break-word;">We explored the role of spatial control in motion editing. The proposed method synthesizes videos with larger modifications when removing the spatial control mechanism on both the motion-reference branch and the main editing branch. We visualized the results in Fig. B.2, from left to right are {reconstruction branch, main editing path, and motion reference branch} respectively. It can be observed that although the motion-reference branch can still generate the target motion without the control of spatial layout, the structure deviates significantly, for example, the raccoon assumes a different pose and location. We regard this as a suboptimal solution because, compared to the results presented in the paper, the results w/o spatial structure control modifies the object position of the source video, leading to a decrease in consistency between the edited result and the source video.</p>
                 <br>
                 <hr style="margin-top:0px">
 
@@ -295,16 +297,16 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:left;">Section C: Impact of Hyper-parameter Selection in UniEdit</h2>
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section C: Impact of Hyper-parameter Selection in UniEdit</h2>
 
-                <p class="title is-5" style="text-align:left;">Appearance Editing (global):</p>
+                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Appearance Editing (global):</p>
                 <img src="./video/rebuttal/hyper/fig8.jpg" alt="Your browser does not support the image tag." loop>
                 <p>Fig. C.1. (copied from Fig.8 in the main text)</p>
                 <br>
-                <p style="text-align:left;">For appearance editing, it's observed that changing the blend layers (\(t_2\)) and steps (\(l_2\)) in Eq. 4 could effectively adjust the degree to which the edited image remains faithful to the original image. Take stylization in Fig. 8 as an example, attention map injection on fewer (15) steps produces a stylized output that may not have the same structure as the input, and injection on all 50 steps could obtain videos with almost identical textures but less stylized. The user can adjust the blended layers and steps to realize their desired balancing between stylization and faithfully.</p>
+                <p style="text-align:justify; word-wrap:break-word;">For appearance editing, it's observed that changing the blend layers (\(t_2\)) and steps (\(l_2\)) in Eq. 4 could effectively adjust the degree to which the edited image remains faithful to the original image. Take stylization in Fig. 8 as an example, attention map injection on fewer (15) steps produces a stylized output that may not have the same structure as the input, and injection on all 50 steps could obtain videos with almost identical textures but less stylized. The user can adjust the blended layers and steps to realize their desired balancing between stylization and faithfully.</p>
                 <hr style="margin-top:0px">
 
-                <p class="title is-5" style="text-align:left;">Appearance Editing (local):</p>
+                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Appearance Editing (local):</p>
                 <p><strong>'cat' --> 'dog'</strong></p>
                 <div style="display: flex; justify-content: space-between;">
                     <div>
@@ -340,14 +342,14 @@
                 </div>
                 <p style="text-align:center;">Fig. C.2.</p>
                 <br>
-                <p style="text-align:left;">The same conclusion was also confirmed in local appearance editing. As shown in the figure above, when we do non-rigid (deformable) object replacement, we find that as the feature injection steps increase, the outline of the "dog" becomes more and more similar to the outline of the cat in the source video. And the appropriate hyperparameters (i.e., ~25 steps) bring the best results.</p>
+                <p style="text-align:justify; word-wrap:break-word;">The same conclusion was also confirmed in local appearance editing. As shown in the figure above, when we do non-rigid (deformable) object replacement, we find that as the feature injection steps increase, the outline of the "dog" becomes more and more similar to the outline of the cat in the source video. And the appropriate hyperparameters (i.e., ~25 steps) bring the best results.</p>
                 <br>
                 <hr style="margin-top:0px">
 
-                <p class="title is-5" style="text-align:left;">Motion Editing:</p>
+                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Motion Editing:</p>
                 <table style="table-layout: fixed;">
                 <tbody>
-                    <p style="text-align:left;">Source video:</p>
+                    <p style="text-align:justify; word-wrap:break-word;">Source video:</p>
                     <p><strong>'walking' --> 'running'</strong></p>
                     <tr>
                         <!-- First row of videos -->
@@ -360,7 +362,7 @@
                     <tr>
                     
                     <tr>
-                        <td colspan="5" style="text-align:left;">Changing <b>content preservation</b> steps in Eq. 2:</td>
+                        <td colspan="5" style="text-align:justify; word-wrap:break-word;">Changing <b>content preservation</b> steps in Eq. 2:</td>
                     </tr>
 
                     <tr>
@@ -389,7 +391,7 @@
                     <tr>
 
                     <tr>
-                        <td colspan="5" style="text-align:left;">Changing <b>motion injection</b> steps in Eq. 3:</td>
+                        <td colspan="5" style="text-align:justify; word-wrap:break-word;">Changing <b>motion injection</b> steps in Eq. 3:</td>
                     </tr>
 
 
@@ -423,7 +425,7 @@
 
                 <table style="table-layout: fixed;">
                     <tbody>
-                        <p style="text-align:left;">Source video:</p>
+                        <p style="text-align:justify; word-wrap:break-word;">Source video:</p>
                         <tr>
                             <td colspan="9" style="text-align:center;"><strong>'walking' --> 'jumping'</strong></td>
                         </tr>
@@ -438,7 +440,7 @@
                         <tr>
                         
                         <tr>
-                            <td colspan="5" style="text-align:left;">Changing <b>content preservation</b> layers in Eq. 2:</td>
+                            <td colspan="5" style="text-align:justify; word-wrap:break-word;">Changing <b>content preservation</b> layers in Eq. 2:</td>
                         </tr>
     
                         <tr>
@@ -467,7 +469,7 @@
                         <tr>
     
                         <tr>
-                            <td colspan="5" style="text-align:left;">Changing <b>motion injection</b> layers in Eq. 3:</td>
+                            <td colspan="5" style="text-align:justify; word-wrap:break-word;">Changing <b>motion injection</b> layers in Eq. 3:</td>
                         </tr>
     
                         <tr>
@@ -500,8 +502,14 @@
                     
                     </table>
                 <p style="text-align:center;">Fig. C.3. & C.4.</p>
-                <p style="text-align:left;"><b>Note: The model have 16 SA-S layers in total, and denoising with 50 steps. Red indicate the optimal value used in UniEdit.</b></p>
+                <p style="text-align:justify; word-wrap:break-word;"><b>Note: The model have 16 SA-S layers in total, and denoising with 50 steps. Red indicate the optimal value used in UniEdit.</b></p>
                 <br>
+                <p style="text-align:justify; word-wrap:break-word;"><b>Hyper-parameter Stability and Analysis.</b> For appearance editing, we observed that altering the blend layers and steps in Eq. 4 can effectively regulate the extent to which the edited image adheres to the original image. For instance, in the stylization shown in Fig. C.1, injecting the attention map into fewer (15) steps yields a stylized output that may not retain the same structure as the input, whereas injecting into all 50 steps results in videos with nearly identical textures but less stylization. Users can adjust the blended layers and steps to achieve their preferred balance between stylization and fidelity.
+                <br>
+                For motion editing, we use content preservation in Eq. 2 to maintain the original content (e.g., textures and background) from the source video. We varied the feature injection steps and layers in Fig. C.3 & C.4. We observed that replacing only the value features at a few steps leads to inconsistencies in the background (footprints on the beach) and character ID (height of the man). We also examined the impact of motion injection in Eq.3. As depicted in Fig. C.3, injecting into a few steps fails to edit the original motion in the source video; as the injection steps increase, the motion in the edited video progressively changes from 'walk' to 'stride' to 'run'. Therefore, adjusting these parameters can be seen as a trade-off between the "similarity of the edited video to the source video" and the "magnitude of motion in the edited video". Similar trade-offs are also encountered in the field of consistent generation. For instance, a concurrent work, ConsiStory [1] (released after the submission deadline), balances identity consistency and spatial layout diversity by tweaking the blending parameter and dropout probability, which is unavoidable for tuning-free methods. It's crucial to highlight that while the results may vary with parameter changes, reasonable outputs can still be obtained, albeit with differences in "consistency with the source video" and ""the magnitude of motion". Despite the variations, the core functionality and effectiveness of the method remain intact.</p>
+                <br>
+                <br>
+                <p style="text-align:justify; word-wrap:break-word;">[1] Tewel, Yoad, et al. "Training-Free Consistent Text-to-Image Generation."</p>
                 <hr style="margin-top:0px">
             </div>
         
@@ -515,12 +523,12 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:left;">Section D: Impact of Mask-Guided Coordination in UniEdit</h2>
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section D: Impact of Mask-Guided Coordination in UniEdit</h2>
                 <p></p>
-                    <p class="title is-5" style="text-align:left;">Visualization of attention maps in CA-S modules:</p>
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of attention maps in CA-S modules:</p>
                     <img src="./video/rebuttal/mask/CA_attn_vis.jpg" alt="Your browser does not support the image tag." loop>
 
-                    <p class="title is-5" style="text-align:left;">Visualization of masks:</p>
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of masks:</p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
                             <img src="./video/rebuttal/mask/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
@@ -540,7 +548,7 @@
                 <table style="table-layout: fixed;">
                     <tbody>
                         <tr>
-                            <p class="title is-5" style="text-align:left;">Synthesis results when using UniEdit with or without mask:</p>
+                            <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Synthesis results when using UniEdit with or without mask:</p>
                             
                             <p><strong>'in NYC Times Square' --> 'in park, in winter'</strong></p>
                             <td width="50%" style="text-align:center;">
@@ -606,6 +614,21 @@
                         
                     </tbody>
                 </table>
+
+                <p style="text-align:justify; word-wrap:break-word;">To investigate the impact of mask-guided coordination, we begin by visualizing masks obtained from 1) the attention map in CA-S modules; 2) the off-the-shelf segmentation model SAM [1], followed by presenting both qualitative and quantitative results of implementing UniEdit with or without mask-guided coordination.
+                <br>
+                <br>
+                As verified by previous work [2], the attention maps in CA-S modules contain correspondence information between text and visual features. The underlying intuition is that the attention maps between each word and the spatial features at point (i, j) indicate 'how similar this token is to the spatial feature at this location'. We visualize the text-image cross attention map alongside the synthesized video in Section D. We observe spatial correspondences that align with the video output from the attention map. For instance, areas with higher values of the token 'man' and 'NYC' correspond to the foreground and background, respectively. We further employ a fixed threshold (0.4 in practice) to derive binary segmentation maps from the attention maps. For comparison, we also display the segmentation mask obtained by point prompt on SAM. It's observed that the cross-attention mask is generally accurate and could serve as a reliable proxy in practice when an external segmentor is not available.
+                <br>
+                <br>
+                We examine the impact of mask-guided coordination through both qualitative and quantitative results across 4 settings: {w/o UniEdit, UniEdit w/o mask, UniEdit with mask from CA-S, UniEdit with mask from SAM}. Qualitatively, the implementation of UniEdit significantly enhances the consistency between the edited videos and the original video. The application of the mask-guided coordination technique further improves the consistency of unedited areas (e.g., color and texture). The quantitative results above align coherently with this analysis.
+                <br>
+                <br>
+                [1] Kirillov, Alexander, et al. "Segment anything."
+                <br>
+                [2] Hertz, Amir, et al. "Prompt-to-Prompt Image Editing with Cross-Attention Control."
+                </p>
+                
                 <hr style="margin-top:0px">
 
             </div>
@@ -662,6 +685,12 @@
                     <tr>
                 </tbody>
                 </table>
+                <p style="text-align:justify; word-wrap:break-word;">We chose LaVie as the base T2V model since it was the latest open-source T2V model when we started the research. Stable Video Diffusion [1] didn't release their text-to-video model, making it unavailable to build UniEdit on SVD. Furthermore, we additionally implement our method on VideoCrafter2 [2], a concurrent work on T2V generation to demonstrate the flexibility of UniEdit. The results are shown above.
+                <br>
+                <br>
+                [1] Blattmann, Andreas, et al. "Stable video diffusion: Scaling latent video diffusion models to large datasets."
+                [2] Chen, Haoxin, et al. "Videocrafter2: Overcoming data limitations for high-quality video diffusion models."</p>
+                
                 <br>
                 <hr style="margin-top:0px">
             </div>
@@ -674,8 +703,8 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:left;">Section F: Failure Cases Visualization</h2>
-                    <h2 class="title is-5" style="text-align:left;">Edit multiple elements simultaneously:</h2>
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section F: Failure Cases Visualization</h2>
+                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Edit multiple elements simultaneously:</h2>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
                             <img src="./video/rebuttal/failure/1.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
@@ -695,13 +724,20 @@
                             <p>raccoon --> kangaroo, play violin --> play guitar<br>(the model do not learn the correct posture for playing the violin, and whether or not our method is used, the model could not generate the posture of "violin on the shoulder")</p>
                         </div>
                     </div>
-                    <h2 class="title is-5" style="text-align:left;">Complex scene editing:</h2>
+                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Complex scene editing:</h2>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
                             <img src="./video/rebuttal/failure/3.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
                             <p>a shark on the left and several goldfish swim in a tank</p>
                         </div>
                     </div>
+                <br>
+                <p style="text-align:justify; word-wrap:break-word;">We exhibit failure cases in section F. Rows 1-3 showcase when editing multiple elements simultaneously, and we observe a relatively large inconsistency with the source video. A naive solution is that perform editing with UniEdit multiple times. Row 4 visualizes the results when editing video with complex scenes, and the model sometimes could not understand the semantics in the target prompt, resulting in incorrect editing. This may be caused by the base model's limited text understanding power, as discussed in [1]. It could be alleviated by leveraging the reasoning power of MLLM [1], or adapting approaches in complex scenario editing [2].
+                <br>
+                <br>
+                [10] Huang, Yuzhou, et al. "SmartEdit: Exploring Complex Instruction-based Image Editing with Multimodal Large Language Models."
+                <br>
+                [11] Mao, Qi, et al. "MAG-Edit: Localized Image Editing in Complex Scenarios via Mask-Based Attention-Adjusted Guidance."</p>
                 <br>
                 <hr style="margin-top:0px">
 
@@ -717,8 +753,8 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:left;">Section G: More Results and Visualization</h2>
-                    <h2 class="title is-5" style="text-align:left;">Visualization of the reconstruction branch and the motion-reference branch:</h2>
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section G: More Results and Visualization</h2>
+                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of the reconstruction branch and the motion-reference branch:</h2>
                     <p><strong>'playing guitar' --> 'waving'</strong></p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
@@ -735,9 +771,10 @@
                     </div>
                     <p>Fig. G.1.</p>
                     <br>
+                    <p style="text-align:justify; word-wrap:break-word;">The output of each branch is visualized in section G, Fig. G.1, where it is observed that the motion branch (right) generate video with the target motion, and effectively transfer it to the main path (middle); meanwhile, the main path inherit the content from the reconstruction branch (left), thus enhance the consistency of unedited parts.</p>
                     <hr style="margin-top:0px">
 
-                    <h2 class="title is-5" style="text-align:left;">Qualitative results on the reconstruction branch</h2>
+                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Qualitative results on the reconstruction branch:</h2>
                         <div style="display: flex; justify-content: space-between;">
                             <div>
                                 <img src="./video/rebuttal/recons/input_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
@@ -767,9 +804,10 @@
                             </div>
                         </div>
                         <p>Fig. G.2.</p>
+                        <p style="text-align:justify; word-wrap:break-word;">As seen, the reconstruction branch is capable of faithfully reconstructing the source video. Therefore, the reconstruction branch retains the content of the source video and can be leveraged for content preservation during the editing process.</p>
                     <br>
                     <hr style="margin-top:0px">
-                    <p class="title is-5" style="text-align:left;">Visualization of foreground mask extracted by U^2-Net:</p>
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of foreground mask extracted by \(U^2\)-Net:</p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
                             <img src="./video/rebuttal/salient/sos1_source.png" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
@@ -784,7 +822,7 @@
                     <p>Fig. G.3.</p>
 
                     <hr style="margin-top:0px">
-                    <p class="title is-5" style="text-align:left;">Motion editing results of Dreamix (copied from their official website):</p>
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Motion editing results of Dreamix (copied from their official website):</p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
                             <video width="98%" autoplay muted loop>
