@@ -24,6 +24,29 @@
   
       gtag('config', 'G-PYVRSFMDRL');
     </script>
+
+<!-- <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td, th {
+        border: 1px solid black;
+        padding: 8px;
+    }
+</style> -->
+
+<style>
+    .bordered-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .bordered-table td, .bordered-table th {
+        border: 1px solid black;
+        padding: 8px;
+    }
+</style>
+
   
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
           rel="stylesheet">
@@ -215,9 +238,60 @@
                             <img src="./video/rebuttal/tgve/difference.svg" style="float: left; width: 100%;">
                             <p>Fig A.2.</p>
                             <p style="text-align:justify; word-wrap:break-word;">We highlight the contrast in Fig. A.2. Tune-A-Video (TAV) produces videos with poor temporal consistency and significant content changes (e.g., the crowd behind the racing car, the fields behind the cat). MasaCtrl*, FateZero, and TokenFlow tend to generate videos that are highly similar to the source, but fail to make edits that match the prompt (e.g., lack of raindrops in column 1 and noticeable stylistic changes in columns 2 and 3). Similarly, Rerender-A-Video also falls short in aligning with the target prompt and has significant color differences compared to the source. Additionally, all baselines are unable to modify the temporal dependency of the source video, leading to their failure in motion editing.</p>
+                            <br>
                             <p style="text-align:justify; word-wrap:break-word;">In contrast, the proposed UniEdit stands out for its ability to generate videos with 1) better content preservation 2) alignment with the target prompt 3) capability for various appearance editing tasks (including global stylization, local object replacement, or background modification), and motion editing.</p>
-                            
-
+                            <br>
+                            <p style="text-align:justify; word-wrap:break-word;">In addition to the 20 evaluation videos from the original paper, we have expanded the validation set with 20 randomly sampled source video clips from the loveu-tgve-2023 [1] dataset, along with their corresponding 80 text prompts, resulting in a total of 100 edited videos. The CLIP metrics on this new validation set are as follows:</p>
+                            <br>
+                            <table class="bordered-table">
+                                <tr>
+                                    <td>CLIP Metrics</td>
+                                    <td>Textual Alignment (&uarr;)</td>
+                                    <td>Frame Consistency (&uarr;)</td>
+                                </tr>
+                                <tr>
+                                    <td>TAV</td>
+                                    <td>27.89</td>
+                                    <td>95.39</td>
+                                </tr>
+                                <tr>
+                                    <td>MasaCtrl∗</td>
+                                    <td>25.58</td>
+                                    <td>97.61</td>
+                                </tr>
+                                <tr>
+                                    <td>FateZero</td>
+                                    <td>27.30</td>
+                                    <td>96.72</td>
+                                </tr>
+                                <tr>
+                                    <td>Rerender</td>
+                                    <td>27.94</td>
+                                    <td>97.18</td>
+                                </tr>
+                                <tr>
+                                    <td>TokenFlow</td>
+                                    <td>28.58</td>
+                                    <td>97.02</td>
+                                </tr>
+                                <tr>
+                                    <td>UniEdit (w/o mask)</td>
+                                    <td>31.43</td>
+                                    <td>98.35</td>
+                                </tr>
+                                <tr>
+                                    <td>UniEdit (w CA-S mask)</td>
+                                    <td>31.49</td>
+                                    <td>98.33</td>
+                                </tr>
+                                <tr>
+                                    <td>UniEdit (w SAM mask)</td>
+                                    <td>31.50</td>
+                                    <td>98.36</td>
+                                </tr>
+                            </table>
+                <br>
+                <p style="text-align:justify; word-wrap:break-word;">[1] Wu, Jay Zhangjie, et al. "Cvpr 2023 text guided video editing competition." *arXiv preprint arXiv:2310.16003* (2023).
                 <hr style="margin-top:0px">
 
             </div>
@@ -261,6 +335,8 @@
                     <p>Fig B.1.</p>
                     <br>
                     <p style="text-align:justify; word-wrap:break-word;"><strong>Observation:</strong> The query and key features (in SA-S modules) dictate the spatial structure of the generated video, while the value features tend to influence the texture, including details such as color tones.<br>To comprehend why we can have inhomogeneous QK and V and their differences, we visualized the results of swapping different features (QK or V) in SA-S modules during style transfer tasks on the source video in Fig. B.1. As can be seen, compared to Fig. B.1(b) with no feature replacement, replacing QK (Fig. B.1(c)) results in the edited video adopting the same spatial structure as the source video. Simultaneously, replacing V eradicates the style information in (Fig. B.1(b)), meaning the texture details from the source video are utilized to replace the style depicted by the target prompt.</p>
+
+
                     <br>
                     <hr style="margin-top:0px">
                     <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Influence of Spatial Structure Control in Motion Editing:</p>
@@ -281,8 +357,62 @@
                     </div>
                     <p>Fig B.2.</p>
                     <br>
-                    <p style="text-align:justify; word-wrap:break-word;">We explored the role of spatial control in motion editing. The proposed method synthesizes videos with larger modifications when removing the spatial control mechanism on both the motion-reference branch and the main editing branch. We visualized the results in Fig. B.2, from left to right are {reconstruction branch, main editing path, and motion reference branch} respectively. It can be observed that although the motion-reference branch can still generate the target motion without the control of spatial layout, the structure deviates significantly, for example, the raccoon assumes a different pose and location. We regard this as a suboptimal solution because, compared to the results presented in the paper, the results w/o spatial structure control modifies the object position of the source video, leading to a decrease in consistency between the edited result and the source video.</p>
+                    <p style="text-align:justify; word-wrap:break-word;">We explored the role of spatial control in motion editing. The proposed method synthesizes videos with larger modifications when removing the spatial control mechanism on both the motion-reference branch and the main editing branch. We visualized the results in Fig. B.2, from left to right are {reconstruction branch, main editing path, and motion reference branch} respectively. It can be observed that although the motion-reference branch can still generate the target motion without the control of spatial layout, the structure deviates significantly, for example, the raccoon assumes a different pose and location. We regard this as a suboptimal solution because, compared to the results presented in the paper, the results w/o spatial structure control modifies the object position of the source video, leading to a decrease in consistency between the edited result and the source video.
+                    <br>
+                    <br>
+                    We add the quantitative results below:</p>
                 <br>
+                
+                <table class="bordered-table">
+                    <tr>
+                        <td>Content Preservation</td>
+                        <td>Motion Injection</td>
+                        <td>Structure Control</td>
+                        <td>Frame Similarity (&uarr;)</td>
+                        <td>Textual Alignment (&uarr;)</td>
+                        <td>Frame Consistency (&uarr;)</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>90.54</td>
+                        <td>28.76</td>
+                        <td>96.99</td>
+                    </tr>
+                    <tr>
+                        <td>&check;</td>
+                        <td></td>
+                        <td></td>
+                        <td>97.28</td>
+                        <td>29.95</td>
+                        <td>98.12</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td>91.30</td>
+                        <td>31.48</td>
+                        <td>98.08</td>
+                    </tr>
+                    <tr>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td></td>
+                        <td>96.11</td>
+                        <td>31.37</td>
+                        <td>98.12</td>
+                    </tr>
+                    <tr>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td>96.29</td>
+                        <td>31.43</td>
+                        <td>98.09</td>
+                    </tr>
+                </table>
                 <hr style="margin-top:0px">
 
             </div>
@@ -427,11 +557,11 @@
                     <tbody>
                         <p style="text-align:justify; word-wrap:break-word;">Source video:</p>
                         <tr>
-                            <td colspan="9" style="text-align:center;"><strong>'walking' --> 'jumping'</strong></td>
+                            <td colspan="9" style="text-align:center; border: none;"><strong>'walking' --> 'jumping'</strong></td>
                         </tr>
                         <tr>
                             <!-- First row of videos -->
-                            <td width="20%" style="text-align:center;"> 
+                            <td width="20%" style="text-align:center; border: none;"> 
                                 <img src="./video/rebuttal/hyper/cat_source.gif" alt="Your browser does not support the image tag." loop>
                                 <br>
                                 <br>
@@ -440,27 +570,27 @@
                         <tr>
                         
                         <tr>
-                            <td colspan="5" style="text-align:justify; word-wrap:break-word;">Changing <b>content preservation</b> layers in Eq. 2:</td>
+                            <td colspan="5" style="text-align:justify; word-wrap:break-word; border: none;">Changing <b>content preservation</b> layers in Eq. 2:</td>
                         </tr>
     
                         <tr>
                             <!-- First row of videos -->
-                            <td width="20%" style="text-align:center;"> 
+                            <td width="20%" style="text-align:center; border: none;"> 
                                 <img src="./video/rebuttal/hyper/cat1.gif" alt="Your browser does not support the image tag." loop>
                                 <p><centered>step:[4-50] layer:[7-16]</centered></p>
                                 <br>
                             </td>
-                            <td width="20%" style="text-align:center;"> 
+                            <td width="20%" style="text-align:center; border: none;"> 
                                 <img src="./video/rebuttal/hyper/cat2.gif" alt="Your browser does not support the image tag." loop>
                                 <p><centered>step:[4-50] layer:[8-16]</centered></p>
                                 <br>
                             </td>
-                            <td width="20%" style="text-align:center;"> 
+                            <td width="20%" style="text-align:center; border: none;"> 
                                 <img src="./video/rebuttal/hyper/cat3.gif" alt="Your browser does not support the image tag." loop>
                                 <p><centered>step:[4-50] layer:[9-16]</centered></p>
                                 <br>
                             </td>
-                            <td width="20%" style="text-align:center;"> 
+                            <td width="20%" style="text-align:center; border: none;"> 
                                 <img src="./video/rebuttal/hyper/cat4_8.gif" alt="Your browser does not support the image tag." loop>
                                 <p><centered><span style="color:red;">step:[4-50] layer:[10-16]</span></centered></p>
                                 <br>
@@ -469,29 +599,29 @@
                         <tr>
     
                         <tr>
-                            <td colspan="5" style="text-align:justify; word-wrap:break-word;">Changing <b>motion injection</b> layers in Eq. 3:</td>
+                            <td colspan="5" style="text-align:justify; word-wrap:break-word; border: none;">Changing <b>motion injection</b> layers in Eq. 3:</td>
                         </tr>
     
                         <tr>
                             
                             <!-- First row of videos -->
     
-                            <td width="20%" style="text-align:center;"> 
+                            <td width="20%" style="text-align:center;border: none;"> 
                                 <img src="./video/rebuttal/hyper/cat5.gif" alt="Your browser does not support the image tag." loop>
                                 <p><centered>step:[0-50] layer:[0-4]</centered></p>
                                 <br>
                             </td>
-                            <td width="20%" style="text-align:center;"> 
+                            <td width="20%" style="text-align:center;border: none;"> 
                                 <img src="./video/rebuttal/hyper/cat6.gif" alt="Your browser does not support the image tag." loop>
                                 <p><centered>step:[0-50] layer:[0-8]</centered></p>
                                 <br>
                             </td>
-                            <td width="20%" style="text-align:center;"> 
+                            <td width="20%" style="text-align:center;border: none;"> 
                                 <img src="./video/rebuttal/hyper/cat7.gif" alt="Your browser does not support the image tag." loop>
                                 <p><centered>step:[0-50] layer:[0-12]</centered></p>
                                 <br>
                             </td>
-                            <td width="20%" style="text-align:center;"> 
+                            <td width="20%" style="text-align:center;border: none;"> 
                                 <img src="./video/rebuttal/hyper/cat4_8.gif" alt="Your browser does not support the image tag." loop>
                                 <centered><span style="color:red;">step:[0-50] layer:[0-16]</span></centered></p>
                                 <br>
@@ -504,12 +634,79 @@
                 <p style="text-align:center;">Fig. C.3. & C.4.</p>
                 <p style="text-align:justify; word-wrap:break-word;"><b>Note: The model have 16 SA-S layers in total, and denoising with 50 steps. Red indicate the optimal value used in UniEdit.</b></p>
                 <br>
+                <p style="text-align:justify; word-wrap:break-word;"><b>In practice, we empirically found set these values to fixed values, i.e., \(t_0=4, l_0=10\) (same as MasaCtrl [2]) and \(t_1=0, l_1=0\) (means replacement on all layers and steps) can achieve good results on most cases, and we further perform a quantitative study when applying different hyper-parameters:</b></p>
+                
+                    <table class="bordered-table">
+                        <tr>
+                            <td>Metric</td>
+                            <td>Frame Similarity</td>
+                            <td>Textual Alignment</td>
+                            <td>Frame Consistency</td>
+                        </tr>
+                        <tr>
+                            <td>step:[4-20] layer:[10-16]</td>
+                            <td>94.33</td>
+                            <td>31.57</td>
+                            <td>98.09</td>
+                        </tr>
+                        <tr>
+                            <td>step:[4-50] layer:[10-16]</td>
+                            <td>96.29</td>
+                            <td>31.43</td>
+                            <td>98.09</td>
+                        </tr>
+                        <tr>
+                            <td>step:[4-50] layer:[8-16]</td>
+                            <td>96.76</td>
+                            <td>31.25</td>
+                            <td>98.11</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Metric</td>
+                            <td>Frame Similarity</td>
+                            <td>Textual Alignment</td>
+                            <td>Frame Consistency</td>
+                        </tr>
+                        <!-- <tr>
+                            <td>-------------------------</td>
+                            <td>:--------------:</td>
+                            <td>:---------------:</td>
+                            <td>:---------------:</td>
+                        </tr> -->
+                        <tr>
+                            <td>step:[0-20] layer:[0-16]</td>
+                            <td>96.51</td>
+                            <td>30.82</td>
+                            <td>98.06</td>
+                        </tr>
+                        <tr>
+                            <td>step:[0-50] layer:[0-16]</td>
+                            <td>96.29</td>
+                            <td>31.43</td>
+                            <td>98.09</td>
+                        </tr>
+                        <tr>
+                            <td>step:[0-50] layer:[10-16]</td>
+                            <td>96.50</td>
+                            <td>31.04</td>
+                            <td>98.08</td>
+                        </tr>
+                    </table>
+                <br>
                 <p style="text-align:justify; word-wrap:break-word;"><b>Hyper-parameter Stability and Analysis.</b> For appearance editing, we observed that altering the blend layers and steps in Eq. 4 can effectively regulate the extent to which the edited image adheres to the original image. For instance, in the stylization shown in Fig. C.1, injecting the attention map into fewer (15) steps yields a stylized output that may not retain the same structure as the input, whereas injecting into all 50 steps results in videos with nearly identical textures but less stylization. Users can adjust the blended layers and steps to achieve their preferred balance between stylization and fidelity.
                 <br>
-                For motion editing, we use content preservation in Eq. 2 to maintain the original content (e.g., textures and background) from the source video. We varied the feature injection steps and layers in Fig. C.3 & C.4. We observed that replacing only the value features at a few steps leads to inconsistencies in the background (footprints on the beach) and character ID (height of the man). We also examined the impact of motion injection in Eq.3. As depicted in Fig. C.3, injecting into a few steps fails to edit the original motion in the source video; as the injection steps increase, the motion in the edited video progressively changes from 'walk' to 'stride' to 'run'. Therefore, adjusting these parameters can be seen as a trade-off between the "similarity of the edited video to the source video" and the "magnitude of motion in the edited video". Similar trade-offs are also encountered in the field of consistent generation. For instance, a concurrent work, ConsiStory [1] (released after the submission deadline), balances identity consistency and spatial layout diversity by tweaking the blending parameter and dropout probability, which is unavoidable for tuning-free methods. It's crucial to highlight that while the results may vary with parameter changes, reasonable outputs can still be obtained, albeit with differences in "consistency with the source video" and ""the magnitude of motion". Despite the variations, the core functionality and effectiveness of the method remain intact.</p>
+                For motion editing, we use content preservation in Eq. 2 to maintain the original content (e.g., textures and background) from the source video. We varied the feature injection steps and layers in Fig. C.3 & C.4. We observed that replacing only the value features at a few steps leads to inconsistencies in the background (footprints on the beach) and character ID (height of the man). We also examined the impact of motion injection in Eq.3. As depicted in Fig. C.3, injecting into a few steps fails to edit the original motion in the source video; as the injection steps increase, the motion in the edited video progressively changes from 'walk' to 'stride' to 'run'. Therefore, adjusting these parameters can be seen as a trade-off between the "similarity of the edited video to the source video" and the "magnitude of motion in the edited video". Similar trade-offs are also encountered in the field of consistent generation. For instance, a concurrent work, ConsiStory [2] (released after the submission deadline), balances identity consistency and spatial layout diversity by tweaking the blending parameter and dropout probability, which is unavoidable for tuning-free methods. It's crucial to highlight that while the results may vary with parameter changes, reasonable outputs can still be obtained, albeit with differences in "consistency with the source video" and ""the magnitude of motion". Despite the variations, the core functionality and effectiveness of the method remain intact.</p>
                 <br>
                 <br>
-                <p style="text-align:justify; word-wrap:break-word;">[1] Tewel, Yoad, et al. "Training-Free Consistent Text-to-Image Generation."</p>
+                <p style="text-align:justify; word-wrap:break-word;">[1] Cao, Mingdeng, et al. "Masactrl: Tuning-free mutual self-attention control for consistent image synthesis and editing."
+                <br>
+                [2] Tewel, Yoad, et al. "Training-Free Consistent Text-to-Image Generation."</p>
                 <hr style="margin-top:0px">
             </div>
         
@@ -804,6 +1001,27 @@
                             </div>
                         </div>
                         <p>Fig. G.2.</p>
+                        <table style="border-collapse: collapse; width: 100%;">
+                            <tr>
+                                <td style="border: 1px solid black;">Metrics</td>
+                                <td style="border: 1px solid black;">FID (&darr;)</td>
+                                <td style="border: 1px solid black;">LPIPS (&darr;)</td>
+                                <td style="border: 1px solid black;">PSNR (&uarr;)</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid black;">DDIM</td>
+                                <td style="border: 1px solid black;">21.30</td>
+                                <td style="border: 1px solid black;">0.140</td>
+                                <td style="border: 1px solid black;">34.26</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid black;">DDIM + Null-text inversion [4]</td>
+                                <td style="border: 1px solid black;">17.81</td>
+                                <td style="border: 1px solid black;">0.158</td>
+                                <td style="border: 1px solid black;">33.75</td>
+                            </tr>
+                        </table>
+
                         <p style="text-align:justify; word-wrap:break-word;">As seen, the reconstruction branch is capable of faithfully reconstructing the source video. Therefore, the reconstruction branch retains the content of the source video and can be leveraged for content preservation during the editing process.</p>
                     <br>
                     <hr style="margin-top:0px">
