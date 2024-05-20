@@ -99,981 +99,34 @@
     </section>
     <div id="container"></div>
 
-    <!-- <script>
-
-    var gifUrls = [
-    './video/rebuttal/tgve/airplane/input.gif',
-    './video/rebuttal/tgve/basketball/input.gif',
-    './video/rebuttal/tgve/car/input.gif',
-    './video/rebuttal/tgve/cat_object/input.gif',
-    './video/rebuttal/tgve/cat_motion/input.gif',
-    './video/rebuttal/tgve/airplane/tuneavideo.gif',
-    './video/rebuttal/tgve/basketball/tuneavideo.gif',
-    './video/rebuttal/tgve/car/tuneavideo.gif',
-    './video/rebuttal/tgve/cat_object/tuneavideo.gif',
-    './video/rebuttal/tgve/cat_motion/tuneavideo.gif',
-    './video/rebuttal/tgve/airplane/masactrl.gif',
-    './video/rebuttal/tgve/basketball/masactrl.gif',
-    './video/rebuttal/tgve/car/masactrl.gif',
-    './video/rebuttal/tgve/cat_object/masactrl.gif',
-    './video/rebuttal/tgve/cat_motion/masactrl.gif',
-    './video/rebuttal/tgve/airplane/fatezero.gif',
-    './video/rebuttal/tgve/basketball/fatezero.gif',
-    './video/rebuttal/tgve/car/fatezero.gif',
-    './video/rebuttal/tgve/cat_object/fatezero.gif',
-    './video/rebuttal/tgve/cat_motion/fatezero.gif',
-    './video/rebuttal/tgve/airplane/tokenflow.gif',
-    './video/rebuttal/tgve/basketball/tokenflow.gif',
-    './video/rebuttal/tgve/car/tokenflow.gif',
-    './video/rebuttal/tgve/cat_object/tokenflow.gif',
-    './video/rebuttal/tgve/cat_motion/tokenflow.gif',
-    './video/rebuttal/tgve/airplane/rerender.gif',
-    './video/rebuttal/tgve/basketball/rerender.gif',
-    './video/rebuttal/tgve/car/rerender.gif',
-    './video/rebuttal/tgve/cat_object/rerender.gif',
-    './video/rebuttal/tgve/cat_motion/rerender.gif',
-    './video/rebuttal/tgve/airplane/ours.gif',
-    './video/rebuttal/tgve/basketball/ours.gif',
-    './video/rebuttal/tgve/car/ours.gif',
-    './video/rebuttal/tgve/cat_object/ours.gif',
-    './video/rebuttal/tgve/cat_motion/ours.gif'
-    ];
-    
-    function loadGif(url) {
-      return new Promise(function(resolve, reject) {
-        var img = new Image();
-        img.onload = function() {
-          resolve(img);
-        };
-        img.onerror = function() {
-          reject(new Error('Failed to load image ' + url));
-        };
-        img.src = url;
-      });
-    }
-    
-    async function loadAllGifs() {
-      try {
-        var images = await Promise.all(gifUrls.map(loadGif));
-        // var container = document.getElementById('container');
-        // for (var i = 0; i < images.length; i++) {
-        //   var div = document.createElement('div');
-        //   div.style.display = 'flex';
-        //   div.style.width = '20%';
-        //   div.appendChild(images[i]);
-        //   container.appendChild(div);
-        // }
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    
-    loadAllGifs();
-    </script> -->
-
-    <!-- <script>
-        window.onload = function() {
-            var images = document.getElementsByTagName('img');
-            for (var i = 0; i < images.length; i++) {
-                images[i].src = images[i].src;
-            }
-        }
-    </script> -->
-        
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const images = document.getElementsByTagName('img');
-            let loadedImages = 0; // Counter for loaded images
-
-            // Function to update image src
-            const updateImageSrc = (img) => {
-                const src = img.getAttribute('src');
-                const timeStamp = new Date().getTime();
-                const delimiter = src.includes('?') ? '&' : '?';
-                img.setAttribute('src', `${src}${delimiter}nocache=${timeStamp}`);
-            };
-
-            // Event listener for image load
-            const onImageLoad = () => {
-                loadedImages++; // Increment counter
-                if (loadedImages === images.length) { // Check if all images are loaded
-                    Array.from(images).forEach(img => updateImageSrc(img));
-                }
-            };
-
-            Array.from(images).forEach(img => {
-                img.addEventListener('load', onImageLoad);
-                // Trigger load event by updating image src
-                updateImageSrc(img);
-            });
-        });
-    </script> -->
     <p class="title is-5" style="text-align:center; color: red;">Loading all videos may take some time. Thank you for your patience.</p>
-    <section>
+    <section class="hero teaser">
         <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section A: Qualitative Results on LOVEU-TGVE-2023</h2>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <div style="width: 100%;">
-                            <!-- <div style="width: 100%;">
-                                <img src="./video/rebuttal/tgve/cap.svg" style="float: left; width: 4.7%;">
-                                <img src="./video/rebuttal/tgve/concat.gif" style="float: left; width: 95%;" loop>
-                            </div> -->
-                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
-                            <div style="width: 100%;">
-                                <img src="./video/rebuttal/tgve/cap.svg" style="float: left; width: 4.7%;">
-                                <img src="./video/rebuttal/tgve/airplane/concatenated.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/rebuttal/tgve/basketball/concatenated.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/rebuttal/tgve/car/concatenated.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/rebuttal/tgve/cat_object/concatenated.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/rebuttal/tgve/cat_motion/concatenated.gif" style="float: left; width: 19%;" loop>
-                            </div>
-                            <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
-                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
-                            <p>Fig A.1.</p>
-                            <br>
-                            <br>
-                            <img src="./video/rebuttal/tgve/difference.svg" style="float: left; width: 100%;">
-                            <p>Fig A.2.</p>
-                            <p style="text-align:justify; word-wrap:break-word;">We highlight the contrast in Fig. A.2. Tune-A-Video (TAV) produces videos with poor temporal consistency and significant content changes (e.g., the crowd behind the racing car, the fields behind the cat). MasaCtrl*, FateZero, and TokenFlow tend to generate videos that are highly similar to the source, but fail to make edits that match the prompt (e.g., lack of raindrops in column 1 and noticeable stylistic changes in columns 2 and 3). Similarly, Rerender-A-Video also falls short in aligning with the target prompt and has significant color differences compared to the source. Additionally, all baselines are unable to modify the temporal dependency of the source video, leading to their failure in motion editing.</p>
-                            <br>
-                            <p style="text-align:justify; word-wrap:break-word;">In contrast, the proposed UniEdit stands out for its ability to generate videos with 1) better content preservation 2) alignment with the target prompt 3) capability for various appearance editing tasks (including global stylization, local object replacement, or background modification), and motion editing.</p>
-                            <br>
-                            <p style="text-align:justify; word-wrap:break-word;">In addition to the 20 evaluation videos from the original paper, we have expanded the validation set with 20 randomly sampled source video clips from the loveu-tgve-2023 [1] dataset, along with their corresponding 80 text prompts, resulting in a total of 100 edited videos. The CLIP metrics on this new validation set are as follows:</p>
-                            <br>
-                            <table class="bordered-table">
-                                <tr>
-                                    <td>CLIP Metrics</td>
-                                    <td>Textual Alignment (&uarr;)</td>
-                                    <td>Frame Consistency (&uarr;)</td>
-                                </tr>
-                                <tr>
-                                    <td>TAV</td>
-                                    <td>27.89</td>
-                                    <td>95.39</td>
-                                </tr>
-                                <tr>
-                                    <td>MasaCtrl∗</td>
-                                    <td>25.58</td>
-                                    <td>97.61</td>
-                                </tr>
-                                <tr>
-                                    <td>FateZero</td>
-                                    <td>27.30</td>
-                                    <td>96.72</td>
-                                </tr>
-                                <tr>
-                                    <td>Rerender</td>
-                                    <td>27.94</td>
-                                    <td>97.18</td>
-                                </tr>
-                                <tr>
-                                    <td>TokenFlow</td>
-                                    <td>28.58</td>
-                                    <td>97.02</td>
-                                </tr>
-                                <tr>
-                                    <td>UniEdit (w/o mask)</td>
-                                    <td>31.43</td>
-                                    <td>98.35</td>
-                                </tr>
-                                <tr>
-                                    <td>UniEdit (w CA-S mask)</td>
-                                    <td>31.49</td>
-                                    <td>98.33</td>
-                                </tr>
-                                <tr>
-                                    <td>UniEdit (w SAM mask)</td>
-                                    <td>31.50</td>
-                                    <td>98.36</td>
-                                </tr>
-                            </table>
-                <br>
-                <p style="text-align:justify; word-wrap:break-word;">[1] Wu, Jay Zhangjie, et al. "Cvpr 2023 text guided video editing competition." *arXiv preprint arXiv:2310.16003* (2023).
-                <hr style="margin-top:0px">
-
+            <div class="hero-body">
+              <!-- <img src="./static/images/fig1.svg" alt="Examples edited by UniEdit." style="transform: translateX(-13.5px);"/> -->
+              <!-- <video autoplay controls muted loop playsinline>
+                <source src="./video/fig1_demo_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video> -->
+              <img src="./video/fig1_demo_video.gif" alt="Your browser does not support the image tag." loop>
+              <h2 class="content has-text-centered">
+                UniEdit supports both video <strong><span style="color: #F0A780;">motion</span></strong> editing in the time axis (i.e., from playing guitar to eating or waving) and various video <strong><span style="color: #156082;">appearance</span></strong> editing scenarios (i.e., stylization, rigid/non-rigid object replacement, background modification).
+              </h2>
+              <h2 class="content has-text-centered">
+                <p style="text-align:left; padding-left: 0px; color: red;">We organize the project page as follows:</p>
+                <p style="text-align:left; padding-left: 0px;">Section A: Video Editing Results with UniEdit (based on <a href="https://github.com/Vchitect/LaVie">LaVie</a> and <a href="https://github.com/AILab-CVC/VideoCrafter">VideoCrafter2</a>);<br>Section B: Analysis on the Proposed Components in UniEdit;<br>Section C: Impact of Hyper-parameter Selection;<br>Section D: Impact of Mask-Guided Coordination;<br>Section E: More Results and Visualization;<br>Section F: Failure Cases Visualization;<br>Section G: Comparison with State-of-the-Art Methods.</p>
+              </h2>
             </div>
-        
-        </div>
-        </div>
-        
-    <br>
-    </section>
-
-
-    <section>
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section B: Analysis on the Proposed Components in UniEdit</h2>
-                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Difference between QK and V features in SA-S modules:</p>
-                    <p><strong>+ 'Van Gogh style'</strong></p>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <img src="./video/rebuttal/explain_v/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p>(a) source video</p>
-                        </div>
-                        <div>
-                            <img src="./video/rebuttal/explain_v/stylization_wo_ours.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p>(b) w/o feature replacement</p>
-                        </div>
-
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-
-                        <div>
-                            <img src="./video/rebuttal/explain_v/stylization_qk.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p>(c) w/ query and key features replacement</p>
-                        </div>
-                        <div>
-                            <img src="./video/rebuttal/explain_v/stylization_v.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p>(d) w/ value features replacement + query and key in (b)</p>
-                        </div>
-                    </div>
-                    <p>Fig B.1.</p>
-                    <br>
-                    <p style="text-align:justify; word-wrap:break-word;"><strong>Observation:</strong> The query and key features (in SA-S modules) dictate the spatial structure of the generated video, while the value features tend to influence the texture, including details such as color tones.<br>To comprehend why we can have inhomogeneous QK and V and their differences, we visualized the results of swapping different features (QK or V) in SA-S modules during style transfer tasks on the source video in Fig. B.1. As can be seen, compared to Fig. B.1(b) with no feature replacement, replacing QK (Fig. B.1(c)) results in the edited video adopting the same spatial structure as the source video. Simultaneously, replacing V eradicates the style information in (Fig. B.1(b)), meaning the texture details from the source video are utilized to replace the style depicted by the target prompt.</p>
-
-
-                    <br>
-                    <hr style="margin-top:0px">
-                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Influence of Spatial Structure Control in Motion Editing:</p>
-                    <p><strong>'playing guitar' --> 'eating an apple'</strong></p>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <img src="./video/rebuttal/motion_editing_w_wo_spatial/wo_spatial.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p>(a). w/o Spatial Structure Control</p>
-                        </div>
-
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-
-                        <div>
-                            <img src="./video/rebuttal/motion_editing_w_wo_spatial/w_spatial.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p>(b). w/ Spatial Structure Control</p>
-                        </div>
-                    </div>
-                    <p>Fig B.2.</p>
-                    <br>
-                    <p style="text-align:justify; word-wrap:break-word;">We explored the role of spatial control in motion editing. The proposed method synthesizes videos with larger modifications when removing the spatial control mechanism on both the motion-reference branch and the main editing branch. We visualized the results in Fig. B.2, from left to right are {reconstruction branch, main editing path, and motion reference branch} respectively. It can be observed that although the motion-reference branch can still generate the target motion without the control of spatial layout, the structure deviates significantly, for example, the raccoon assumes a different pose and location. We regard this as a suboptimal solution because, compared to the results presented in the paper, the results w/o spatial structure control modifies the object position of the source video, leading to a decrease in consistency between the edited result and the source video.
-                    <br>
-                    <br>
-                    We add the quantitative results below:</p>
-                <br>
-                
-                <table class="bordered-table">
-                    <tr>
-                        <td>Content Preservation</td>
-                        <td>Motion Injection</td>
-                        <td>Structure Control</td>
-                        <td>Frame Similarity (&uarr;)</td>
-                        <td>Textual Alignment (&uarr;)</td>
-                        <td>Frame Consistency (&uarr;)</td>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>90.54</td>
-                        <td>28.76</td>
-                        <td>96.99</td>
-                    </tr>
-                    <tr>
-                        <td>&check;</td>
-                        <td></td>
-                        <td></td>
-                        <td>97.28</td>
-                        <td>29.95</td>
-                        <td>98.12</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>&check;</td>
-                        <td>&check;</td>
-                        <td>91.30</td>
-                        <td>31.48</td>
-                        <td>98.08</td>
-                    </tr>
-                    <tr>
-                        <td>&check;</td>
-                        <td>&check;</td>
-                        <td></td>
-                        <td>96.11</td>
-                        <td>31.37</td>
-                        <td>98.12</td>
-                    </tr>
-                    <tr>
-                        <td>&check;</td>
-                        <td>&check;</td>
-                        <td>&check;</td>
-                        <td>96.29</td>
-                        <td>31.43</td>
-                        <td>98.09</td>
-                    </tr>
-                </table>
-                <hr style="margin-top:0px">
-
-            </div>
-        
-        </div>
-        </div>
-        
-    <br>
-    </section>
-    
-    <section>
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section C: Impact of Hyper-parameter Selection in UniEdit</h2>
-
-                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Appearance Editing (global):</p>
-                <img src="./video/rebuttal/hyper/fig8.jpg" alt="Your browser does not support the image tag." loop>
-                <p>Fig. C.1. (copied from Fig.8 in the main text)</p>
-                <br>
-                <p style="text-align:justify; word-wrap:break-word;">For appearance editing, it's observed that changing the blend layers (\(t_2\)) and steps (\(l_2\)) in Eq. 4 could effectively adjust the degree to which the edited image remains faithful to the original image. Take stylization in Fig. 8 as an example, attention map injection on fewer (15) steps produces a stylized output that may not have the same structure as the input, and injection on all 50 steps could obtain videos with almost identical textures but less stylized. The user can adjust the blended layers and steps to realize their desired balancing between stylization and faithfully.</p>
-                <hr style="margin-top:0px">
-
-                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Appearance Editing (local):</p>
-                <p><strong>'cat' --> 'dog'</strong></p>
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
-                        <img src="./video/rebuttal/hyper/0-15 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">step:[0-15] layer:[0-16]</p>
-                    </div>
-                    <div>
-                        <img src="./video/rebuttal/hyper/0-20 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">step:[0-20] layer:[0-16]</p>
-                    </div>
-                </div>
-                <br>
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
-                        <img src="./video/rebuttal/hyper/0-25 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">step:[0-25] layer:[0-16]</p>
-                    </div>
-                    <div>
-                        <img src="./video/rebuttal/hyper/0-30 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">step:[0-30] layer:[0-16]</p>
-                    </div>
-                </div>
-                <br>
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
-                        <img src="./video/rebuttal/hyper/0-35 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">step:[0-35] layer:[0-16]</p>
-                    </div>
-                    <div>
-                        <img src="./video/rebuttal/hyper/0-40 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">step:[0-40] layer:[0-16]</p>
-                    </div>
-                </div>
-                <p style="text-align:center;">Fig. C.2.</p>
-                <br>
-                <p style="text-align:justify; word-wrap:break-word;">The same conclusion was also confirmed in local appearance editing. As shown in the figure above, when we do non-rigid (deformable) object replacement, we find that as the feature injection steps increase, the outline of the "dog" becomes more and more similar to the outline of the cat in the source video. And the appropriate hyperparameters (i.e., ~25 steps) bring the best results.</p>
-                <br>
-                <hr style="margin-top:0px">
-
-                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Motion Editing:</p>
-                <table style="table-layout: fixed;">
-                <tbody>
-                    <p style="text-align:justify; word-wrap:break-word;">Source video:</p>
-                    <p><strong>'walking' --> 'running'</strong></p>
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/rebuttal/hyper/source.gif" alt="Your browser does not support the image tag." loop>
-                            <br>
-                            <br>
-                        </td>
-
-                    <tr>
-                    
-                    <tr>
-                        <td colspan="5" style="text-align:justify; word-wrap:break-word;">Changing <b>content preservation</b> steps in Eq. 2:</td>
-                    </tr>
-
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/rebuttal/hyper/1.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered>step:[4-20] layer:[10-16]</centered></p>
-                            <br>
-                        </td>
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/rebuttal/hyper/2.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered>step:[4-30] layer:[10-16]</centered></p>
-                            <br>
-                        </td>
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/rebuttal/hyper/3.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered>step:[4-40] layer:[10-16]</centered></p>
-                            <br>
-                        </td>
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/rebuttal/hyper/4_10.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered><span style="color:red;">step:[4-50] layer:[10-16]</span></centered></p>
-                            <br>
-                        </td>
-
-                    <tr>
-
-                    <tr>
-                        <td colspan="5" style="text-align:justify; word-wrap:break-word;">Changing <b>motion injection</b> steps in Eq. 3:</td>
-                    </tr>
-
-
-                    <tr>
-                        
-                        <!-- First row of videos -->
-
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/rebuttal/hyper/7.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered>step:[0-20] layer:[0-16]</centered></p>
-                            <br>
-                        </td>
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/rebuttal/hyper/8.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered>step:[0-30] layer:[0-16]</centered></p>
-                            <br>
-                        </td>
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/rebuttal/hyper/9.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered>step:[0-40] layer:[0-16]</centered></p>
-                            <br>
-                        </td>
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/rebuttal/hyper/4_10.gif" alt="Your browser does not support the image tag." loop>
-                            <centered><span style="color:red;">step:[0-50] layer:[0-16]</span></centered></p>
-                            <br>
-                        </td>
-                    <tr>
-                </tbody>
-                </table>
-
-                <table style="table-layout: fixed;">
-                    <tbody>
-                        <p style="text-align:justify; word-wrap:break-word;">Source video:</p>
-                        <tr>
-                            <td colspan="9" style="text-align:center; border: none;"><strong>'walking' --> 'jumping'</strong></td>
-                        </tr>
-                        <tr>
-                            <!-- First row of videos -->
-                            <td width="20%" style="text-align:center; border: none;"> 
-                                <img src="./video/rebuttal/hyper/cat_source.gif" alt="Your browser does not support the image tag." loop>
-                                <br>
-                                <br>
-                            </td>
-    
-                        <tr>
-                        
-                        <tr>
-                            <td colspan="5" style="text-align:justify; word-wrap:break-word; border: none;">Changing <b>content preservation</b> layers in Eq. 2:</td>
-                        </tr>
-    
-                        <tr>
-                            <!-- First row of videos -->
-                            <td width="20%" style="text-align:center; border: none;"> 
-                                <img src="./video/rebuttal/hyper/cat1.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>step:[4-50] layer:[7-16]</centered></p>
-                                <br>
-                            </td>
-                            <td width="20%" style="text-align:center; border: none;"> 
-                                <img src="./video/rebuttal/hyper/cat2.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>step:[4-50] layer:[8-16]</centered></p>
-                                <br>
-                            </td>
-                            <td width="20%" style="text-align:center; border: none;"> 
-                                <img src="./video/rebuttal/hyper/cat3.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>step:[4-50] layer:[9-16]</centered></p>
-                                <br>
-                            </td>
-                            <td width="20%" style="text-align:center; border: none;"> 
-                                <img src="./video/rebuttal/hyper/cat4_8.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered><span style="color:red;">step:[4-50] layer:[10-16]</span></centered></p>
-                                <br>
-                            </td>
-    
-                        <tr>
-    
-                        <tr>
-                            <td colspan="5" style="text-align:justify; word-wrap:break-word; border: none;">Changing <b>motion injection</b> layers in Eq. 3:</td>
-                        </tr>
-    
-                        <tr>
-                            
-                            <!-- First row of videos -->
-    
-                            <td width="20%" style="text-align:center;border: none;"> 
-                                <img src="./video/rebuttal/hyper/cat5.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>step:[0-50] layer:[0-4]</centered></p>
-                                <br>
-                            </td>
-                            <td width="20%" style="text-align:center;border: none;"> 
-                                <img src="./video/rebuttal/hyper/cat6.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>step:[0-50] layer:[0-8]</centered></p>
-                                <br>
-                            </td>
-                            <td width="20%" style="text-align:center;border: none;"> 
-                                <img src="./video/rebuttal/hyper/cat7.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>step:[0-50] layer:[0-12]</centered></p>
-                                <br>
-                            </td>
-                            <td width="20%" style="text-align:center;border: none;"> 
-                                <img src="./video/rebuttal/hyper/cat4_8.gif" alt="Your browser does not support the image tag." loop>
-                                <centered><span style="color:red;">step:[0-50] layer:[0-16]</span></centered></p>
-                                <br>
-                            </td>
-                        <tr>
-                            
-                    </tbody>
-                    
-                    </table>
-                <p style="text-align:center;">Fig. C.3. & C.4.</p>
-                <p style="text-align:justify; word-wrap:break-word;"><b>Note: The model have 16 SA-S layers in total, and denoising with 50 steps. Red indicate the optimal value used in UniEdit.</b></p>
-                <br>
-                <p style="text-align:justify; word-wrap:break-word;"><b>In practice, we empirically found set these values to fixed values, i.e., \(t_0=4, l_0=10\) (same as MasaCtrl [2]) and \(t_1=0, l_1=0\) (means replacement on all layers and steps) can achieve good results on most cases, and we further perform a quantitative study when applying different hyper-parameters:</b></p>
-                
-                    <table class="bordered-table">
-                        <tr>
-                            <td>Metric</td>
-                            <td>Frame Similarity</td>
-                            <td>Textual Alignment</td>
-                            <td>Frame Consistency</td>
-                        </tr>
-                        <tr>
-                            <td>step:[4-20] layer:[10-16]</td>
-                            <td>94.33</td>
-                            <td>31.57</td>
-                            <td>98.09</td>
-                        </tr>
-                        <tr>
-                            <td>step:[4-50] layer:[10-16]</td>
-                            <td>96.29</td>
-                            <td>31.43</td>
-                            <td>98.09</td>
-                        </tr>
-                        <tr>
-                            <td>step:[4-50] layer:[8-16]</td>
-                            <td>96.76</td>
-                            <td>31.25</td>
-                            <td>98.11</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Metric</td>
-                            <td>Frame Similarity</td>
-                            <td>Textual Alignment</td>
-                            <td>Frame Consistency</td>
-                        </tr>
-                        <!-- <tr>
-                            <td>-------------------------</td>
-                            <td>:--------------:</td>
-                            <td>:---------------:</td>
-                            <td>:---------------:</td>
-                        </tr> -->
-                        <tr>
-                            <td>step:[0-20] layer:[0-16]</td>
-                            <td>96.51</td>
-                            <td>30.82</td>
-                            <td>98.06</td>
-                        </tr>
-                        <tr>
-                            <td>step:[0-50] layer:[0-16]</td>
-                            <td>96.29</td>
-                            <td>31.43</td>
-                            <td>98.09</td>
-                        </tr>
-                        <tr>
-                            <td>step:[0-50] layer:[10-16]</td>
-                            <td>96.50</td>
-                            <td>31.04</td>
-                            <td>98.08</td>
-                        </tr>
-                    </table>
-                <br>
-                <p style="text-align:justify; word-wrap:break-word;"><b>Hyper-parameter Stability and Analysis.</b> For appearance editing, we observed that altering the blend layers and steps in Eq. 4 can effectively regulate the extent to which the edited image adheres to the original image. For instance, in the stylization shown in Fig. C.1, injecting the attention map into fewer (15) steps yields a stylized output that may not retain the same structure as the input, whereas injecting into all 50 steps results in videos with nearly identical textures but less stylization. Users can adjust the blended layers and steps to achieve their preferred balance between stylization and fidelity.
-                <br>
-                For motion editing, we use content preservation in Eq. 2 to maintain the original content (e.g., textures and background) from the source video. We varied the feature injection steps and layers in Fig. C.3 & C.4. We observed that replacing only the value features at a few steps leads to inconsistencies in the background (footprints on the beach) and character ID (height of the man). We also examined the impact of motion injection in Eq.3. As depicted in Fig. C.3, injecting into a few steps fails to edit the original motion in the source video; as the injection steps increase, the motion in the edited video progressively changes from 'walk' to 'stride' to 'run'. Therefore, adjusting these parameters can be seen as a trade-off between the "similarity of the edited video to the source video" and the "magnitude of motion in the edited video". Similar trade-offs are also encountered in the field of consistent generation. For instance, a concurrent work, ConsiStory [2] (released after the submission deadline), balances identity consistency and spatial layout diversity by tweaking the blending parameter and dropout probability, which is unavoidable for tuning-free methods. It's crucial to highlight that while the results may vary with parameter changes, reasonable outputs can still be obtained, albeit with differences in "consistency with the source video" and ""the magnitude of motion". Despite the variations, the core functionality and effectiveness of the method remain intact.</p>
-                <br>
-                <br>
-                <p style="text-align:justify; word-wrap:break-word;">[1] Cao, Mingdeng, et al. "Masactrl: Tuning-free mutual self-attention control for consistent image synthesis and editing."
-                <br>
-                [2] Tewel, Yoad, et al. "Training-Free Consistent Text-to-Image Generation."</p>
-                <hr style="margin-top:0px">
-            </div>
-        
-        </div>
-        </div>
-        
-    <br>
-    </section>
-
-    <section>
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section D: Impact of Mask-Guided Coordination in UniEdit</h2>
-                <p></p>
-                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of attention maps in CA-S modules:</p>
-                    <img src="./video/rebuttal/mask/CA_attn_vis.jpg" alt="Your browser does not support the image tag." loop>
-
-                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of masks:</p>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <img src="./video/rebuttal/mask/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p>Output Video<br></p>
-                        </div>
-                        <div>
-                            <img src="./video/rebuttal/mask/ca_mask.png" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p>CA-S mask<br>(obtained by using threshold on the attention map of 'man')</p>
-                        </div>
-                        <div>
-                            <img src="./video/rebuttal/mask/sam_mask.png" alt="Your browser does not support the image tag." style="width: 90%;" loop>
-                            <p>SAM mask<br>(obtained by using point guided segmentation)</p>
-                        </div>
-                    </div>
-                    
-                <br>
-                <table style="table-layout: fixed;">
-                    <tbody>
-                        <tr>
-                            <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Synthesis results when using UniEdit with or without mask:</p>
-                            
-                            <p><strong>'in NYC Times Square' --> 'in park, in winter'</strong></p>
-                            <td width="50%" style="text-align:center;">
-                                
-                                <img src="./video/rebuttal/mask/without_uniedit.gif" alt="Your browser does not support the image tag." loop>
-    
-                                <p><centered>Result without UniEdit</centered></p>
-                                <br>
-                            </td>
-                            <td width="50%" style="text-align:center;">
-                                <img src="./video/rebuttal/mask/without_mask.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>Result with UniEdit (no mask)</centered></p>
-                                <br>
-                            </td>
-                        <tr>
-                        
-                        <tr>
-                            <!-- First row of videos -->
-                            <td width="50%" style="text-align:center;"> 
-                                <img src="./video/rebuttal/mask/with_ca_mask.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>Result with UniEdit (use attention mask in CA-S)</centered></p>
-                                <br>
-                            </td>
-                            <td width="50%" style="text-align:center;"> 
-                                <img src="./video/rebuttal/mask/with_sam_mask.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>Result with UniEdit (use SAM segmentation mask)</centered></p>
-                                <br>
-                            </td>
-                        <tr>
-                        <tr>
-                            <tr>
-                                <td colspan="4""><strong>'cat' --> 'dog'</strong><br></td>
-                            </tr>
-                            
-                            <td width="50%" style="text-align:center;">
-    
-                                <img src="./video/rebuttal/mask/1.gif" alt="Your browser does not support the image tag." loop>
-    
-                                <p><centered>Result without UniEdit</centered></p>
-                                <br>
-                            </td>
-                            <td width="50%" style="text-align:center;">
-                                <img src="./video/rebuttal/mask/2.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>Result with UniEdit (no mask)</centered></p>
-                                <br>
-                            </td>
-                        <tr>
-                        
-                        <tr>
-                            <!-- First row of videos -->
-                            <td width="50%" style="text-align:center;"> 
-                                <img src="./video/rebuttal/mask/3.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>Result with UniEdit (use attention mask in CA-S)</centered></p>
-                                <br>
-                            </td>
-                            <td width="50%" style="text-align:center;"> 
-                                <img src="./video/rebuttal/mask/4.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>Result with UniEdit (use SAM segmentation mask)</centered></p>
-                                <br>
-                            </td>
-
-                        <tr>
-                        
-                    </tbody>
-                </table>
-
-                <p style="text-align:justify; word-wrap:break-word;">To investigate the impact of mask-guided coordination, we begin by visualizing masks obtained from 1) the attention map in CA-S modules; 2) the off-the-shelf segmentation model SAM [1], followed by presenting both qualitative and quantitative results of implementing UniEdit with or without mask-guided coordination.
-                <br>
-                <br>
-                As verified by previous work [2], the attention maps in CA-S modules contain correspondence information between text and visual features. The underlying intuition is that the attention maps between each word and the spatial features at point (i, j) indicate 'how similar this token is to the spatial feature at this location'. We visualize the text-image cross attention map alongside the synthesized video in Section D. We observe spatial correspondences that align with the video output from the attention map. For instance, areas with higher values of the token 'man' and 'NYC' correspond to the foreground and background, respectively. We further employ a fixed threshold (0.4 in practice) to derive binary segmentation maps from the attention maps. For comparison, we also display the segmentation mask obtained by point prompt on SAM. It's observed that the cross-attention mask is generally accurate and could serve as a reliable proxy in practice when an external segmentor is not available.
-                <br>
-                <br>
-                We examine the impact of mask-guided coordination through both qualitative and quantitative results across 4 settings: {w/o UniEdit, UniEdit w/o mask, UniEdit with mask from CA-S, UniEdit with mask from SAM}. Qualitatively, the implementation of UniEdit significantly enhances the consistency between the edited videos and the original video. The application of the mask-guided coordination technique further improves the consistency of unedited areas (e.g., color and texture). The quantitative results above align coherently with this analysis.
-                <br>
-                <br>
-                [1] Kirillov, Alexander, et al. "Segment anything."
-                <br>
-                [2] Hertz, Amir, et al. "Prompt-to-Prompt Image Editing with Cross-Attention Control."
-                </p>
-                
-                <hr style="margin-top:0px">
-
-            </div>
-        
-        </div>
-        </div>
-        
-    <br>
-    </section>
-
-
-    <section>
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                    <h2 class="title is-3">Section E: Results on Different Base Model<br>(UniEdit + VideoCrafter2)</h2>
-                <p></p>
-                <table style="table-layout: fixed;">
-                <tbody>
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/videocrafter2/rabbit.mp4" type="video/mp4">
-                            </video>
-                            <img src="./static/images/vc1.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/videocrafter2/teddy.mp4" type="video/mp4">
-                            </video>
-                            <img src="./static/images/vc2.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                    <tr>
-                    
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/videocrafter2/swing.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/vc3.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/videocrafter2/corgi.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/vc4.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                    <tr>
-                </tbody>
-                </table>
-                <p style="text-align:justify; word-wrap:break-word;">We chose LaVie as the base T2V model since it was the latest open-source T2V model when we started the research. Stable Video Diffusion [1] didn't release their text-to-video model, making it unavailable to build UniEdit on SVD. Furthermore, we additionally implement our method on VideoCrafter2 [2], a concurrent work on T2V generation to demonstrate the flexibility of UniEdit. The results are shown above.
-                <br>
-                <br>
-                [1] Blattmann, Andreas, et al. "Stable video diffusion: Scaling latent video diffusion models to large datasets."
-                [2] Chen, Haoxin, et al. "Videocrafter2: Overcoming data limitations for high-quality video diffusion models."</p>
-                
-                <br>
-                <hr style="margin-top:0px">
-            </div>
-        </div>
-        </div>
-    <br>
-    </section>
-
-    <section>
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section F: Failure Cases Visualization</h2>
-                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Edit multiple elements simultaneously:</h2>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <img src="./video/rebuttal/failure/1.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
-                            <p>cat --> dog, + Van Gogh style</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <img src="./video/rebuttal/failure/2.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
-                            <p>raccoon --> panda, play violin --> waving</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-
-                        <div>
-                            <img src="./video/rebuttal/failure/4.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
-                            <p>raccoon --> kangaroo, play violin --> play guitar<br>(the model do not learn the correct posture for playing the violin, and whether or not our method is used, the model could not generate the posture of "violin on the shoulder")</p>
-                        </div>
-                    </div>
-                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Complex scene editing:</h2>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <img src="./video/rebuttal/failure/3.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
-                            <p>a shark on the left and several goldfish swim in a tank</p>
-                        </div>
-                    </div>
-                <br>
-                <p style="text-align:justify; word-wrap:break-word;">We exhibit failure cases in section F. Rows 1-3 showcase when editing multiple elements simultaneously, and we observe a relatively large inconsistency with the source video. A naive solution is that perform editing with UniEdit multiple times. Row 4 visualizes the results when editing video with complex scenes, and the model sometimes could not understand the semantics in the target prompt, resulting in incorrect editing. This may be caused by the base model's limited text understanding power, as discussed in [1]. It could be alleviated by leveraging the reasoning power of MLLM [1], or adapting approaches in complex scenario editing [2].
-                <br>
-                <br>
-                [10] Huang, Yuzhou, et al. "SmartEdit: Exploring Complex Instruction-based Image Editing with Multimodal Large Language Models."
-                <br>
-                [11] Mao, Qi, et al. "MAG-Edit: Localized Image Editing in Complex Scenarios via Mask-Based Attention-Adjusted Guidance."</p>
-                <br>
-                <hr style="margin-top:0px">
-
-            </div>
-        
-        </div>
-        </div>
-        
-    <br>
-    </section>
-
-    <section>
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section G: More Results and Visualization</h2>
-                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of the reconstruction branch and the motion-reference branch:</h2>
-                    <p><strong>'playing guitar' --> 'waving'</strong></p>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <img src="./video/rebuttal/branch_vis/1.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p></p>
-                        </div>
-                    </div>
-                    <p><strong>'walking' --> 'lying'</strong></p>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <img src="./video/rebuttal/branch_vis/2.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p></p>
-                        </div>
-                    </div>
-                    <p>Fig. G.1.</p>
-                    <br>
-                    <p style="text-align:justify; word-wrap:break-word;">The output of each branch is visualized in section G, Fig. G.1, where it is observed that the motion branch (right) generate video with the target motion, and effectively transfer it to the main path (middle); meanwhile, the main path inherit the content from the reconstruction branch (left), thus enhance the consistency of unedited parts.</p>
-                    <hr style="margin-top:0px">
-
-                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Qualitative results on the reconstruction branch:</h2>
-                        <div style="display: flex; justify-content: space-between;">
-                            <div>
-                                <img src="./video/rebuttal/recons/input_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                                <p>Source Video</p>
-                            </div>
-                            <div>
-                                <img src="./video/rebuttal/recons/sd_scheduler_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                                <p>Reconstruction Branch Output<br></p>
-                            </div>
-                            <div>
-                                <img src="./video/rebuttal/recons/nti_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                                <p>Reconstruction Branch Output<br>(w/ null-text inversion)</p>
-                            </div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <div>
-                                <img src="./video/rebuttal/recons/input_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                                <p>Source Video</p>
-                            </div>
-                            <div>
-                                <img src="./video/rebuttal/recons/sd_scheduler_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                                <p>Reconstruction Branch Output<br></p>
-                            </div>
-                            <div>
-                                <img src="./video/rebuttal/recons/nti_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                                <p>Reconstruction Branch Output<br>(w/ null-text inversion)</p>
-                            </div>
-                        </div>
-                        <p>Fig. G.2.</p>
-                        <table style="border-collapse: collapse; width: 100%;">
-                            <tr>
-                                <td style="border: 1px solid black;">Metrics</td>
-                                <td style="border: 1px solid black;">FID (&darr;)</td>
-                                <td style="border: 1px solid black;">LPIPS (&darr;)</td>
-                                <td style="border: 1px solid black;">PSNR (&uarr;)</td>
-                            </tr>
-                            <tr>
-                                <td style="border: 1px solid black;">DDIM</td>
-                                <td style="border: 1px solid black;">21.30</td>
-                                <td style="border: 1px solid black;">0.140</td>
-                                <td style="border: 1px solid black;">34.26</td>
-                            </tr>
-                            <tr>
-                                <td style="border: 1px solid black;">DDIM + Null-text inversion [4]</td>
-                                <td style="border: 1px solid black;">17.81</td>
-                                <td style="border: 1px solid black;">0.158</td>
-                                <td style="border: 1px solid black;">33.75</td>
-                            </tr>
-                        </table>
-
-                        <p style="text-align:justify; word-wrap:break-word;">As seen, the reconstruction branch is capable of faithfully reconstructing the source video. Therefore, the reconstruction branch retains the content of the source video and can be leveraged for content preservation during the editing process.</p>
-                    <br>
-                    <hr style="margin-top:0px">
-                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of foreground mask extracted by \(U^2\)-Net:</p>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <img src="./video/rebuttal/salient/sos1_source.png" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p></p>
-                        </div>
-
-                        <div>
-                            <img src="./video/rebuttal/salient/sos1.png" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
-                            <p></p>
-                        </div>
-                    </div>
-                    <p>Fig. G.3.</p>
-
-                    <hr style="margin-top:0px">
-                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Motion editing results of Dreamix (copied from their official website):</p>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div>
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/rebuttal/dreamix/vid2vid_skateboard.mp4" type="video/mp4"> 
-                            </video> 
-                        </div>
-
-                        <div>
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/rebuttal/dreamix/vid2vid_orangutan_hello.mp4" type="video/mp4"> 
-                            </video> 
-                        </div>
-                    </div>
-                    <p>Fig. G.4.</p>
-                <hr style="margin-top:0px">
-
-            </div>
-        
-        </div>
-        </div>
-        
-    <br>
-    </section>
-
-    
-
+          </div>
+      </section>
 
 
     <section class="hero teaser">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3">UniEdit + LaVie (Motion Editing)</h2>
+                    <h2 class="title is-3" style="text-align:left;">Section A: Video Editing Results with UniEdit</h2>
+                    <h2 class="title is-3">UniEdit + <a href="https://github.com/Vchitect/LaVie">LaVie</a> (Motion Editing)</h2>
 
                     <table style="table-layout: fixed;">
                     <tbody>
@@ -1159,7 +212,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3">UniEdit + LaVie (Appearance Editing)</h2>
+                    <h2 class="title is-3">UniEdit + <a href="https://github.com/Vchitect/LaVie">LaVie</a> (Appearance Editing)</h2>
                 <p></p>
                 <table style="table-layout: fixed;">
                 <tbody>
@@ -1354,12 +407,735 @@
     <br>
     </section>
 
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">UniEdit + <a href="https://github.com/AILab-CVC/VideoCrafter">VideoCrafter2</a></h2>
+                <p></p>
+                <table style="table-layout: fixed;">
+                <tbody>
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/videocrafter2/rabbit.mp4" type="video/mp4">
+                            </video>
+                            <img src="./static/images/vc1.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                        <td width="50%" style="text-align:center;">
+                            <video width="98%" autoplay muted loop>
+                                <source src="video/videocrafter2/teddy.mp4" type="video/mp4">
+                            </video>
+                            <img src="./static/images/vc2.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                    <tr>
+                    
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/videocrafter2/swing.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/vc3.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                        <td width="50%" style="text-align:center;"> 
+                            <video width="98%" autoplay muted loop> 
+                                <source src="video/videocrafter2/corgi.mp4" type="video/mp4"> 
+                            </video> 
+                            <img src="./static/images/vc4.svg", style="width: 100%; margin-top: -0px;">
+                            <br>
+                        </td>
+                    <tr>
+                </tbody>
+                </table>
+                <p style="text-align:justify; word-wrap:break-word;">Our work primarily builds on the text-to-video generation framework LaVie. Furthermore, we additionally implement our method on VideoCrafter2, a concurrent work on T2V generation to demonstrate the flexibility of UniEdit. The results are shown above.
+                
+                <br>
+                <hr style="margin-top:0px">
+            </div>
+        </div>
+        </div>
+    <br>
+    </section>
+
 
     <section>
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3">Comparison with State-of-the-Art Methods</h2>
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section B: Analysis on the Proposed Components</h2>
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Difference between QK and V features in SA-S modules:</p>
+                    <p><strong>+ 'Van Gogh style'</strong></p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/ablation/explain_v/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(a) source video</p>
+                        </div>
+                        <div>
+                            <img src="./video/ablation/explain_v/stylization_wo_ours.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(b) w/o feature replacement</p>
+                        </div>
+
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+
+                        <div>
+                            <img src="./video/ablation/explain_v/stylization_qk.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(c) w/ query and key features replacement</p>
+                        </div>
+                        <div>
+                            <img src="./video/ablation/explain_v/stylization_v.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(d) w/ value features replacement + query and key in (b)</p>
+                        </div>
+                    </div>
+                    <p>Fig B.1.</p>
+                    <br>
+                    <p style="text-align:justify; word-wrap:break-word;"><strong>Observation:</strong> The query and key features (in SA-S modules) dictate the spatial structure of the generated video, while the value features tend to influence the texture, including details such as color tones.<br>To comprehend why we can have inhomogeneous QK and V and their differences, we visualized the results of swapping different features (QK or V) in SA-S modules during style transfer tasks on the source video in Fig. B.1. As can be seen, compared to Fig. B.1(b) with no feature replacement, replacing QK (Fig. B.1(c)) results in the edited video adopting the same spatial structure as the source video. Simultaneously, replacing V eradicates the style information in (Fig. B.1(b)), meaning the texture details from the source video are utilized to replace the style depicted by the target prompt.</p>
+
+
+                    <br>
+                    <hr style="margin-top:0px">
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Influence of Spatial Structure Control in Motion Editing:</p>
+                    <p><strong>'playing guitar' --> 'eating an apple'</strong></p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/ablation/motion_editing_w_wo_spatial/wo_spatial.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(a). w/o Spatial Structure Control</p>
+                        </div>
+
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+
+                        <div>
+                            <img src="./video/ablation/motion_editing_w_wo_spatial/w_spatial.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>(b). w/ Spatial Structure Control</p>
+                        </div>
+                    </div>
+                    <p>Fig B.2.</p>
+                    <br>
+                    <p style="text-align:justify; word-wrap:break-word;">We explored the role of spatial control in motion editing. The proposed method synthesizes videos with larger modifications when removing the spatial control mechanism on both the motion-reference branch and the main editing branch. We visualized the results in Fig. B.2, from left to right are {reconstruction branch, main editing path, and motion reference branch} respectively. It can be observed that although the motion-reference branch can still generate the target motion without the control of spatial layout, the structure deviates significantly, for example, the raccoon assumes a different pose and location. We regard this as a suboptimal solution because, compared to the results presented in the paper, the results w/o spatial structure control modifies the object position of the source video, leading to a decrease in consistency between the edited result and the source video.
+                    <br>
+                    <br>
+                    We add the quantitative results below:</p>
+                <br>
+                
+                <table class="bordered-table">
+                    <tr>
+                        <td>Content Preservation</td>
+                        <td>Motion Injection</td>
+                        <td>Structure Control</td>
+                        <td>Frame Similarity (&uarr;)</td>
+                        <td>Textual Alignment (&uarr;)</td>
+                        <td>Frame Consistency (&uarr;)</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>90.54</td>
+                        <td>28.76</td>
+                        <td>96.99</td>
+                    </tr>
+                    <tr>
+                        <td>&check;</td>
+                        <td></td>
+                        <td></td>
+                        <td>97.28</td>
+                        <td>29.95</td>
+                        <td>98.12</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td>91.30</td>
+                        <td>31.48</td>
+                        <td>98.08</td>
+                    </tr>
+                    <tr>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td></td>
+                        <td>96.11</td>
+                        <td>31.37</td>
+                        <td>98.12</td>
+                    </tr>
+                    <tr>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td>&check;</td>
+                        <td>96.29</td>
+                        <td>31.43</td>
+                        <td>98.09</td>
+                    </tr>
+                </table>
+                <hr style="margin-top:0px">
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+    
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section C: Impact of Hyper-parameter Selection</h2>
+
+                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Appearance Editing (global):</p>
+                <img src="./video/ablation/hyper/fig_hyper_ablation2.jpg" alt="Your browser does not support the image tag." loop>
+                <p>Fig. C.1. (copied from Fig.8 in the main text)</p>
+                <br>
+                <p style="text-align:justify; word-wrap:break-word;">For appearance editing, it's observed that changing the blend layers (\(t_1\)) in Eq. 4 could effectively adjust the degree to which the edited image remains faithful to the original image. Take stylization in Fig. C.1 as an example, attention map injection on fewer (15) steps produces a stylized output that may not have the same structure as the input, and injection on all 50 steps could obtain videos with almost identical textures but less stylized. The user can adjust the blended layers and steps to realize their desired balancing between stylization and faithfully.</p>
+                <hr style="margin-top:0px">
+
+                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Appearance Editing (local):</p>
+                <p><strong>'cat' --> 'dog'</strong></p>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <img src="./video/ablation/hyper/0-15 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">\(t_1\)=15</p>
+                    </div>
+                    <div>
+                        <img src="./video/ablation/hyper/0-20 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">\(t_1\)=20</p>
+                    </div>
+                </div>
+                <br>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <img src="./video/ablation/hyper/0-25 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">\(t_1\)=25</p>
+                    </div>
+                    <div>
+                        <img src="./video/ablation/hyper/0-30 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">\(t_1\)=30</p>
+                    </div>
+                </div>
+                <br>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <img src="./video/ablation/hyper/0-35 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">\(t_1\)=35</p>
+                    </div>
+                    <div>
+                        <img src="./video/ablation/hyper/0-40 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
+                        <p style="text-align:center;">\(t_1\)=40</p>
+                    </div>
+                </div>
+                <p style="text-align:center;">Fig. C.2.</p>
+                <br>
+                <p style="text-align:justify; word-wrap:break-word;">The same conclusion was also confirmed in local appearance editing. As shown in the figure above, when we do non-rigid (deformable) object replacement, we find that as the feature injection steps increase, the outline of the "dog" becomes more and more similar to the outline of the cat in the source video. And the appropriate hyperparameters (i.e., ~25 steps) bring the best results.</p>
+                <br>
+                <hr style="margin-top:0px">
+
+                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Motion Editing:</p>
+                <table style="table-layout: fixed;">
+                <tbody>
+                    <p style="text-align:justify; word-wrap:break-word;">Source video:</p>
+                    <p><strong>'walking' --> 'running'</strong></p>
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/ablation/hyper/source.gif" alt="Your browser does not support the image tag." loop>
+                            <br>
+                            <br>
+                        </td>
+
+                    <tr>
+                    
+                    <tr>
+                        <td colspan="5" style="text-align:justify; word-wrap:break-word;">Changing <b>content preservation</b> steps in Eq. 2:</td>
+                    </tr>
+
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/ablation/hyper/1.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered>\(t_0=20, L=10\)</centered></p>
+                            <br>
+                        </td>
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/ablation/hyper/2.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered>\(t_0=30, L=10\)</centered></p>
+                            <br>
+                        </td>
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/ablation/hyper/3.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered>\(t_0=40, L=10\)</centered></p>
+                            <br>
+                        </td>
+                        <td width="20%" style="text-align:center;"> 
+                            <img src="./video/ablation/hyper/4_10.gif" alt="Your browser does not support the image tag." loop>
+                            <p><centered><span style="color:red;">\(t_0=50, L=10\)</span></centered></p>
+                            <br>
+                        </td>
+
+                    <tr>
+
+                </tbody>
+                </table>
+
+                <table style="table-layout: fixed;">
+                    <tbody>
+                        <p style="text-align:justify; word-wrap:break-word;">Source video:</p>
+                        <tr>
+                            <td colspan="9" style="text-align:center; border: none;"><strong>'walking' --> 'jumping'</strong></td>
+                        </tr>
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="20%" style="text-align:center; border: none;"> 
+                                <img src="./video/ablation/hyper/cat_source.gif" alt="Your browser does not support the image tag." loop>
+                                <br>
+                                <br>
+                            </td>
+    
+                        <tr>
+                        
+                        <tr>
+                            <td colspan="5" style="text-align:justify; word-wrap:break-word; border: none;">Changing <b>content preservation</b> layers in Eq. 2:</td>
+                        </tr>
+    
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="20%" style="text-align:center; border: none;"> 
+                                <img src="./video/ablation/hyper/cat1.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>\(t_0=50, L=7\)</centered></p>
+                                <br>
+                            </td>
+                            <td width="20%" style="text-align:center; border: none;"> 
+                                <img src="./video/ablation/hyper/cat2.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>\(t_0=50, L=8\)</centered></p>
+                                <br>
+                            </td>
+                            <td width="20%" style="text-align:center; border: none;"> 
+                                <img src="./video/ablation/hyper/cat3.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>\(t_0=50, L=9\)</centered></p>
+                                <br>
+                            </td>
+                            <td width="20%" style="text-align:center; border: none;"> 
+                                <img src="./video/ablation/hyper/cat4_8.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered><span style="color:red;">\(t_0=50, L=10\)</span></centered></p>
+                                <br>
+                            </td>
+    
+                        <tr>
+    
+                        
+                            
+                    </tbody>
+                    
+                    </table>
+                <p style="text-align:center;">Fig. C.3. & C.4.</p>
+                <p style="text-align:justify; word-wrap:break-word;"><b>Note: The model have 16 SA-S layers in total, and denoising with 50 steps. Red indicate the optimal value used in UniEdit.</b></p>
+                <br>
+                <p style="text-align:justify; word-wrap:break-word;"><b>In practice, we empirically found set these values to fixed values, i.e., \(t_0=50, L=10\) (same as MasaCtrl [1]) and \(t_1=25\) can achieve good results on most cases, and we further perform a quantitative study when applying different hyper-parameters:</b></p>
+                
+                    <table class="bordered-table">
+                        <tr>
+                            <td>Metric</td>
+                            <td>Frame Similarity</td>
+                            <td>Textual Alignment</td>
+                            <td>Frame Consistency</td>
+                        </tr>
+                        <tr>
+                            <td>\(t_0=20, L=10\)</td>
+                            <td>94.33</td>
+                            <td>31.57</td>
+                            <td>98.09</td>
+                        </tr>
+                        <tr>
+                            <td>\(t_0=50, L=10\)</td>
+                            <td>96.29</td>
+                            <td>31.84</td>
+                            <td>98.12</td>
+                        </tr>
+                        <tr>
+                            <td>\(t_0=50, L=8\)</td>
+                            <td>96.76</td>
+                            <td>31.25</td>
+                            <td>98.11</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Metric</td>
+                            <td>Frame Similarity</td>
+                            <td>Textual Alignment</td>
+                            <td>Frame Consistency</td>
+                        </tr>
+                        <!-- <tr>
+                            <td>-------------------------</td>
+                            <td>:--------------:</td>
+                            <td>:---------------:</td>
+                            <td>:---------------:</td>
+                        </tr> -->
+                        <tr>
+                            <td>\(t_1=20\)</td>
+                            <td>96.21</td>
+                            <td>30.92</td>
+                            <td>98.06</td>
+                        </tr>
+                        <tr>
+                            <td>\(t_1=25\)</td>
+                            <td>96.29</td>
+                            <td>31.43</td>
+                            <td>98.09</td>
+                        </tr>
+                        <tr>
+                            <td>\(t_1=30\)</td>
+                            <td>96.50</td>
+                            <td>31.04</td>
+                            <td>98.08</td>
+                        </tr>
+                    </table>
+                <br>
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section D: Impact of Mask-Guided Coordination</h2>
+                <p></p>
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of attention maps in CA-S modules:</p>
+                    <img src="./video/ablation/mask/CA_attn_vis.jpg" alt="Your browser does not support the image tag." loop>
+
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of masks:</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/ablation/mask/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>Output Video<br></p>
+                        </div>
+                        <div>
+                            <img src="./video/ablation/mask/ca_mask.png" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p>CA-S mask<br>(obtained by using threshold on the attention map of 'man')</p>
+                        </div>
+                        <div>
+                            <img src="./video/ablation/mask/sam_mask.png" alt="Your browser does not support the image tag." style="width: 90%;" loop>
+                            <p>SAM mask<br>(obtained by using point guided segmentation)</p>
+                        </div>
+                    </div>
+                    
+                <br>
+                <table style="table-layout: fixed;">
+                    <tbody>
+                        <tr>
+                            <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Synthesis results when using UniEdit with or without mask:</p>
+                            
+                            <p><strong>'in NYC Times Square' --> 'in park, in winter'</strong></p>
+                            <td width="50%" style="text-align:center;">
+                                
+                                <img src="./video/ablation/mask/without_uniedit.gif" alt="Your browser does not support the image tag." loop>
+    
+                                <p><centered>Result without UniEdit</centered></p>
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;">
+                                <img src="./video/ablation/mask/without_mask.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (no mask)</centered></p>
+                                <br>
+                            </td>
+                        <tr>
+                        
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="50%" style="text-align:center;"> 
+                                <img src="./video/ablation/mask/with_ca_mask.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (use attention mask in CA-S)</centered></p>
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;"> 
+                                <img src="./video/ablation/mask/with_sam_mask.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (use SAM segmentation mask)</centered></p>
+                                <br>
+                            </td>
+                        <tr>
+                        <tr>
+                            <tr>
+                                <td colspan="4""><strong>'cat' --> 'dog'</strong><br></td>
+                            </tr>
+                            
+                            <td width="50%" style="text-align:center;">
+    
+                                <img src="./video/ablation/mask/1.gif" alt="Your browser does not support the image tag." loop>
+    
+                                <p><centered>Result without UniEdit</centered></p>
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;">
+                                <img src="./video/ablation/mask/2.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (no mask)</centered></p>
+                                <br>
+                            </td>
+                        <tr>
+                        
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="50%" style="text-align:center;"> 
+                                <img src="./video/ablation/mask/3.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (use attention mask in CA-S)</centered></p>
+                                <br>
+                            </td>
+                            <td width="50%" style="text-align:center;"> 
+                                <img src="./video/ablation/mask/4.gif" alt="Your browser does not support the image tag." loop>
+                                <p><centered>Result with UniEdit (use SAM segmentation mask)</centered></p>
+                                <br>
+                            </td>
+
+                        <tr>
+                        
+                    </tbody>
+                </table>
+
+                <p style="text-align:justify; word-wrap:break-word;">To investigate the impact of mask-guided coordination, we begin by visualizing masks obtained from 1) the attention map in CA-S modules; 2) the off-the-shelf segmentation model SAM [1], followed by presenting both qualitative and quantitative results of implementing UniEdit with or without mask-guided coordination.
+                <br>
+                <br>
+                As verified by previous work [2], the attention maps in CA-S modules contain correspondence information between text and visual features. The underlying intuition is that the attention maps between each word and the spatial features at point (i, j) indicate 'how similar this token is to the spatial feature at this location'. We visualize the text-image cross attention map alongside the synthesized video in Section D. We observe spatial correspondences that align with the video output from the attention map. For instance, areas with higher values of the token 'man' and 'NYC' correspond to the foreground and background, respectively. We further employ a fixed threshold (0.4 in practice) to derive binary segmentation maps from the attention maps. For comparison, we also display the segmentation mask obtained by point prompt on SAM. It's observed that the cross-attention mask is generally accurate and could serve as a reliable proxy in practice when an external segmentor is not available.
+                <br>
+                <br>
+                We examine the impact of mask-guided coordination through both qualitative and quantitative results across 4 settings: {w/o UniEdit, UniEdit w/o mask, UniEdit with mask from CA-S, UniEdit with mask from SAM}. Qualitatively, the implementation of UniEdit significantly enhances the consistency between the edited videos and the original video. The application of the mask-guided coordination technique further improves the consistency of unedited areas (e.g., color and texture). The quantitative results above align coherently with this analysis.
+                <br>
+                <br>
+                [1] Kirillov, Alexander, et al. "Segment anything."
+                <br>
+                [2] Hertz, Amir, et al. "Prompt-to-Prompt Image Editing with Cross-Attention Control."
+                </p>
+                
+                <hr style="margin-top:0px">
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+
+
+
+
+
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section E: More Results and Visualization</h2>
+                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of the reconstruction branch and the motion-reference branch:</h2>
+                    <p><strong>'playing guitar' --> 'waving'</strong></p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/ablation/branch_vis/1.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p></p>
+                        </div>
+                    </div>
+                    <p><strong>'walking' --> 'lying'</strong></p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/ablation/branch_vis/2.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p></p>
+                        </div>
+                    </div>
+                    <p>Fig. G.1.</p>
+                    <br>
+                    <p style="text-align:justify; word-wrap:break-word;">The output of each branch is visualized in section G, Fig. G.1, where it is observed that the motion branch (right) generate video with the target motion, and effectively transfer it to the main path (middle); meanwhile, the main path inherit the content from the reconstruction branch (left), thus enhance the consistency of unedited parts.</p>
+                    <hr style="margin-top:0px">
+
+                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Qualitative results on the reconstruction branch:</h2>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div>
+                                <img src="./video/ablation/recons/input_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Source Video</p>
+                            </div>
+                            <div>
+                                <img src="./video/ablation/recons/sd_scheduler_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Reconstruction Branch Output<br></p>
+                            </div>
+                            <div>
+                                <img src="./video/ablation/recons/nti_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Reconstruction Branch Output<br>(w/ null-text inversion)</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div>
+                                <img src="./video/ablation/recons/input_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Source Video</p>
+                            </div>
+                            <div>
+                                <img src="./video/ablation/recons/sd_scheduler_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Reconstruction Branch Output<br></p>
+                            </div>
+                            <div>
+                                <img src="./video/ablation/recons/nti_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <p>Reconstruction Branch Output<br>(w/ null-text inversion)</p>
+                            </div>
+                        </div>
+                        <p>Fig. G.2.</p>
+                        <table style="border-collapse: collapse; width: 100%;">
+                            <tr>
+                                <td style="border: 1px solid black;">Metrics</td>
+                                <td style="border: 1px solid black;">FID (&darr;)</td>
+                                <td style="border: 1px solid black;">LPIPS (&darr;)</td>
+                                <td style="border: 1px solid black;">PSNR (&uarr;)</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid black;">DDIM</td>
+                                <td style="border: 1px solid black;">21.30</td>
+                                <td style="border: 1px solid black;">0.140</td>
+                                <td style="border: 1px solid black;">34.26</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid black;">DDIM + Null-text inversion [4]</td>
+                                <td style="border: 1px solid black;">17.81</td>
+                                <td style="border: 1px solid black;">0.158</td>
+                                <td style="border: 1px solid black;">33.75</td>
+                            </tr>
+                        </table>
+
+                        <p style="text-align:justify; word-wrap:break-word;">As seen, the reconstruction branch is capable of faithfully reconstructing the source video. Therefore, the reconstruction branch retains the content of the source video and can be leveraged for content preservation during the editing process.</p>
+                    <br>
+                    <hr style="margin-top:0px">
+                    <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of foreground mask extracted by \(U^2\)-Net:</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/ablation/salient/sos1_source.png" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p></p>
+                        </div>
+
+                        <div>
+                            <img src="./video/ablation/salient/sos1.png" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <p></p>
+                        </div>
+                    </div>
+                    <p>Fig. G.3.</p>
+                <hr style="margin-top:0px">
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+
+    
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section F: Failure Cases Visualization</h2>
+                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Edit multiple elements simultaneously:</h2>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/ablation/failure/1.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <p>cat --> dog, + Van Gogh style</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/ablation/failure/2.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <p>raccoon --> panda, play violin --> waving</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+
+                        <div>
+                            <img src="./video/ablation/failure/4.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <p>raccoon --> kangaroo, play violin --> play guitar<br>(the model do not learn the correct posture for playing the violin, and whether or not our method is used, the model could not generate the posture of "violin on the shoulder")</p>
+                        </div>
+                    </div>
+                    <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Complex scene editing:</h2>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <img src="./video/ablation/failure/3.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <p>a shark on the left and several goldfish swim in a tank</p>
+                        </div>
+                    </div>
+                <br>
+                <p style="text-align:justify; word-wrap:break-word;">We exhibit failure cases in section F. Rows 1-3 showcase when editing multiple elements  simultaneously, and we observe a relatively large inconsistency with the source video. A naive solution is that perform editing with UniEdit multiple times. Row 4 visualizes the results when editing video with complex scenes, and the model sometimes could not understand the semantics in the target prompt, resulting in incorrect editing. This may be caused by the base model's limited text understanding power, as discussed in [1]. It could be alleviated by leveraging the reasoning power of MLLM [1], or adapting approaches in complex scenario editing [2].
+                <br>
+                <br>
+                [1] Huang, Yuzhou, et al. "SmartEdit: Exploring Complex Instruction-based Image Editing with Multimodal Large Language Models."
+                <br>
+                [2] Mao, Qi, et al. "MAG-Edit: Localized Image Editing in Complex Scenarios via Mask-Based Attention-Adjusted Guidance."</p>
+                <br>
+                <hr style="margin-top:0px">
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section G: Comparison with State-of-the-Art Methods</h2>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <div style="width: 100%;">
+                            <!-- <div style="width: 100%;">
+                                <img src="./video/ablation/tgve/cap.svg" style="float: left; width: 4.7%;">
+                                <img src="./video/ablation/tgve/concat.gif" style="float: left; width: 95%;" loop>
+                            </div> -->
+                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
+                            <div style="width: 100%;">
+                                <img src="./video/ablation/tgve/cap.svg" style="float: left; width: 4.7%;">
+                                <img src="./video/ablation/tgve/airplane/concatenated.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/tgve/basketball/concatenated.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/tgve/car/concatenated.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/tgve/cat_object/concatenated.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/tgve/cat_motion/concatenated.gif" style="float: left; width: 19%;" loop>
+                            </div>
+                            <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
+                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
+                            <p>Fig A.1.</p>
+                            <br>
+                            <br>
+                            <img src="./video/ablation/tgve/difference.svg" style="float: left; width: 100%;">
+                            <p>Fig A.2.</p>
+                            <p style="text-align:justify; word-wrap:break-word;">We highlight the contrast in Fig. A.2. Tune-A-Video (TAV) produces videos with poor temporal consistency and significant content changes (e.g., the crowd behind the racing car, the fields behind the cat). MasaCtrl*, FateZero, and TokenFlow tend to generate videos that are highly similar to the source, but fail to make edits that match the prompt (e.g., lack of raindrops in column 1 and noticeable stylistic changes in columns 2 and 3). Similarly, Rerender-A-Video also falls short in aligning with the target prompt and has significant color differences compared to the source. Additionally, all baselines are unable to modify the temporal dependency of the source video, leading to their failure in motion editing.</p>
+                            <br>
+                            <p style="text-align:justify; word-wrap:break-word;">In contrast, the proposed UniEdit stands out for its ability to generate videos with 1) better content preservation 2) alignment with the target prompt 3) capability for various appearance editing tasks (including global stylization, local object replacement, or background modification), and motion editing.</p>
+                            <br>
+                            
+                <br>
+                <p style="text-align:justify; word-wrap:break-word;">[1] Wu, Jay Zhangjie, et al. "Cvpr 2023 text guided video editing competition." *arXiv preprint arXiv:2310.16003* (2023).
+                <hr style="margin-top:0px">
+
+            </div>
+        
+        </div>
+        </div>
+        
+    <br>
+    </section>
+
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
                 <video width="100%" controls style="display: block; margin: 0 auto;">
                     <source src="video/compare with baselines.mp4" type="video/mp4">
                 </video>
@@ -1375,61 +1151,6 @@
     <br>
     </section>
 
-
-    <!-- <div id="container"></div>
-
-    <script>
-    var gifUrls = [
-    './video/rebuttal/tgve/airplane/masactrl.gif',
-    './video/rebuttal/tgve/basketball/masactrl.gif',
-    './video/rebuttal/tgve/car/masactrl.gif',
-    './video/rebuttal/tgve/cat_object/masactrl.gif',
-    './video/rebuttal/tgve/cat_motion/masactrl.gif',
-    './video/rebuttal/tgve/airplane/fatezero.gif',
-    './video/rebuttal/tgve/basketball/fatezero.gif',
-    './video/rebuttal/tgve/car/fatezero.gif',
-    './video/rebuttal/tgve/cat_object/fatezero.gif',
-    './video/rebuttal/tgve/cat_motion/fatezero.gif',
-    './video/rebuttal/tgve/airplane/tokenflow.gif',
-    './video/rebuttal/tgve/basketball/tokenflow.gif',
-    './video/rebuttal/tgve/car/tokenflow.gif',
-    './video/rebuttal/tgve/cat_object/tokenflow.gif',
-    './video/rebuttal/tgve/cat_motion/tokenflow.gif',
-    './video/rebuttal/tgve/airplane/rerender.gif',
-    './video/rebuttal/tgve/basketball/rerender.gif',
-    './video/rebuttal/tgve/car/rerender.gif',
-    './video/rebuttal/tgve/cat_object/rerender.gif',
-    './video/rebuttal/tgve/cat_motion/rerender.gif',
-    './video/rebuttal/tgve/airplane/ours.gif',
-    './video/rebuttal/tgve/basketball/ours.gif',
-    './video/rebuttal/tgve/car/ours.gif',
-    './video/rebuttal/tgve/cat_object/ours.gif',
-    './video/rebuttal/tgve/cat_motion/ours.gif'
-    ];
-
-    var images = [];
-
-    for (var i = 0; i < gifUrls.length; i++) {
-
-    var img = new Image();
-
-
-    img.onload = function() {
-
-        images.push(this);
-
-
-        if (images.length == gifUrls.length) {
-        for (var j = 0; j < images.length; j++) {
-            document.getElementById('container').appendChild(images[j]);
-        }
-        }
-    };
-
-
-    img.src = gifUrls[i];
-    }
-    </script> -->
 </body>
 
 </html>
