@@ -954,7 +954,7 @@
                             <p></p>
                         </div>
                     </div>
-                    <p>Fig. G.1.</p>
+                    <p>Fig. E.1.</p>
                     <br>
                     <p style="text-align:justify; word-wrap:break-word;">The output of each branch is visualized in section G, Fig. G.1, where it is observed that the motion branch (right) generate video with the target motion, and effectively transfer it to the main path (middle); meanwhile, the main path inherit the content from the reconstruction branch (left), thus enhance the consistency of unedited parts.</p>
                     <hr style="margin-top:0px">
@@ -988,7 +988,7 @@
                                 <p>Reconstruction Branch Output<br>(w/ null-text inversion)</p>
                             </div>
                         </div>
-                        <p>Fig. G.2.</p>
+                        <p>Fig. E.2.</p>
                         <table style="border-collapse: collapse; width: 100%;">
                             <tr>
                                 <td style="border: 1px solid black;">Metrics</td>
@@ -1025,7 +1025,7 @@
                             <p></p>
                         </div>
                     </div>
-                    <p>Fig. G.3.</p>
+                    <p>Fig. E.3.</p>
                 <hr style="margin-top:0px">
 
             </div>
@@ -1110,15 +1110,44 @@
                             </div>
                             <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
                             <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
-                            <p>Fig A.1.</p>
+                            <p>Fig G.1.</p>
                             <br>
                             <br>
                             <img src="./video/ablation/tgve/difference.svg" style="float: left; width: 100%;">
-                            <p>Fig A.2.</p>
-                            <p style="text-align:justify; word-wrap:break-word;">We highlight the contrast in Fig. A.2. Tune-A-Video (TAV) produces videos with poor temporal consistency and significant content changes (e.g., the crowd behind the racing car, the fields behind the cat). MasaCtrl*, FateZero, and TokenFlow tend to generate videos that are highly similar to the source, but fail to make edits that match the prompt (e.g., lack of raindrops in column 1 and noticeable stylistic changes in columns 2 and 3). Similarly, Rerender-A-Video also falls short in aligning with the target prompt and has significant color differences compared to the source. Additionally, all baselines are unable to modify the temporal dependency of the source video, leading to their failure in motion editing.</p>
+                            <p>Fig G.2.</p>
+                            <p style="text-align:justify; word-wrap:break-word;">We highlight the contrast in Fig. G.2. Tune-A-Video (TAV) produces videos with poor temporal consistency and significant content changes (e.g., the crowd behind the racing car, the fields behind the cat). MasaCtrl*, FateZero, and TokenFlow tend to generate videos that are highly similar to the source, but fail to make edits that match the prompt (e.g., lack of raindrops in column 1 and noticeable stylistic changes in columns 2 and 3). Similarly, Rerender-A-Video also falls short in aligning with the target prompt and has significant color differences compared to the source. Additionally, all baselines are unable to modify the temporal dependency of the source video, leading to their failure in motion editing.</p>
                             <br>
                             <p style="text-align:justify; word-wrap:break-word;">In contrast, the proposed UniEdit stands out for its ability to generate videos with 1) better content preservation 2) alignment with the target prompt 3) capability for various appearance editing tasks (including global stylization, local object replacement, or background modification), and motion editing.</p>
                             <br>
+                            <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Compare with baseline methods on Stable Diffusion:</h2>
+                            <div style="width: 100%;">
+                                <img src="./video/ablation/tgve/cap.svg" style="float: left; width: 4.7%;">
+                                <img src="./video/ablation/compare/1.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/compare/2.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/compare/3.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/compare/4.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/compare/white.gif" style="float: left; width: 19%;" loop>
+                            </div>
+                            <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
+                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+oil painting style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'running'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'waving'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
+                            <p>Fig G.3.</p>
+                            
+                            <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Compare with baseline methods on LaVie (same as UniEdit):</h2>
+                            <div style="width: 100%;">
+                                <img src="./video/ablation/tgve/cap.svg" style="float: left; width: 4.7%;">
+                                <img src="./video/ablation/compare/5.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/compare/6.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/compare/7.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/compare/8.gif" style="float: left; width: 19%;" loop>
+                                <img src="./video/ablation/compare/white.gif" style="float: left; width: 19%;" loop>
+                            </div>
+                            <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
+                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+oil painting style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'running'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'waving'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
+                            <p>Fig G.4.</p>
+
+                            <p style="text-align:justify; word-wrap:break-word;">For a fair comparison, we also migrated all baselines to LaVie, using the same base model as our method. The results are presented in Fig. G.4, and they are found to be inferior compared to those in Fig. G.3 (based on Stable Diffusion).</p>
+                            <br>
+                            
                             
                 <br>
                 <p style="text-align:justify; word-wrap:break-word;">[1] Wu, Jay Zhangjie, et al. "Cvpr 2023 text guided video editing competition." *arXiv preprint arXiv:2310.16003* (2023).
