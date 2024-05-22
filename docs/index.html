@@ -114,7 +114,7 @@
               </h2>
               <h2 class="content has-text-centered">
                 <p style="text-align:left; padding-left: 0px; color: red;">We organize the project page as follows:</p>
-                <p style="text-align:left; padding-left: 0px;">Section A: Video Editing Results with UniEdit (based on <a href="https://github.com/Vchitect/LaVie">LaVie</a> and <a href="https://github.com/AILab-CVC/VideoCrafter">VideoCrafter2</a>);<br>Section B: Analysis on the Proposed Components in UniEdit;<br>Section C: Impact of Hyper-parameter Selection;<br>Section D: Impact of Mask-Guided Coordination;<br>Section E: More Results and Visualization;<br>Section F: Failure Cases Visualization;<br>Section G: Comparison with State-of-the-Art Methods.</p>
+                <p style="text-align:left; padding-left: 0px;"><a href="#sectionA">Section A</a>: Video Editing Results with UniEdit (based on <a href="https://github.com/Vchitect/LaVie">LaVie</a> and <a href="https://github.com/AILab-CVC/VideoCrafter">VideoCrafter2</a>);<br><a href="#sectionB">Section B</a>: Analysis on the Proposed Components in UniEdit;<br><a href="#sectionC">Section C</a>: Impact of Hyper-parameter Selection;<br><a href="#sectionD">Section D</a>: Impact of Mask-Guided Coordination;<br><a href="#sectionE">Section E</a>: More Results and Visualization;<br><a href="#sectionF">Section F</a>: Failure Cases Visualization;<br><a href="#sectionG">Section G</a>: Comparison with State-of-the-Art Methods.</p>
               </h2>
             </div>
           </div>
@@ -125,7 +125,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:left;">Section A: Video Editing Results with UniEdit</h2>
+                    <h2 class="title is-3" id="sectionA" style="text-align:left;">Section A: Video Editing Results with UniEdit</h2>
                     <h2 class="title is-3">UniEdit + <a href="https://github.com/Vchitect/LaVie">LaVie</a> (Motion Editing)</h2>
 
                     <table style="table-layout: fixed;">
@@ -467,7 +467,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section B: Analysis on the Proposed Components</h2>
+                    <h2 class="title is-3" id="sectionB" style="text-align:justify; word-wrap:break-word;">Section B: Analysis on the Proposed Components</h2>
                     <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Difference between QK and V features in SA-S modules:</p>
                     <p><strong>+ 'Van Gogh style'</strong></p>
                     <div style="display: flex; justify-content: space-between;">
@@ -587,7 +587,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section C: Impact of Hyper-parameter Selection</h2>
+                    <h2 class="title is-3" id="sectionC" style="text-align:justify; word-wrap:break-word;">Section C: Impact of Hyper-parameter Selection</h2>
 
                 <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Appearance Editing (global):</p>
                 <img src="./video/ablation/hyper/fig_hyper_ablation2.jpg" alt="Your browser does not support the image tag." loop>
@@ -814,7 +814,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section D: Impact of Mask-Guided Coordination</h2>
+                    <h2 class="title is-3" id="sectionD" style="text-align:justify; word-wrap:break-word;">Section D: Impact of Mask-Guided Coordination</h2>
                 <p></p>
                     <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of attention maps in CA-S modules:</p>
                     <img src="./video/ablation/mask/CA_attn_vis.jpg" alt="Your browser does not support the image tag." loop>
@@ -938,7 +938,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section E: More Results and Visualization</h2>
+                    <h2 class="title is-3" id="sectionE" style="text-align:justify; word-wrap:break-word;">Section E: More Results and Visualization</h2>
                     <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of the reconstruction branch and the motion-reference branch:</h2>
                     <p><strong>'playing guitar' --> 'waving'</strong></p>
                     <div style="display: flex; justify-content: space-between;">
@@ -956,7 +956,7 @@
                     </div>
                     <p>Fig. E.1.</p>
                     <br>
-                    <p style="text-align:justify; word-wrap:break-word;">The output of each branch is visualized in section G, Fig. G.1, where it is observed that the motion branch (right) generate video with the target motion, and effectively transfer it to the main path (middle); meanwhile, the main path inherit the content from the reconstruction branch (left), thus enhance the consistency of unedited parts.</p>
+                    <p style="text-align:justify; word-wrap:break-word;">The output of each branch is visualized in section E, Fig. E.1, where it is observed that the motion branch (right) generate video with the target motion, and effectively transfer it to the main path (middle); meanwhile, the main path inherit the content from the reconstruction branch (left), thus enhance the consistency of unedited parts.</p>
                     <hr style="margin-top:0px">
 
                     <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Qualitative results on the reconstruction branch:</h2>
@@ -1041,7 +1041,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section F: Failure Cases Visualization</h2>
+                    <h2 class="title is-3" id="sectionF" style="text-align:justify; word-wrap:break-word;">Section F: Failure Cases Visualization</h2>
                     <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Edit multiple elements simultaneously:</h2>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
@@ -1091,7 +1091,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" style="text-align:justify; word-wrap:break-word;">Section G: Comparison with State-of-the-Art Methods</h2>
+                    <h2 class="title is-3" id="sectionG" style="text-align:justify; word-wrap:break-word;">Section G: Comparison with State-of-the-Art Methods</h2>
 
                     <div style="display: flex; justify-content: space-between;">
                         <div style="width: 100%;">
