@@ -113,97 +113,123 @@
                 UniEdit supports both video <strong><span style="color: #F0A780;">motion</span></strong> editing in the time axis (i.e., from playing guitar to eating or waving) and various video <strong><span style="color: #156082;">appearance</span></strong> editing scenarios (i.e., stylization, rigid/non-rigid object replacement, background modification).
               </h2>
               <h2 class="content has-text-centered">
-                <p style="text-align:left; padding-left: 0px; color: red;">We organize the project page as follows:</p>
-                <p style="text-align:left; padding-left: 0px;"><a href="#sectionA">Section A</a>: Video Editing Results with UniEdit (based on <a href="https://github.com/Vchitect/LaVie">LaVie</a> and <a href="https://github.com/AILab-CVC/VideoCrafter">VideoCrafter2</a>);<br><a href="#sectionB">Section B</a>: Analysis on the Proposed Components in UniEdit;<br><a href="#sectionC">Section C</a>: Impact of Hyper-parameter Selection;<br><a href="#sectionD">Section D</a>: Impact of Mask-Guided Coordination;<br><a href="#sectionE">Section E</a>: More Results and Visualization;<br><a href="#sectionF">Section F</a>: Failure Cases Visualization;<br><a href="#sectionG">Section G</a>: Comparison with State-of-the-Art Methods.</p>
+                <p style="text-align:left; padding-left: 0px; color: red;">We organize the project page as follows:</p><p style="text-align:left; padding-left: 0px;"><a href="#sectionRebuttal">Section Rebuttal</a>: Video Results Corresponding to the Rebuttal;<br><p style="text-align:left; padding-left: 0px;"><a href="#sectionA">Section A</a>: Video Editing Results with UniEdit (based on <a href="https://github.com/Vchitect/LaVie">LaVie</a> and <a href="https://github.com/AILab-CVC/VideoCrafter">VideoCrafter2</a>);<br><a href="#sectionB">Section B</a>: Analysis on the Proposed Components in UniEdit;<br><a href="#sectionC">Section C</a>: Impact of Hyper-parameter Selection;<br><a href="#sectionD">Section D</a>: Impact of Mask-Guided Coordination;<br><a href="#sectionE">Section E</a>: More Results and Visualization;<br><a href="#sectionF">Section F</a>: Failure Cases Visualization;<br><a href="#sectionG">Section G</a>: Comparison with State-of-the-Art Methods.</p>
               </h2>
             </div>
           </div>
       </section>
 
-      <!-- <section>
+      <section>
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" id="sectionRebuttal" style="text-align:justify; word-wrap:break-word;">Section Rebuttal: Video Results Corresponding to the Rebuttal PDF</h2>
+                    <h2 class="title is-3" id="sectionRebuttal" style="text-align:justify; word-wrap:break-word;">Section Rebuttal: Video Results Corresponding to the Rebuttal</h2>
                 <p></p>
                 <table style="table-layout: fixed;">
                     <tbody>
                         <tr>
-                            <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure A:</p>
-                            <td width="50%" style="text-align:center;">
-                                
-                                <img src="./video/rebuttal/fig_A/grid_case1_input_optical.gif" alt="Your browser does not support the image tag." loop>
+                            <td width="100%" style="text-align:center;">
+                                <p style="text-align: center;">raccoon --> panda, play violin --> waving</p>
+                                <!-- <br> -->
+                                <img src="./video/ablation/rebuttal/panda_waving_improved.gif" alt="Your browser does not support the image tag." loop>
     
-                                <p style="text-align: left;">&nbsp;&nbsp;&nbsp;Synthesized Video &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optical Flow</p>
-                                
-                            </td>
-                            <td width="50%" style="text-align:center;">
-                                
-                                <img src="./video/rebuttal/fig_A/grid_case2_input_optical.gif" alt="Your browser does not support the image tag." loop>
-    
-                                <p style="text-align: left;">&nbsp;&nbsp;&nbsp;Synthesized Video &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optical Flow</p>
-                                
-                            </td>
-                            
-                        <tr>
-                    </tbody>
-                </table>
-                <hr style="margin-top:0px">
-                <table style="table-layout: fixed;">
-                    <tbody>
-                        <tr>
-                            <td width="50%" style="text-align:center;">
-                                
-                                <img src="./video/rebuttal/fig_A/grid_case1.gif" alt="Your browser does not support the image tag." loop>
-    
-                                <p><centered>Temporal Attention Maps at Different Layers and Timesteps</centered></p>
-                                <br>
-                            </td>
-                            <td width="50%" style="text-align:center;">
-                                
-                                <img src="./video/rebuttal/fig_A/grid_case2.gif" alt="Your browser does not support the image tag." loop>
-    
-                                <p><centered>Temporal Attention Maps at Different Layers and Timesteps</centered></p>
+                                <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit-Mask</p>
                                 <br>
                             </td>
                             
                         <tr>
+                        <br>
+                        <tr>
+                            <a href="#Fig_A">
+                            <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure A: Enhanced Editing Results of UniEdit with Mask-Guided Coordination<br><br></p>
+                            </a>
+                            <td width="100%" style="text-align:center;">
+                                <p style="text-align: center;"> A shark on the left and several goldfish swim in a tank.</p>
+                                <img src="./video/ablation/rebuttal/shark_improved.gif" alt="Your browser does not support the image tag." loop>
+    
+                                <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit-Mask</p>
+                                <br>
+                            </td>
+                        <tr>
                     </tbody>
                 </table>
+
                 <table style="table-layout: fixed;">
                     <tbody>
                         <tr>
-                            <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure B:</p>
+                            <a href="#Fig_B">
+                                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure B: Qualitative Comparison with ReVideo<br><br></p>
+                            </a>
                             <tr>
-                                <td width="50%" style="text-align:center;">
-                                    <p style="text-align: left;">&nbsp;&nbsp;&nbsp;Synthesized Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spatial Layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Temporal Layer</p>
-                                    <img src="./video/rebuttal/fig_B/grid_case1.gif" alt="Your browser does not support the image tag." loop>
-        
-                                    <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attn with 'corgi' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attn with 'walking'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attn with 'park'</p>
-                                    <br>
-                                </td>
-                                <td width="50%" style="text-align:center;">
-                                    <p style="text-align: left;">&nbsp;&nbsp;&nbsp;Synthesized Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spatial Layer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Temporal Layer</p>
-                                    <img src="./video/rebuttal/fig_B/grid_case2.gif" alt="Your browser does not support the image tag." loop>
-        
-                                    <p style="text-align: left;">&nbsp;Attn with 'teddybear' &nbsp;&nbsp;&nbsp; Attn with 'suite'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attn with 'house'</p>
-                                    <br>
-                                </td>
+                                <div style="width: 100%;">
+                                    <img src="./video/ablation/rebuttal/cap.svg" style="float: left; width: 5.6%;">
+                                    <img src="./video/ablation/rebuttal/1_withrevideo.gif" style="float: left; width: 18.8%;" loop>
+                                    <img src="./video/ablation/rebuttal/2_withrevideo.gif" style="float: left; width: 18.8%;" loop>
+                                    <img src="./video/ablation/rebuttal/3_withrevideo.gif" style="float: left; width: 18.8%;" loop>
+                                    <img src="./video/ablation/rebuttal/4_withrevideo.gif" style="float: left; width: 18.8%;" loop>
+                                    <img src="./video/ablation/compare/white_resized.gif" style="float: left; width: 18.8%;" loop>
+                                </div>
+                                <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
+                                <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+oil painting style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'running'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'waving'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
+                            <tr>
+                            <br>
+                            <tr>
+                                <div style="width: 100%;">
+                                    <img src="./video/ablation/rebuttal/cap.svg" style="float: left; width: 5.6%;">
+                                    <img src="./video/ablation/rebuttal/5_withrevideo.gif" style="float: left; width: 18.8%;" loop>
+                                    <img src="./video/ablation/rebuttal/6_withrevideo.gif" style="float: left; width: 18.8%;" loop>
+                                    <img src="./video/ablation/rebuttal/7_withrevideo.gif" style="float: left; width: 18.8%;" loop>
+                                    <img src="./video/ablation/rebuttal/8_withrevideo.gif" style="float: left; width: 18.8%;" loop>
+                                    <img src="./video/ablation/rebuttal/9_withrevideo.gif" style="float: left; width: 18.8%;" loop>
+                                </div>
+                                <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
+                                <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
+                                <br>
                             <tr>
                         <tr>
                     </tbody>
                 <table style="table-layout: fixed;">
                     <tbody>
+                        <br>
                         <tr>
-                            <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure C:</p>
-                            <tr>
-                                <td width="100%" style="text-align:center;">
-                                    <img src="./video/rebuttal/fig_C/grid.gif" alt="Your browser does not support the image tag." loop>
-        
-                                    <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gamma;=0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gamma;=0.25 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gamma;=0.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gamma;=0.75 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gamma;=1</p>
-                                    <br>
-                                </td>
-                            <tr>
+                            <!-- <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure C: Enhanced Editing Results of UniEdit with Powerful Base T2V Generation Model</p> -->
+                            <a href="#Fig_C">
+                                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">
+                                  Figure C: Enhanced Editing Results of UniEdit with Powerful Base T2V Generation Model<br><br>
+                                </p>
+                            </a>
+
+                            <td width="100%" style="text-align:center;">
+                                
+                                <img src="./video/ablation/rebuttal/cat_consistency_improved.gif" alt="Your browser does not support the image tag." loop>
+    
+                                <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit + LaVie &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit + Improved LaVie</p>
+                                <br>
+                                
+                            </td>
+                        <tr>
+                    </tbody>
+                </table>
+
+                <table style="table-layout: fixed;">
+                    <tbody>
+                        <br>
+                        <tr>
+                            <!-- <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure C: Enhanced Editing Results of UniEdit with Powerful Base T2V Generation Model</p> -->
+                            <a href="#Fig_D">
+                                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">
+                                  Figure D: Enhanced Editing Results of UniEdit with Mask-Guided Coordination<br><br>
+                                </p>
+                            </a>
+
+                            <td width="100%" style="text-align:center;">
+                                
+                                <img src="./video/ablation/rebuttal/corgi_lying_improved.gif" alt="Your browser does not support the image tag." loop>
+    
+                                <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit-Mask</p>
+                                <br>
+                                
+                            </td>
                         <tr>
                     </tbody>
                 </table>
@@ -216,7 +242,7 @@
         </div>
         
     <br>
-    </section> -->
+    </section>
 
 
     <section class="hero teaser">
