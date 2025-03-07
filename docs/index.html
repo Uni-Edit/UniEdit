@@ -104,16 +104,16 @@
         <div class="container is-max-desktop">
             <div class="hero-body">
               <!-- <img src="./static/images/fig1.svg" alt="Examples edited by UniEdit." style="transform: translateX(-13.5px);"/> -->
-              <!-- <video autoplay controls muted loop playsinline>
-                <source src="./video/fig1_demo_video.mp4" type="video/mp4">
+              <video autoplay controls muted loop playsinline>
+                <source src="./video/iccv_submission/fig1_demo_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-              </video> -->
-              <img src="./video/fig1_demo_video.gif" alt="Your browser does not support the image tag." loop>
+              </video>
+              <!-- <img src="./video/fig1_demo_video.gif" alt="Your browser does not support the image tag." loop> -->
               <h2 class="content has-text-centered">
                 UniEdit supports both video <strong><span style="color: #F0A780;">motion</span></strong> editing in the time axis (i.e., from playing guitar to eating or waving) and various video <strong><span style="color: #156082;">appearance</span></strong> editing scenarios (i.e., stylization, rigid/non-rigid object replacement, background modification).
               </h2>
               <h2 class="content has-text-centered">
-                <p style="text-align:left; padding-left: 0px; color: red;">We organize the project page as follows:</p><p style="text-align:left; padding-left: 0px;"><a href="#sectionRebuttal">Section Rebuttal</a>: Video Results Corresponding to the Rebuttal;<br><p style="text-align:left; padding-left: 0px;"><a href="#sectionA">Section A</a>: Video Editing Results with UniEdit (based on <a href="https://github.com/Vchitect/LaVie">LaVie</a> and <a href="https://github.com/AILab-CVC/VideoCrafter">VideoCrafter2</a>);<br><a href="#sectionB">Section B</a>: Analysis on the Proposed Components in UniEdit;<br><a href="#sectionC">Section C</a>: Impact of Hyper-parameter Selection;<br><a href="#sectionD">Section D</a>: Impact of Mask-Guided Coordination;<br><a href="#sectionE">Section E</a>: More Results and Visualization;<br><a href="#sectionF">Section F</a>: Failure Cases Visualization;<br><a href="#sectionG">Section G</a>: Comparison with State-of-the-Art Methods.</p>
+                <p style="text-align:left; padding-left: 0px; color: red;">We organize the project page as follows:</p><p style="text-align:left; padding-left: 0px;"><a href="#sectionA">Section A</a>: Video Editing Results with UniEdit (based on CogVideoX-2B, VideoCrafter2, and LaVie);<br><a href="#sectionB">Section B</a>: Analysis on the Proposed Components in UniEdit;<br><a href="#sectionC">Section C</a>: Impact of Hyper-parameter Selection;<br><a href="#sectionD">Section D</a>: Impact of Mask-Guided Coordination;<br><a href="#sectionE">Section E</a>: More Results and Visualization;<br><a href="#sectionF">Section F</a>: Failure Cases Visualization;<br><a href="#sectionG">Section G</a>: Comparison with State-of-the-Art Methods.</p>
               </h2>
             </div>
           </div>
@@ -123,165 +123,24 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3" id="sectionRebuttal" style="text-align:justify; word-wrap:break-word;">Section Rebuttal: Video Results Corresponding to the Rebuttal</h2>
+                    <h2 class="title is-3" id="sectionA" style="text-align:left;">Section A: Video Editing Results with UniEdit</h2>
+                    <h2 class="title is-3">UniEdit + <a href="https://github.com/THUDM/CogVideo">CogVideoX-2B</a></h2>
                 <p></p>
+
                 <table style="table-layout: fixed;">
                     <tbody>
+                        <br>
                         <tr>
-                            <td width="100%" style="text-align:center;">
-                                <p style="text-align: center;">raccoon --> panda, play violin --> waving</p>
-                                <!-- <br> -->
-                                <img src="./video/ablation/rebuttal/panda_waving_improved.gif" alt="Your browser does not support the image tag." loop>
-    
-                                <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit-Mask</p>
-                                <br>
-                            </td>
+                            <tr>
+                                <td width="100%" style="text-align:center;">
+                                    <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                                        <source src="./video/iccv_submission/ours_cogvideox.mp4" type="video/mp4">
+                                    </video>
+                                    <br>
+                                </td>
+                            <tr>
                             
                         <tr>
-                        <br>
-                        <tr>
-                            <a href="#Fig_A">
-                            <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure A: Enhanced Editing Results of UniEdit with Mask-Guided Coordination<br><br></p>
-                            </a>
-                            <td width="100%" style="text-align:center;">
-                                <p style="text-align: center;"> A shark on the left and several goldfish swim in a tank.</p>
-                                <img src="./video/ablation/rebuttal/shark_improved.gif" alt="Your browser does not support the image tag." loop>
-    
-                                <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit-Mask</p>
-                                <br>
-                            </td>
-                        <tr>
-                    </tbody>
-                </table>
-
-                <table style="table-layout: fixed;">
-                    <tbody>
-                        <tr>
-                            <a href="#Fig_B">
-                                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure B: Qualitative Comparison with ReVideo<br><br></p>
-                            </a>
-                            <tr>
-                                <div style="width: 100%;">
-                                    <img src="./video/ablation/rebuttal/cap.svg" style="float: left; width: 5.6%;">
-                                    <img src="./video/ablation/rebuttal/1_withrevideo.gif" style="float: left; width: 18.8%;" loop>
-                                    <img src="./video/ablation/rebuttal/2_withrevideo.gif" style="float: left; width: 18.8%;" loop>
-                                    <img src="./video/ablation/rebuttal/3_withrevideo.gif" style="float: left; width: 18.8%;" loop>
-                                    <img src="./video/ablation/rebuttal/4_withrevideo.gif" style="float: left; width: 18.8%;" loop>
-                                    <img src="./video/ablation/compare/white_resized.gif" style="float: left; width: 18.8%;" loop>
-                                </div>
-                                <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
-                                <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+oil painting style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'running'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'waving'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
-                            <tr>
-                            <br>
-                            <tr>
-                                <div style="width: 100%;">
-                                    <img src="./video/ablation/rebuttal/cap.svg" style="float: left; width: 5.6%;">
-                                    <img src="./video/ablation/rebuttal/5_withrevideo.gif" style="float: left; width: 18.8%;" loop>
-                                    <img src="./video/ablation/rebuttal/6_withrevideo.gif" style="float: left; width: 18.8%;" loop>
-                                    <img src="./video/ablation/rebuttal/7_withrevideo.gif" style="float: left; width: 18.8%;" loop>
-                                    <img src="./video/ablation/rebuttal/8_withrevideo.gif" style="float: left; width: 18.8%;" loop>
-                                    <img src="./video/ablation/rebuttal/9_withrevideo.gif" style="float: left; width: 18.8%;" loop>
-                                </div>
-                                <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
-                                <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
-                                <br>
-                            <tr>
-                        <tr>
-                    </tbody>
-                <table style="table-layout: fixed;">
-                    <tbody>
-                        <br>
-                        <tr>
-                            <!-- <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure C: Enhanced Editing Results of UniEdit with Powerful Base T2V Generation Model</p> -->
-                            <a href="#Fig_C">
-                                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">
-                                  Figure C: Enhanced Editing Results of UniEdit with Powerful Base T2V Generation Model<br><br>
-                                </p>
-                            </a>
-
-                            <td width="100%" style="text-align:center;">
-                                
-                                <img src="./video/ablation/rebuttal/cat_consistency_improved.gif" alt="Your browser does not support the image tag." loop>
-    
-                                <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit + LaVie &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit + Improved LaVie</p>
-                                <br>
-                                
-                            </td>
-                        <tr>
-                    </tbody>
-                </table>
-
-                <table style="table-layout: fixed;">
-                    <tbody>
-                        <br>
-                        <tr>
-                            <!-- <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure C: Enhanced Editing Results of UniEdit with Powerful Base T2V Generation Model</p> -->
-                            <a href="#Fig_D">
-                                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">
-                                  Figure D: Enhanced Editing Results of UniEdit with Mask-Guided Coordination<br><br>
-                                </p>
-                            </a>
-
-                            <td width="100%" style="text-align:center;">
-                                
-                                <img src="./video/ablation/rebuttal/corgi_lying_improved.gif" alt="Your browser does not support the image tag." loop>
-    
-                                <p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Source Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UniEdit-Mask</p>
-                                <br>
-                                
-                            </td>
-                        <tr>
-                    </tbody>
-                </table>
-                
-                <table style="table-layout: fixed;">
-                    <tbody>
-                        <br>
-                        <tr>
-                            <!-- <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Figure C: Enhanced Editing Results of UniEdit with Powerful Base T2V Generation Model</p> -->
-                            <a href="#Fig_E">
-                                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">
-                                  Figure E: Editing Results on CogVideoX-2b<br><br>
-                                </p>
-                            </a>
-                            <tr>
-                                <td width="100%" style="text-align:center;">
-                                    <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                                        <source src="./video/ablation/rebuttal/fig_E/object2.mp4" type="video/mp4">
-                                    </video>
-                                    <p style="text-align: center;">car --> bike</p>
-                                    <br>
-                                </td>
-                            <tr>
-                                
-                            <tr>
-                                <td width="100%" style="text-align:center;">
-                                    <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                                        <source src="./video/ablation/rebuttal/fig_E/style.mp4" type="video/mp4">
-                                    </video>
-                                    <p style="text-align: center;"> + oil painting</p>
-                                    <br>
-                                </td>
-                            <tr>
-                            <tr>
-                                <td width="100%" style="text-align:center;">
-                                    <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                                        <source src="./video/ablation/rebuttal/fig_E/object1.mp4" type="video/mp4">
-                                    </video>
-                                    <p style="text-align: center;"> white SUV --> red SUV</p>
-                                    <br>
-                                </td>
-                            <tr>
-                            <tr>
-                                <td width="100%" style="text-align:center;">
-                                    <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                                        <source src="./video/ablation/rebuttal/fig_E/motion.mp4" type="video/mp4">
-                                    </video>
-                                    <p style="text-align: center;">playing guitar --> waving</p>
-                                    <br>
-                                </td>
-                            <tr>
-                        <tr>
                     </tbody>
                 </table>
                 <hr style="margin-top:0px">
@@ -291,293 +150,6 @@
         </div>
         </div>
         
-    <br>
-    </section>
-
-
-    <section class="hero teaser">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                    <h2 class="title is-3" id="sectionA" style="text-align:left;">Section A: Video Editing Results with UniEdit</h2>
-                    <h2 class="title is-3">UniEdit + <a href="https://github.com/Vchitect/LaVie">LaVie</a> (Motion Editing)</h2>
-
-                    <table style="table-layout: fixed;">
-                    <tbody>
-                        <tr>
-                            <!-- First row of videos -->
-                            <td width="50%" style="text-align:center;"> 
-                                <video width="98%" autoplay muted loop>
-                                    <source src="video/motion/raccoon eat apple.mp4" type="video/mp4"> 
-                                </video> 
-                                <img src="./static/images/m1.svg", style="width: 100%; margin-top: -0px;">
-                                <br>
-                            </td>
-                            <td width="50%" style="text-align:center;"> 
-                                <video width="98%" autoplay muted loop> 
-                                    <source src="video/motion/raccoon waving.mp4" type="video/mp4"> 
-                                </video> 
-                                <img src="./static/images/m2.svg", style="width: 100%; margin-top: -0px;">
-                                <br>
-                            </td>
-                        <tr>
-                        <tr>
-                            <!-- First row of videos -->
-                            <td width="50%" style="text-align:center;"> 
-                                <video width="98%" autoplay muted loop> 
-                                    <source src="video/motion/corgi_lying.mp4" type="video/mp4"> 
-                                </video> 
-                                <img src="./static/images/m3.svg", style="width: 100%; margin-top: -0px;">
-                                <br>
-                            </td>
-                            <td width="50%" style="text-align:center;"> 
-                                <video width="98%" autoplay muted loop> 
-                                    <source src="video/motion/corgi jumping.mp4" type="video/mp4"> 
-                                </video> 
-                                <img src="./static/images/m4.svg", style="width: 100%; margin-top: -0px;">
-                                <br>
-                            </td>
-                        <tr>
-                        <tr>
-                            <!-- First row of videos -->
-                            <td width="50%" style="text-align:center;"> 
-                                <video width="98%" autoplay muted loop> 
-                                    <source src="video/motion/man running.mp4" type="video/mp4"> 
-                                </video> 
-                                <img src="./static/images/m5.svg", style="width: 100%; margin-top: -0px;">
-                                <br>
-                            </td>
-                            <td width="50%" style="text-align:center;"> 
-                                <video width="98%" autoplay muted loop> 
-                                    <source src="video/motion/monkey turn around.mp4" type="video/mp4"> 
-                                </video> 
-                                <img src="./static/images/m6.svg", style="width: 100%; margin-top: -0px;">
-                                <br>
-                            </td>
-                        <tr>
-                        <tr>
-                            <!-- First row of videos -->
-                            <td width="50%" style="text-align:center;"> 
-                                <video width="98%" autoplay muted loop> 
-                                    <source src="video/motion/teddy dancing.mp4" type="video/mp4"> 
-                                </video> 
-                                <img src="./static/images/m7.svg", style="width: 100%; margin-top: -0px;">
-                                <br>
-                            </td>
-                            <td width="50%" style="text-align:center;"> 
-                                <video width="98%" autoplay muted loop> 
-                                    <source src="video/motion/cat jumping.mp4" type="video/mp4"> 
-                                </video> 
-                                <img src="./static/images/m8.svg", style="width: 100%; margin-top: -0px;">
-                                <br>
-                            </td>
-                        <tr>
-                    </tbody>
-                    </table>
-                <br>
-                <hr style="margin-top:0px">
-            </div>
-        </div>
-        </div>
-
-    </section>
-
-    <section>
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                    <h2 class="title is-3">UniEdit + <a href="https://github.com/Vchitect/LaVie">LaVie</a> (Appearance Editing)</h2>
-                <p></p>
-                <table style="table-layout: fixed;">
-                <tbody>
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/appear/phantom red suit.mp4" type="video/mp4">
-                            </video>
-                            <img src="./static/images/a1.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/appear/phantom superman suit.mp4" type="video/mp4">
-                            </video>
-                            <img src="./static/images/a2.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                    <tr>
-                    
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/iron man winter.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a9.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/furturistic factory.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a6.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-
-                    <tr>
-
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/appear/wolf dinner.mp4" type="video/mp4">
-                            </video>
-                            <img src="./static/images/a4.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/appear/mario dinner.mp4" type="video/mp4">
-                            </video>
-                            <img src="./static/images/a3.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                    <tr>
-
-                    <tr>
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/shanghai oil painting.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a8.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/appear/husky.mp4" type="video/mp4">
-                            </video>
-                            <img src="./static/images/a18.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                    <tr>
-
-                    <tr>
-                        <!-- First row of videos -->
-
-                        <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/appear/ice car.mp4" type="video/mp4">
-                            </video>
-                            <img src="./static/images/a17.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/lego boy.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a10.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                    <tr>
-
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/NYC night.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a7.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/NYC blackwhite.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a16.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                    <tr>
-
-
-
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/crayon_shark.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a5.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/appear/girl walk.mp4" type="video/mp4">
-                            </video>
-                            <img src="./static/images/a15.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                    <tr>
-
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/metal raccoon guitar.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a11.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/iron man guitar.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a12.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                    <tr>
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/panda guitar.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a13.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/spider man guitar.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a14.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>                        
-                    <tr>
-
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/guitar in space.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a19.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/appear/guitar van gogh.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/a20.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>                        
-                    <tr>
-                </tbody>
-                </table>
-                <br>
-                <hr style="margin-top:0px">
-            </div>
-        </div>
-        </div>
     <br>
     </section>
 
@@ -592,42 +164,81 @@
                     <tr>
                         <!-- First row of videos -->
                         <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/videocrafter2/rabbit.mp4" type="video/mp4">
+                            <video width="100%" autoplay muted loop>
+                                <source src="video/iccv_submission/ours_videocrafter2.mp4" type="video/mp4">
                             </video>
-                            <img src="./static/images/vc1.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;">
-                            <video width="98%" autoplay muted loop>
-                                <source src="video/videocrafter2/teddy.mp4" type="video/mp4">
-                            </video>
-                            <img src="./static/images/vc2.svg", style="width: 100%; margin-top: -0px;">
                             <br>
                         </td>
                     <tr>
                     
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/videocrafter2/swing.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/vc3.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                        <td width="50%" style="text-align:center;"> 
-                            <video width="98%" autoplay muted loop> 
-                                <source src="video/videocrafter2/corgi.mp4" type="video/mp4"> 
-                            </video> 
-                            <img src="./static/images/vc4.svg", style="width: 100%; margin-top: -0px;">
-                            <br>
-                        </td>
-                    <tr>
                 </tbody>
                 </table>
-                <p style="text-align:justify; word-wrap:break-word;">Our work primarily builds on the text-to-video generation framework LaVie. Furthermore, we additionally implement our method on VideoCrafter2, a concurrent work on T2V generation to demonstrate the flexibility of UniEdit. The results are shown above.
-                
+                <hr style="margin-top:0px">
+            </div>
+        </div>
+        </div>
+    <br>
+    </section>
+
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    
+                    <h2 class="title is-3">UniEdit + <a href="https://github.com/Vchitect/LaVie">LaVie</a> (Appearance Editing)</h2>
+
+                    <table style="table-layout: fixed;">
+                    <tbody>
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="100%" style="text-align:center;"> 
+                                <video width="100%" autoplay muted loop>
+                                    <source src="video/iccv_submission/appearence1-1.mp4" type="video/mp4"> 
+                                </video> 
+                                <br>
+                            </td>
+                        <tr>
+                        <tr>
+                            <!-- First row of videos -->
+                            <td width="100%" style="text-align:center;"> 
+                                <video width="100%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/appearence2-1.mp4" type="video/mp4"> 
+                                </video> 
+                                <br>
+                            </td>
+                        <tr>
+                        
+                    </tbody>
+                    </table>
+                <br>
+                <hr style="margin-top:0px">
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">UniEdit + <a href="https://github.com/Vchitect/LaVie">LaVie</a> (Motion Editing)</h2>
+                <p></p>
+                <table style="table-layout: fixed;">
+                <tbody>
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="100%" style="text-align:center;">
+                            <video width="100%" autoplay muted loop>
+                                <source src="video/iccv_submission/motion1-1.mp4" type="video/mp4">
+                            </video>
+                            <br>
+                        </td>
+                    <tr>
+                    
+                </tbody>
+                </table>
                 <br>
                 <hr style="margin-top:0px">
             </div>
@@ -1266,90 +877,25 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full-width">
                     <h2 class="title is-3" id="sectionG" style="text-align:justify; word-wrap:break-word;">Section G: Comparison with State-of-the-Art Methods</h2>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <div style="width: 100%;">
-                            <!-- <div style="width: 100%;">
-                                <img src="./video/ablation/tgve/cap.svg" style="float: left; width: 4.7%;">
-                                <img src="./video/ablation/tgve/concat.gif" style="float: left; width: 95%;" loop>
-                            </div> -->
-                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
-                            <div style="width: 100%;">
-                                <img src="./video/ablation/tgve/cap.svg" style="float: left; width: 4.7%;">
-                                <img src="./video/ablation/tgve/airplane/concatenated.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/tgve/basketball/concatenated.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/tgve/car/concatenated.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/tgve/cat_object/concatenated.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/tgve/cat_motion/concatenated.gif" style="float: left; width: 19%;" loop>
-                            </div>
-                            <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
-                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'raining'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'furturistic style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'neon lights'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'look up to the sky'</strong></p>
-                            <p>Fig G.1.</p>
+                <p></p>
+                <table style="table-layout: fixed;">
+                <tbody>
+                    <tr>
+                        <!-- First row of videos -->
+                        <td width="100%" style="text-align:center;">
+                            <video width="100%" autoplay muted loop>
+                                <source src="video/iccv_submission/compare_video.mp4" type="video/mp4">
+                            </video>
                             <br>
-                            <br>
-                            <img src="./video/ablation/tgve/difference.svg" style="float: left; width: 100%;">
-                            <p>Fig G.2.</p>
-                            <p style="text-align:justify; word-wrap:break-word;">We highlight the contrast in Fig. G.2. Tune-A-Video (TAV) produces videos with poor temporal consistency and significant content changes (e.g., the crowd behind the racing car, the fields behind the cat). MasaCtrl*, FateZero, and TokenFlow tend to generate videos that are highly similar to the source, but fail to make edits that match the prompt (e.g., lack of raindrops in column 1 and noticeable stylistic changes in columns 2 and 3). Similarly, Rerender-A-Video also falls short in aligning with the target prompt and has significant color differences compared to the source. Additionally, all baselines are unable to modify the temporal dependency of the source video, leading to their failure in motion editing.</p>
-                            <br>
-                            <p style="text-align:justify; word-wrap:break-word;">In contrast, the proposed UniEdit stands out for its ability to generate videos with 1) better content preservation 2) alignment with the target prompt 3) capability for various appearance editing tasks (including global stylization, local object replacement, or background modification), and motion editing.</p>
-                            <br>
-                            <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Compare with baseline methods on Stable Diffusion:</h2>
-                            <div style="width: 100%;">
-                                <img src="./video/ablation/tgve/cap.svg" style="float: left; width: 4.7%;">
-                                <img src="./video/ablation/compare/1.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/compare/2.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/compare/3.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/compare/4.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/compare/white.gif" style="float: left; width: 19%;" loop>
-                            </div>
-                            <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
-                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+oil painting style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'running'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'waving'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
-                            <p>Fig G.3.</p>
-                            
-                            <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Compare with baseline methods on LaVie (same as UniEdit):</h2>
-                            <div style="width: 100%;">
-                                <img src="./video/ablation/tgve/cap.svg" style="float: left; width: 4.7%;">
-                                <img src="./video/ablation/compare/5.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/compare/6.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/compare/7.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/compare/8.gif" style="float: left; width: 19%;" loop>
-                                <img src="./video/ablation/compare/white.gif" style="float: left; width: 19%;" loop>
-                            </div>
-                            <!-- <p><strong>From top to bottom: source video, TAV, MasaCtrl*, FateZero, TokenFlow, Rerender-A-Video, UniEdit (Ours).</strong></p> -->
-                            <p style="text-align:justify; word-wrap:break-word;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cat' --> 'dog'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+oil painting style'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'running'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'waving'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
-                            <p>Fig G.4.</p>
-
-                            <p style="text-align:justify; word-wrap:break-word;">For a fair comparison, we also migrated all baselines to LaVie, using the same base model as our method. The results are presented in Fig. G.4, and they are found to be inferior compared to those in Fig. G.3 (based on Stable Diffusion).</p>
-                            <br>
-                            
-                            
+                        </td>
+                    <tr>
+                    
+                </tbody>
+                </table>
                 <br>
-                <p style="text-align:justify; word-wrap:break-word;">[1] Wu, Jay Zhangjie, et al. "Cvpr 2023 text guided video editing competition." *arXiv preprint arXiv:2310.16003* (2023).
                 <hr style="margin-top:0px">
-
             </div>
-        
         </div>
-        </div>
-        
-    <br>
-    </section>
-
-    <section>
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                <video width="100%" controls style="display: block; margin: 0 auto;">
-                    <source src="video/compare with baselines.mp4" type="video/mp4">
-                </video>
-                
-
-            </div>
-            
-        </div>
-        <p>MasaCtrl* indicates we adapt MasaCtrl to the text-to-video model.</p>
-        <br>
-        <hr style="margin-top:0px">
         </div>
     <br>
     </section>
