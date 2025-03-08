@@ -99,13 +99,17 @@
     </section>
     <div id="container"></div>
 
-    <p class="title is-5" style="text-align:center; color: red;">Loading all videos may take some time. Thank you for your patience.</p>
+
     <section class="hero teaser">
+        
         <div class="container is-max-desktop">
+            <h2 width="90%" class="content has-text-centered">
+                <p style="text-align:left; padding-left: 0px;"><b>Friendly Reminder:</b> If the videos are loading slowly, you can download this page from our <i>supplementary materials</i> and view it locally by double-clicking the "index.html" file.</p>
+              </h2>
             <div class="hero-body">
               <!-- <img src="./static/images/fig1.svg" alt="Examples edited by UniEdit." style="transform: translateX(-13.5px);"/> -->
               <video autoplay controls muted loop playsinline>
-                <source src="./video/iccv_submission/fig1_demo_video.mp4" type="video/mp4">
+                <source src="./video/iccv_submission/fig1_demo_video_compressed.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <!-- <img src="./video/fig1_demo_video.gif" alt="Your browser does not support the image tag." loop> -->
@@ -134,7 +138,7 @@
                             <tr>
                                 <td width="100%" style="text-align:center;">
                                     <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                                        <source src="./video/iccv_submission/ours_cogvideox.mp4" type="video/mp4">
+                                        <source src="./video/iccv_submission/ours_cogvideox_compressed.mp4" type="video/mp4">
                                     </video>
                                     <br>
                                 </td>
@@ -165,7 +169,7 @@
                         <!-- First row of videos -->
                         <td width="50%" style="text-align:center;">
                             <video width="100%" autoplay muted loop>
-                                <source src="video/iccv_submission/ours_videocrafter2.mp4" type="video/mp4">
+                                <source src="video/iccv_submission/ours_videocrafter2_compressed.mp4" type="video/mp4">
                             </video>
                             <br>
                         </td>
@@ -194,7 +198,7 @@
                             <!-- First row of videos -->
                             <td width="100%" style="text-align:center;"> 
                                 <video width="100%" autoplay muted loop>
-                                    <source src="video/iccv_submission/appearence1-1.mp4" type="video/mp4"> 
+                                    <source src="video/iccv_submission/appearence1-1_compressed.mp4" type="video/mp4"> 
                                 </video> 
                                 <br>
                             </td>
@@ -203,7 +207,7 @@
                             <!-- First row of videos -->
                             <td width="100%" style="text-align:center;"> 
                                 <video width="100%" autoplay muted loop> 
-                                    <source src="video/iccv_submission/appearence2-1.mp4" type="video/mp4"> 
+                                    <source src="video/iccv_submission/appearence2-1_compressed.mp4" type="video/mp4"> 
                                 </video> 
                                 <br>
                             </td>
@@ -231,7 +235,7 @@
                         <!-- First row of videos -->
                         <td width="100%" style="text-align:center;">
                             <video width="100%" autoplay muted loop>
-                                <source src="video/iccv_submission/motion1-1.mp4" type="video/mp4">
+                                <source src="video/iccv_submission/motion1-1_compressed.mp4" type="video/mp4">
                             </video>
                             <br>
                         </td>
@@ -257,11 +261,17 @@
                     <p><strong>+ 'Van Gogh style'</strong></p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
-                            <img src="./video/ablation/explain_v/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/explainv_source_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/explain_v/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                             <p>(a) source video</p>
                         </div>
                         <div>
-                            <img src="./video/ablation/explain_v/stylization_wo_ours.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/explainv_stylization_wo_ours_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/explain_v/stylization_wo_ours.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                             <p>(b) w/o feature replacement</p>
                         </div>
 
@@ -269,11 +279,17 @@
                     <div style="display: flex; justify-content: space-between;">
 
                         <div>
-                            <img src="./video/ablation/explain_v/stylization_qk.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/explainv_stylization_qk_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/explain_v/stylization_qk.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                             <p>(c) w/ query and key features replacement</p>
                         </div>
                         <div>
-                            <img src="./video/ablation/explain_v/stylization_v.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/explainv_stylization_v_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/explain_v/stylization_v.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                             <p>(d) w/ value features replacement + query and key in (b)</p>
                         </div>
                     </div>
@@ -288,7 +304,10 @@
                     <p><strong>'playing guitar' --> 'eating an apple'</strong></p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
-                            <img src="./video/ablation/motion_editing_w_wo_spatial/wo_spatial.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/wo_spatial_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/iccv_submission/wo_spatial.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                             <p>(a). w/o Spatial Structure Control</p>
                         </div>
 
@@ -296,7 +315,10 @@
                     <div style="display: flex; justify-content: space-between;">
 
                         <div>
-                            <img src="./video/ablation/motion_editing_w_wo_spatial/w_spatial.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/w_spatial_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/iccv_submission/w_spatial.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                             <p>(b). w/ Spatial Structure Control</p>
                         </div>
                     </div>
@@ -380,148 +402,10 @@
                 <br>
                 <p style="text-align:justify; word-wrap:break-word;">For appearance editing, it's observed that changing the blend layers (\(t_1\)) in Eq. 4 could effectively adjust the degree to which the edited image remains faithful to the original image. Take stylization in Fig. C.1 as an example, attention map injection on fewer (15) steps produces a stylized output that may not have the same structure as the input, and injection on all 50 steps could obtain videos with almost identical textures but less stylized. The user can adjust the blended layers and steps to realize their desired balancing between stylization and faithfully.</p>
                 <hr style="margin-top:0px">
-
-                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Appearance Editing (local):</p>
-                <p><strong>'cat' --> 'dog'</strong></p>
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
-                        <img src="./video/ablation/hyper/0-15 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">\(t_1\)=15</p>
-                    </div>
-                    <div>
-                        <img src="./video/ablation/hyper/0-20 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">\(t_1\)=20</p>
-                    </div>
-                </div>
-                <br>
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
-                        <img src="./video/ablation/hyper/0-25 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">\(t_1\)=25</p>
-                    </div>
-                    <div>
-                        <img src="./video/ablation/hyper/0-30 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">\(t_1\)=30</p>
-                    </div>
-                </div>
-                <br>
-                <div style="display: flex; justify-content: space-between;">
-                    <div>
-                        <img src="./video/ablation/hyper/0-35 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">\(t_1\)=35</p>
-                    </div>
-                    <div>
-                        <img src="./video/ablation/hyper/0-40 0-16.gif" alt="Your browser does not support the image tag." style="width: 99%;" loop>
-                        <p style="text-align:center;">\(t_1\)=40</p>
-                    </div>
-                </div>
-                <p style="text-align:center;">Fig. C.2.</p>
-                <br>
-                <p style="text-align:justify; word-wrap:break-word;">The same conclusion was also confirmed in local appearance editing. As shown in the figure above, when we do non-rigid (deformable) object replacement, we find that as the feature injection steps increase, the outline of the "dog" becomes more and more similar to the outline of the cat in the source video. And the appropriate hyperparameters (i.e., ~25 steps) bring the best results.</p>
-                <br>
-                <hr style="margin-top:0px">
-
-                <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Motion Editing:</p>
-                <table style="table-layout: fixed;">
-                <tbody>
-                    <p style="text-align:justify; word-wrap:break-word;">Source video:</p>
-                    <p><strong>'walking' --> 'running'</strong></p>
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/ablation/hyper/source.gif" alt="Your browser does not support the image tag." loop>
-                            <br>
-                            <br>
-                        </td>
-
-                    <tr>
                     
-                    <tr>
-                        <td colspan="5" style="text-align:justify; word-wrap:break-word;">Changing <b>content preservation</b> steps in Eq. 2:</td>
-                    </tr>
 
-                    <tr>
-                        <!-- First row of videos -->
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/ablation/hyper/1.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered>\(t_0=20, L=10\)</centered></p>
-                            <br>
-                        </td>
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/ablation/hyper/2.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered>\(t_0=30, L=10\)</centered></p>
-                            <br>
-                        </td>
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/ablation/hyper/3.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered>\(t_0=40, L=10\)</centered></p>
-                            <br>
-                        </td>
-                        <td width="20%" style="text-align:center;"> 
-                            <img src="./video/ablation/hyper/4_10.gif" alt="Your browser does not support the image tag." loop>
-                            <p><centered><span style="color:red;">\(t_0=50, L=10\)</span></centered></p>
-                            <br>
-                        </td>
-
-                    <tr>
-
-                </tbody>
-                </table>
-
-                <table style="table-layout: fixed;">
-                    <tbody>
-                        <p style="text-align:justify; word-wrap:break-word;">Source video:</p>
-                        <tr>
-                            <td colspan="9" style="text-align:center; border: none;"><strong>'walking' --> 'jumping'</strong></td>
-                        </tr>
-                        <tr>
-                            <!-- First row of videos -->
-                            <td width="20%" style="text-align:center; border: none;"> 
-                                <img src="./video/ablation/hyper/cat_source.gif" alt="Your browser does not support the image tag." loop>
-                                <br>
-                                <br>
-                            </td>
-    
-                        <tr>
-                        
-                        <tr>
-                            <td colspan="5" style="text-align:justify; word-wrap:break-word; border: none;">Changing <b>content preservation</b> layers in Eq. 2:</td>
-                        </tr>
-    
-                        <tr>
-                            <!-- First row of videos -->
-                            <td width="20%" style="text-align:center; border: none;"> 
-                                <img src="./video/ablation/hyper/cat1.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>\(t_0=50, L=7\)</centered></p>
-                                <br>
-                            </td>
-                            <td width="20%" style="text-align:center; border: none;"> 
-                                <img src="./video/ablation/hyper/cat2.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>\(t_0=50, L=8\)</centered></p>
-                                <br>
-                            </td>
-                            <td width="20%" style="text-align:center; border: none;"> 
-                                <img src="./video/ablation/hyper/cat3.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered>\(t_0=50, L=9\)</centered></p>
-                                <br>
-                            </td>
-                            <td width="20%" style="text-align:center; border: none;"> 
-                                <img src="./video/ablation/hyper/cat4_8.gif" alt="Your browser does not support the image tag." loop>
-                                <p><centered><span style="color:red;">\(t_0=50, L=10\)</span></centered></p>
-                                <br>
-                            </td>
-    
-                        <tr>
-    
-                        
-                            
-                    </tbody>
-                    
-                    </table>
-                <p style="text-align:center;">Fig. C.3. & C.4.</p>
-                <p style="text-align:justify; word-wrap:break-word;"><b>Note: The model have 16 SA-S layers in total, and denoising with 50 steps. Red indicate the optimal value used in UniEdit.</b></p>
                 <br>
-                <p style="text-align:justify; word-wrap:break-word;"><b>In practice, we empirically found set these values to fixed values, i.e., \(t_0=50, L=10\) (same as MasaCtrl [1]) and \(t_1=25\) can achieve good results on most cases, and we further perform a quantitative study when applying different hyper-parameters:</b></p>
+                <p style="text-align:justify; word-wrap:break-word;">In practice, we empirically found set these values to fixed values, i.e., \(t_0=50, L=10\) (same as MasaCtrl [1]) and \(t_1=25\) can achieve good results on most cases, and we further perform a quantitative study when applying different hyper-parameters:</p>
                 
                     <table class="bordered-table">
                         <tr>
@@ -607,7 +491,10 @@
                     <p class="title is-5" style="text-align:justify; word-wrap:break-word;">Visualization of masks:</p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
-                            <img src="./video/ablation/mask/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/mask_source-1_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/mask/source.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                             <p>Output Video<br></p>
                         </div>
                         <div>
@@ -628,14 +515,19 @@
                             
                             <p><strong>'in NYC Times Square' --> 'in park, in winter'</strong></p>
                             <td width="50%" style="text-align:center;">
-                                
-                                <img src="./video/ablation/mask/without_uniedit.gif" alt="Your browser does not support the image tag." loop>
+                                <video width="92.95%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/mask_without_uniedit-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/mask/without_uniedit.gif" alt="Your browser does not support the image tag." loop> -->
     
                                 <p><centered>Result without UniEdit</centered></p>
                                 <br>
                             </td>
                             <td width="50%" style="text-align:center;">
-                                <img src="./video/ablation/mask/without_mask.gif" alt="Your browser does not support the image tag." loop>
+                                <video width="92.95%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/mask_without_mask-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/mask/without_mask.gif" alt="Your browser does not support the image tag." loop> -->
                                 <p><centered>Result with UniEdit (no mask)</centered></p>
                                 <br>
                             </td>
@@ -644,12 +536,18 @@
                         <tr>
                             <!-- First row of videos -->
                             <td width="50%" style="text-align:center;"> 
-                                <img src="./video/ablation/mask/with_ca_mask.gif" alt="Your browser does not support the image tag." loop>
+                                <video width="92.95%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/mask_withca_mask-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/mask/with_ca_mask.gif" alt="Your browser does not support the image tag." loop> -->
                                 <p><centered>Result with UniEdit (use attention mask in CA-S)</centered></p>
                                 <br>
                             </td>
                             <td width="50%" style="text-align:center;"> 
-                                <img src="./video/ablation/mask/with_sam_mask.gif" alt="Your browser does not support the image tag." loop>
+                                <video width="92.95%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/mask_with_sam_mask-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/mask/with_sam_mask.gif" alt="Your browser does not support the image tag." loop> -->
                                 <p><centered>Result with UniEdit (use SAM segmentation mask)</centered></p>
                                 <br>
                             </td>
@@ -660,14 +558,19 @@
                             </tr>
                             
                             <td width="50%" style="text-align:center;">
-    
-                                <img src="./video/ablation/mask/1.gif" alt="Your browser does not support the image tag." loop>
+                                <video width="100%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/mask_1-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/mask/1.gif" alt="Your browser does not support the image tag." loop> -->
     
                                 <p><centered>Result without UniEdit</centered></p>
                                 <br>
                             </td>
                             <td width="50%" style="text-align:center;">
-                                <img src="./video/ablation/mask/2.gif" alt="Your browser does not support the image tag." loop>
+                                <video width="100%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/mask_2-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/mask/2.gif" alt="Your browser does not support the image tag." loop> -->
                                 <p><centered>Result with UniEdit (no mask)</centered></p>
                                 <br>
                             </td>
@@ -676,12 +579,18 @@
                         <tr>
                             <!-- First row of videos -->
                             <td width="50%" style="text-align:center;"> 
-                                <img src="./video/ablation/mask/3.gif" alt="Your browser does not support the image tag." loop>
+                                <video width="100%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/mask_3-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/mask/3.gif" alt="Your browser does not support the image tag." loop> -->
                                 <p><centered>Result with UniEdit (use attention mask in CA-S)</centered></p>
                                 <br>
                             </td>
                             <td width="50%" style="text-align:center;"> 
-                                <img src="./video/ablation/mask/4.gif" alt="Your browser does not support the image tag." loop>
+                                <video width="100%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/mask_4-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/mask/4.gif" alt="Your browser does not support the image tag." loop> -->
                                 <p><centered>Result with UniEdit (use SAM segmentation mask)</centered></p>
                                 <br>
                             </td>
@@ -728,14 +637,20 @@
                     <p><strong>'playing guitar' --> 'waving'</strong></p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
-                            <img src="./video/ablation/branch_vis/1.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/branch_vis_1-1_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/branch_vis/1.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                             <p></p>
                         </div>
                     </div>
                     <p><strong>'walking' --> 'lying'</strong></p>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
-                            <img src="./video/ablation/branch_vis/2.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/branch_vis_2-1_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/branch_vis/2.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                             <p></p>
                         </div>
                     </div>
@@ -747,29 +662,47 @@
                     <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Qualitative results on the reconstruction branch:</h2>
                         <div style="display: flex; justify-content: space-between;">
                             <div>
-                                <img src="./video/ablation/recons/input_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <video width="92.95%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/recons_input_lotus-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/recons/input_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                                 <p>Source Video</p>
                             </div>
                             <div>
-                                <img src="./video/ablation/recons/sd_scheduler_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <video width="92.95%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/recons_lotus_sd-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/recons/sd_scheduler_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                                 <p>Reconstruction Branch Output<br></p>
                             </div>
                             <div>
-                                <img src="./video/ablation/recons/nti_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <video width="92.95%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/recons_lotus_nti-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/recons/nti_lotus.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                                 <p>Reconstruction Branch Output<br>(w/ null-text inversion)</p>
                             </div>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                             <div>
-                                <img src="./video/ablation/recons/input_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <video width="92.95%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/recons_input_basketball-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/recons/input_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                                 <p>Source Video</p>
                             </div>
                             <div>
-                                <img src="./video/ablation/recons/sd_scheduler_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <video width="92.95%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/recons_basketball_sd-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/recons/sd_scheduler_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                                 <p>Reconstruction Branch Output<br></p>
                             </div>
                             <div>
-                                <img src="./video/ablation/recons/nti_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop>
+                                <video width="92.95%" autoplay muted loop> 
+                                    <source src="video/iccv_submission/recons_basketball_nti-1_compressed.mp4" type="video/mp4"> 
+                                </video> 
+                                <!-- <img src="./video/ablation/recons/nti_basketball.gif" alt="Your browser does not support the image tag." style="width: 92.95%;" loop> -->
                                 <p>Reconstruction Branch Output<br>(w/ null-text inversion)</p>
                             </div>
                         </div>
@@ -830,27 +763,39 @@
                     <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Edit multiple elements simultaneously:</h2>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
-                            <img src="./video/ablation/failure/1.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/failure_1-1_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/failure/1.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop> -->
                             <p>cat --> dog, + Van Gogh style</p>
                         </div>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
-                            <img src="./video/ablation/failure/2.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/failure_2-1_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/failure/2.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop> -->
                             <p>raccoon --> panda, play violin --> waving</p>
                         </div>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
 
                         <div>
-                            <img src="./video/ablation/failure/4.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/failure_3-1_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/failure/4.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop> -->
                             <p>raccoon --> kangaroo, play violin --> play guitar<br>(the model do not learn the correct posture for playing the violin, and whether or not our method is used, the model could not generate the posture of "violin on the shoulder")</p>
                         </div>
                     </div>
                     <h2 class="title is-5" style="text-align:justify; word-wrap:break-word;">Complex scene editing:</h2>
                     <div style="display: flex; justify-content: space-between;">
                         <div>
-                            <img src="./video/ablation/failure/3.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop>
+                            <video width="92.95%" autoplay muted loop> 
+                                <source src="video/iccv_submission/failure_4-1_compressed.mp4" type="video/mp4"> 
+                            </video> 
+                            <!-- <img src="./video/ablation/failure/3.gif" alt="Your browser does not support the image tag." style="width: 60%;" loop> -->
                             <p>a shark on the left and several goldfish swim in a tank</p>
                         </div>
                     </div>
@@ -884,7 +829,7 @@
                         <!-- First row of videos -->
                         <td width="100%" style="text-align:center;">
                             <video width="100%" autoplay muted loop>
-                                <source src="video/iccv_submission/compare_video.mp4" type="video/mp4">
+                                <source src="video/iccv_submission/compare_video_compressed.mp4" type="video/mp4">
                             </video>
                             <br>
                         </td>
